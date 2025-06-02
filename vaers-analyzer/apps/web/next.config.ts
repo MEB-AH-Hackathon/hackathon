@@ -3,12 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   distDir: '.next',
-  experimental: {
-    // Log build output details
-    logging: {
-      level: 'verbose',
-    },
-  },
   // Add custom webpack config to log build details
   webpack: (config, { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }) => {
     console.log('=== Next.js Build Debug Info ===');
