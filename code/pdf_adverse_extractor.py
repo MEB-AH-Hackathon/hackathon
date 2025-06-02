@@ -258,7 +258,7 @@ def main():
         results = extractor.process_pdf_folder(
             folder_path="../data",
             delay_between_calls=1.5,  # Be respectful to API
-            max_files=2  # Limit for initial testing
+            max_files= None # Limit for initial testing
         )
 
         # Validate and export results
