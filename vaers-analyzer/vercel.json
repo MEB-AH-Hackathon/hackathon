@@ -1,6 +1,12 @@
 {
-  "buildCommand": "pnpm build:prod",
+  "buildCommand": "bash scripts/build-debug.sh",
   "installCommand": "pnpm install",
   "outputDirectory": "apps/web/.next",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
 }
