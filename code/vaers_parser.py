@@ -283,7 +283,7 @@ class VAERSParser:
 
 def main():
     try:
-        parser = VAERSParser("../vaers_data")
+        parser = VAERSParser("../vaers_data/vaers_data")
         output_file = parser.process_all_vaers_data()
         print(f"\n✓ VAERS data processing complete!")
         print(f"Output saved to: {output_file}")
