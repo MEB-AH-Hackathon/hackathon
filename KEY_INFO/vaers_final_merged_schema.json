@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VAERS Final Merged Table Schema",
+  "description": "Schema for the main merged VAERS table containing vaccine info with symptoms as rows",
+  "type": "object",
+  "properties": {
+    "VAERS_ID": {
+      "type": "string",
+      "description": "Unique VAERS case identifier"
+    },
+    "VAX_TYPE": {
+      "type": ["string", "null"],
+      "description": "Type of vaccine (e.g., COVID19, FLU3, etc.)"
+    },
+    "VAX_MANU": {
+      "type": ["string", "null"],
+      "description": "Vaccine manufacturer"
+    },
+    "VAX_LOT": {
+      "type": ["string", "null"],
+      "description": "Vaccine lot number"
+    },
+    "VAX_DOSE_SERIES": {
+      "type": ["string", "null"],
+      "description": "Dose number in series (e.g., 1, 2, 3, UNK)"
+    },
+    "VAX_ROUTE": {
+      "type": ["string", "null"],
+      "description": "Route of administration (e.g., IM, SC, IN)"
+    },
+    "VAX_SITE": {
+      "type": ["string", "null"],
+      "description": "Site of administration (e.g., LA, RA for left/right arm)"
+    },
+    "VAX_NAME": {
+      "type": ["string", "null"],
+      "description": "Commercial name of vaccine"
+    },
+    "VAX_ORDER": {
+      "type": ["integer", "null"],
+      "description": "Order of vaccine administration if multiple vaccines given"
+    },
+    "RECVDATE": {
+      "type": ["string", "null"],
+      "description": "Date VAERS report was received (MM/DD/YYYY format)"
+    },
+    "STATE": {
+      "type": ["string", "null"],
+      "description": "State where adverse event occurred"
+    },
+    "AGE_YRS": {
+      "type": ["number", "null"],
+      "description": "Age of patient in years"
+    },
+    "SEX": {
+      "type": ["string", "null"],
+      "description": "Sex of patient (M/F/U for unknown)"
+    },
+    "SYMPTOM_TEXT": {
+      "type": ["string", "null"],
+      "description": "Free text description of adverse event"
+    },
+    "DIED": {
+      "type": ["string", "null"],
+      "description": "Patient died (Y/N)"
+    },
+    "L_THREAT": {
+      "type": ["string", "null"],
+      "description": "Life threatening event (Y/N)"
+    },
+    "ER_VISIT": {
+      "type": ["string", "null"],
+      "description": "Emergency room visit required (Y/N)"
+    },
+    "HOSPITAL": {
+      "type": ["string", "null"],
+      "description": "Hospitalization required (Y/N)"
+    },
+    "DISABLE": {
+      "type": ["string", "null"],
+      "description": "Disability resulted (Y/N)"
+    },
+    "OTHER_MEDS": {
+      "type": ["string", "null"],
+      "description": "Other medications taken"
+    },
+    "CUR_ILL": {
+      "type": ["string", "null"],
+      "description": "Current illnesses"
+    },
+    "HISTORY": {
+      "type": ["string", "null"],
+      "description": "Medical history"
+    },
+    "SYMPTOM": {
+      "type": ["string", "null"],
+      "description": "Specific symptom from coded symptoms list"
+    },
+    "symptom_count": {
+      "type": ["integer", "null"],
+      "description": "Number of times this symptom was reported for this VAERS_ID"
+    }
+  },
+  "required": ["VAERS_ID"],
+  "additionalProperties": false
+}

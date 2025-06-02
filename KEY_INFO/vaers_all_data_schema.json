@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VAERS All Data Table Schema",
+  "description": "Schema for combined VAERS data from all years (patient and event information)",
+  "type": "object",
+  "properties": {
+    "VAERS_ID": {
+      "type": "string",
+      "description": "Unique VAERS case identifier"
+    },
+    "RECVDATE": {
+      "type": ["string", "null"],
+      "description": "Date VAERS report was received (MM/DD/YYYY format)"
+    },
+    "STATE": {
+      "type": ["string", "null"],
+      "description": "State where adverse event occurred (2-letter abbreviation)"
+    },
+    "AGE_YRS": {
+      "type": ["number", "null"],
+      "description": "Age of patient in years"
+    },
+    "CAGE_YR": {
+      "type": ["number", "null"],
+      "description": "Calculated age in years"
+    },
+    "CAGE_MO": {
+      "type": ["number", "null"],
+      "description": "Calculated age in months (for infants)"
+    },
+    "SEX": {
+      "type": ["string", "null"],
+      "description": "Sex of patient (M/F/U for unknown)"
+    },
+    "RPT_DATE": {
+      "type": ["string", "null"],
+      "description": "Date adverse event was reported"
+    },
+    "SYMPTOM_TEXT": {
+      "type": ["string", "null"],
+      "description": "Free text description of adverse event symptoms"
+    },
+    "DIED": {
+      "type": ["string", "null"],
+      "description": "Patient died (Y/N)"
+    },
+    "DATEDIED": {
+      "type": ["string", "null"],
+      "description": "Date of death if applicable"
+    },
+    "L_THREAT": {
+      "type": ["string", "null"],
+      "description": "Life threatening event (Y/N)"
+    },
+    "ER_VISIT": {
+      "type": ["string", "null"],
+      "description": "Emergency room visit required (Y/N)"
+    },
+    "HOSPITAL": {
+      "type": ["string", "null"],
+      "description": "Hospitalization required (Y/N)"
+    },
+    "HOSPDAYS": {
+      "type": ["integer", "null"],
+      "description": "Number of days hospitalized"
+    },
+    "X_STAY": {
+      "type": ["string", "null"],
+      "description": "Prolonged hospitalization (Y/N)"
+    },
+    "DISABLE": {
+      "type": ["string", "null"],
+      "description": "Disability resulted (Y/N)"
+    },
+    "RECOVD": {
+      "type": ["string", "null"],
+      "description": "Patient recovered (Y/N/U for unknown)"
+    },
+    "VAX_DATE": {
+      "type": ["string", "null"],
+      "description": "Date of vaccination"
+    },
+    "ONSET_DATE": {
+      "type": ["string", "null"],
+      "description": "Date of adverse event onset"
+    },
+    "NUMDAYS": {
+      "type": ["integer", "null"],
+      "description": "Number of days between vaccination and adverse event"
+    },
+    "LAB_DATA": {
+      "type": ["string", "null"],
+      "description": "Laboratory data"
+    },
+    "V_ADMINBY": {
+      "type": ["string", "null"],
+      "description": "Type of facility where vaccine was administered"
+    },
+    "V_FUNDBY": {
+      "type": ["string", "null"],
+      "description": "Type of funds used to purchase vaccine"
+    },
+    "OTHER_MEDS": {
+      "type": ["string", "null"],
+      "description": "Other medications taken"
+    },
+    "CUR_ILL": {
+      "type": ["string", "null"],
+      "description": "Current illnesses"
+    },
+    "HISTORY": {
+      "type": ["string", "null"],
+      "description": "Medical history"
+    },
+    "PRIOR_VAX": {
+      "type": ["string", "null"],
+      "description": "Prior vaccinations"
+    },
+    "SPLTTYPE": {
+      "type": ["string", "null"],
+      "description": "Manufacturer/IND# sponsored protocol"
+    },
+    "FORM_VERS": {
+      "type": ["integer", "null"],
+      "description": "VAERS form version number"
+    },
+    "TODAYS_DATE": {
+      "type": ["string", "null"],
+      "description": "Date form was completed"
+    },
+    "BIRTH_DEFECT": {
+      "type": ["string", "null"],
+      "description": "Birth defect (Y/N)"
+    },
+    "OFC_VISIT": {
+      "type": ["string", "null"],
+      "description": "Office visit (Y/N)"
+    },
+    "ER_ED_VISIT": {
+      "type": ["string", "null"],
+      "description": "Emergency department visit (Y/N)"
+    },
+    "ALLERGIES": {
+      "type": ["string", "null"],
+      "description": "Known allergies"
+    },
+    "ORDER": {
+      "type": ["integer", "null"],
+      "description": "Record order"
+    },
+    "source_file": {
+      "type": "string",
+      "description": "Original CSV filename this record came from (e.g., '2024VAERSDATA.csv')"
+    }
+  },
+  "required": ["VAERS_ID"],
+  "additionalProperties": false
+}

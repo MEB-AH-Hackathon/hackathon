@@ -1,2 +1,6 @@
 .env
 TODO.md
+data
+vaers_data/
+intermediate_results/
+code/.tmp/

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VAERS Symptoms Long Table Schema",
+  "description": "Schema for symptoms data transformed from wide to long format",
+  "type": "object",
+  "properties": {
+    "VAERS_ID": {
+      "type": "string",
+      "description": "Unique VAERS case identifier"
+    },
+    "SYMPTOM": {
+      "type": "string",
+      "description": "Coded symptom name from MedDRA or similar coding system"
+    },
+    "symptom_count": {
+      "type": "integer",
+      "description": "Number of times this symptom was reported for this VAERS_ID (usually 1)"
+    },
+    "source_file": {
+      "type": "string",
+      "description": "Original CSV filename this record came from (e.g., '2024VAERSSYMPTOMS.csv')"
+    }
+  },
+  "required": ["VAERS_ID", "SYMPTOM", "symptom_count"],
+  "additionalProperties": false
+}
