@@ -5,6 +5,9 @@
 # Raw data directories (too large for git)
 vaers_data/
 data/
+data/*
+data/.DS_Store
+data/**/*.DS_Store
 
 # Generated output directories
 duckdb_data/
