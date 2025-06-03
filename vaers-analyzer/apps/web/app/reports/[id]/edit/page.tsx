@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getReportById } from '../../actions/reports';
+import { getReportById } from '../../../actions/reports';
 import { PageLayout, PageContainer, PageHeader } from '@repo/ui';
 import { EditReportForm } from './components/EditReportForm';
 
