@@ -5,11 +5,7 @@
 # Raw data directories (too large for git)
 vaers_data/
 data/
-data/*
-data/.DS_Store
-data/**/*.DS_Store
-json_data/
-json_data/*
+duckdb/
 # Generated output directories
 duckdb_data/
 intermediate_results/
@@ -27,3 +23,4 @@ myenv/
 # Development files
 TODO.md
 scratch/
+duckdb/vaers_analysis.db
