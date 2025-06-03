@@ -166,11 +166,11 @@ export class VaersAnalysisPipeline {
             matchedSymptoms: scoreData.matchedSymptoms,
             vaccines: (fullReport.vaxTypeList || []).filter(Boolean),
             outcomes: [
-              fullReport.died === 'Y' && 'Death',
-              fullReport.lThreat === 'Y' && 'Life Threatening',
-              fullReport.hospital === 'Y' && 'Hospitalized',
-              fullReport.disable === 'Y' && 'Disabled',
-              fullReport.erVisit === 'Y' && 'ER Visit'
+              fullReport.died && 'Death',
+              fullReport.lThreat && 'Life Threatening',
+              fullReport.hospital && 'Hospitalized',
+              fullReport.disable && 'Disabled',
+              fullReport.erVisit && 'ER Visit'
             ].filter(Boolean) as string[]
           });
         }

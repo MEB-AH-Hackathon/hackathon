@@ -2,6 +2,8 @@ import { serial, integer, text, timestamp, date, pgTable, pgEnum, varchar, numer
 import { REPORT_STATUS } from '@vaers/types';
 
 export const reportStatus = pgEnum("report_status", REPORT_STATUS as unknown as [string, ...string[]]);
+export const sexEnum = pgEnum("sex_enum", ["male", "female", "unknown"]);
+export const recovdEnum = pgEnum("recovd_enum", ["yes", "no", "unknown"]);
 
 export const vaersReports = pgTable("vaers_reports", {
   id: serial("id").primaryKey(),
@@ -9,14 +11,14 @@ export const vaersReports = pgTable("vaers_reports", {
   recvDate: varchar("recv_date", { length: 10 }), // MM/DD/YYYY format
   state: varchar("state", { length: 2 }),
   ageYrs: numeric("age_yrs", { precision: 5, scale: 2 }),
-  sex: varchar("sex", { length: 1 }),
+  sex: sexEnum("sex"),
   symptomText: text("symptom_text"),
-  died: varchar("died", { length: 1 }), // Y/N or null
-  lThreat: varchar("l_threat", { length: 1 }), // Y/N or null
-  erVisit: varchar("er_visit", { length: 1 }), // Y/N or null
-  hospital: varchar("hospital", { length: 1 }), // Y/N or null
-  disable: varchar("disable", { length: 1 }), // Y/N or null
-  recovd: varchar("recovd", { length: 1 }), // Y/N or null
+  died: boolean("died").notNull().default(false),
+  lThreat: boolean("l_threat").notNull().default(false),
+  erVisit: boolean("er_visit").notNull().default(false),
+  hospital: boolean("hospital").notNull().default(false),
+  disable: boolean("disable").notNull().default(false),
+  recovd: recovdEnum("recovd"),
   vaxDate: varchar("vax_date", { length: 10 }), // Date string
   onsetDate: varchar("onset_date", { length: 10 }), // Date string
   numDays: numeric("num_days", { precision: 10, scale: 1 }),

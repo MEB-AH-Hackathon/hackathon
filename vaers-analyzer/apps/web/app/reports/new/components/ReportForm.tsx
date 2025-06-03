@@ -8,6 +8,21 @@ import { SymptomInputs } from './SymptomInputs';
 import { ExampleReports } from './ExampleReports';
 import type { VaersReport, VaersRawData } from '@vaers/types';
 
+// Transform functions to convert between new enum values and old format
+function transformRecoveryToOld(recovery: 'yes' | 'no' | 'unknown' | ''): string | null {
+  if (recovery === 'yes') return 'Y';
+  if (recovery === 'no') return 'N';
+  if (recovery === 'unknown') return 'U';
+  return null;
+}
+
+function transformSexToOld(sex: string): string | null {
+  if (sex === 'female') return 'F';
+  if (sex === 'male') return 'M';
+  if (sex === 'unknown') return 'U';
+  return null;
+}
+
 export function ReportForm() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -29,7 +44,7 @@ export function ReportForm() {
   const [erVisit, setErVisit] = useState(false);
   const [hospital, setHospital] = useState(false);
   const [disable, setDisable] = useState(false);
-  const [recovd, setRecovd] = useState<'Y' | 'N' | 'U' | ''>('');
+  const [recovd, setRecovd] = useState<'yes' | 'no' | 'unknown' | ''>('');
   
   // Arrays
   const [vaccines, setVaccines] = useState<VaccineInput[]>([
@@ -95,14 +110,14 @@ export function ReportForm() {
         RECVDATE: recvDate || null,
         STATE: state || null,
         AGE_YRS: ageYrs ? parseFloat(ageYrs) : null,
-        SEX: sex || null,
+        SEX: transformSexToOld(sex),
         SYMPTOM_TEXT: symptomText || null,
         DIED: died ? 'Y' : null,
         L_THREAT: lThreat ? 'Y' : null,
         ER_VISIT: erVisit ? 'Y' : null,
         HOSPITAL: hospital ? 'Y' : null,
         DISABLE: disable ? 'Y' : null,
-        RECOVD: recovd || null,
+        RECOVD: transformRecoveryToOld(recovd),
         VAX_DATE: vaxDate || null,
         ONSET_DATE: onsetDate || null,
         NUMDAYS: vaxDate && onsetDate ? 
@@ -198,9 +213,9 @@ export function ReportForm() {
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 >
                   <option value="">Select</option>
-                  <option value="F">Female</option>
-                  <option value="M">Male</option>
-                  <option value="U">Unknown</option>
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="unknown">Unknown</option>
                 </select>
               </div>
             </div>
@@ -312,13 +327,13 @@ export function ReportForm() {
                 <select
                   id="recovd"
                   value={recovd}
-                  onChange={(e) => setRecovd(e.target.value as 'Y' | 'N' | 'U' | '')}
+                  onChange={(e) => setRecovd(e.target.value as 'yes' | 'no' | 'unknown' | '')}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 >
                   <option value="">Select</option>
-                  <option value="Y">Yes - Recovered</option>
-                  <option value="N">No - Not Recovered</option>
-                  <option value="U">Unknown</option>
+                  <option value="yes">Yes - Recovered</option>
+                  <option value="no">No - Not Recovered</option>
+                  <option value="unknown">Unknown</option>
                 </select>
               </div>
             </div>

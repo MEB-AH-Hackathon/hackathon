@@ -34,14 +34,14 @@ interface VaersSubsetData {
   RECVDATE: string;
   STATE: string;
   AGE_YRS: number | null;
-  SEX: string;
+  SEX: 'male' | 'female' | 'unknown' | null;
   SYMPTOM_TEXT: string;
-  DIED: string | null;
-  L_THREAT: string | null;
-  ER_VISIT: string | null;
-  HOSPITAL: string | null;
-  DISABLE: string | null;
-  RECOVD: string | null;
+  DIED: boolean;
+  L_THREAT: boolean;
+  ER_VISIT: boolean;
+  HOSPITAL: boolean;
+  DISABLE: boolean;
+  RECOVD: 'yes' | 'no' | 'unknown' | null;
   VAX_DATE: string;
   ONSET_DATE: string;
   NUMDAYS: number | null;
@@ -158,14 +158,14 @@ async function seed() {
             recvDate: vaersItem.RECVDATE,
             state: vaersItem.STATE,
             ageYrs: vaersItem.AGE_YRS?.toString() || null,
-            sex: vaersItem.SEX,
+            sex: vaersItem.SEX || null,
             symptomText: vaersItem.SYMPTOM_TEXT,
             died: vaersItem.DIED,
             lThreat: vaersItem.L_THREAT,
             erVisit: vaersItem.ER_VISIT,
             hospital: vaersItem.HOSPITAL,
             disable: vaersItem.DISABLE,
-            recovd: vaersItem.RECOVD,
+            recovd: vaersItem.RECOVD || null,
             vaxDate: vaersItem.VAX_DATE,
             onsetDate: vaersItem.ONSET_DATE,
             numDays: vaersItem.NUMDAYS?.toString() || null,

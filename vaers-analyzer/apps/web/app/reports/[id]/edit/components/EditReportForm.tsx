@@ -31,7 +31,7 @@ export function EditReportForm({ report }: EditReportFormProps) {
   const [erVisit, setErVisit] = useState(report.erVisit || false);
   const [hospital, setHospital] = useState(report.hospital || false);
   const [disable, setDisable] = useState(report.disable || false);
-  const [recovd, setRecovd] = useState<VaersReport['recovd']>(report.recovd || 'U');
+  const [recovd, setRecovd] = useState<VaersReport['recovd']>(report.recovd || 'unknown');
 
   const [vaccines, setVaccines] = useState<VaccineInput[]>(
     report.vaccines.length > 0
@@ -69,7 +69,7 @@ export function EditReportForm({ report }: EditReportFormProps) {
         vaersId,
         state: state || undefined,
         ageYrs: ageYrs ? parseFloat(ageYrs) : undefined,
-        sex: (sex as 'F' | 'M' | 'U') || undefined,
+        sex: (sex as 'male' | 'female' | 'unknown') || undefined,
         symptomText: symptomText || undefined,
         died,
         lThreat,
@@ -163,9 +163,9 @@ export function EditReportForm({ report }: EditReportFormProps) {
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white"
             >
               <option value="">Select</option>
-              <option value="F">Female</option>
-              <option value="M">Male</option>
-              <option value="U">Unknown</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="unknown">Unknown</option>
             </select>
           </div>
         </div>
@@ -259,9 +259,9 @@ export function EditReportForm({ report }: EditReportFormProps) {
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white"
             >
               <option value="">Select</option>
-              <option value="Y">Yes - Recovered</option>
-              <option value="N">No - Not Recovered</option>
-              <option value="U">Unknown</option>
+              <option value="yes">Yes - Recovered</option>
+              <option value="no">No - Not Recovered</option>
+              <option value="unknown">Unknown</option>
             </select>
           </div>
         </div>

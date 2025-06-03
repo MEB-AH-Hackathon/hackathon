@@ -1,8 +1,8 @@
 export const REPORT_STATUS = ['new', 'validated', 'pending_validation', 'rejected'] as const;
 export const SYMPTOM_SEVERITY = ['mild', 'moderate', 'severe', 'life_threatening'] as const;
 export const VALIDATION_STATUS = ['validated', 'unvalidated', 'disputed'] as const;
-export const RECOVERY_STATUS = ['Y', 'N', 'U'] as const;
-export const SEX_VALUES = ['F', 'M', 'U'] as const;
+export const RECOVERY_STATUS = ['yes', 'no', 'unknown'] as const;
+export const SEX_VALUES = ['male', 'female', 'unknown'] as const;
 
 export type ReportStatus = typeof REPORT_STATUS[number];
 export type SymptomSeverity = typeof SYMPTOM_SEVERITY[number];

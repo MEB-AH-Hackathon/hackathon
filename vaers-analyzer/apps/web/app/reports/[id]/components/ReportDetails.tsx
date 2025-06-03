@@ -31,7 +31,7 @@ export function ReportDetails({ report }: ReportDetailsProps) {
                   {report.ageYrs ? `${report.ageYrs} years` : 'Age unknown'}
                 </div>
                 <div className="text-sm text-slate-600 dark:text-slate-400">
-                  {report.sex && `${report.sex === 'F' ? 'Female' : report.sex === 'M' ? 'Male' : 'Unknown'}`}
+                  {report.sex && `${report.sex === 'female' ? 'Female' : report.sex === 'male' ? 'Male' : 'Unknown'}`}
                   {report.state && ` • ${report.state}`}
                 </div>
               </div>
@@ -58,9 +58,9 @@ export function ReportDetails({ report }: ReportDetailsProps) {
           <div>
             <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Recovery Status</dt>
             <dd className="mt-1 text-sm text-gray-900 dark:text-white">
-              {report.recovd === 'Y' ? 'Recovered' : 
-               report.recovd === 'N' ? 'Not Recovered' : 
-               report.recovd === 'U' ? 'Unknown' : 'Not Specified'}
+              {report.recovd === 'yes' ? 'Recovered' : 
+               report.recovd === 'no' ? 'Not Recovered' : 
+               report.recovd === 'unknown' ? 'Unknown' : 'Not Specified'}
             </dd>
           </div>
           

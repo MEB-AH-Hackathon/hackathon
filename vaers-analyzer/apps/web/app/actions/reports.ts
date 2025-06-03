@@ -20,11 +20,11 @@ function dbRecordToVaersReport(record: VaersReportRecord): VaersReport {
     ageYrs: record.ageYrs ? parseFloat(record.ageYrs) : undefined,
     sex: record.sex as Sex | undefined,
     symptomText: record.symptomText || undefined,
-    died: record.died === 'Y',
-    lThreat: record.lThreat === 'Y',
-    erVisit: record.erVisit === 'Y',
-    hospital: record.hospital === 'Y',
-    disable: record.disable === 'Y',
+    died: record.died,
+    lThreat: record.lThreat,
+    erVisit: record.erVisit,
+    hospital: record.hospital,
+    disable: record.disable,
     recovd: record.recovd as RecoveryStatus | undefined,
     vaxDate: record.vaxDate ? new Date(record.vaxDate) : undefined,
     onsetDate: record.onsetDate ? new Date(record.onsetDate) : undefined,
@@ -79,8 +79,7 @@ export async function getReports(
 ): Promise<PaginatedReports> {
   try {
     // Map outcome filter
-    const outcomeMap: Record<string, 'died' | 'lThreat' | 'erVisit' | 'hospital' | 'disable' | 'recovd'> = {
-      'recovered': 'recovd',
+    const outcomeMap: Record<string, 'died' | 'lThreat' | 'erVisit' | 'hospital' | 'disable'> = {
       'hospitalized': 'hospital',
       'serious': 'died' // For serious, we'll need special handling
     };
@@ -91,14 +90,13 @@ export async function getReports(
       : filters.dateRange === '90days' ? 90 
       : undefined;
 
-    // Handle 'recovered' outcome which maps to recovd='Y'
+    // Handle 'recovered' outcome which maps to recovd='yes'
     if (filters.outcome === 'recovered') {
-      // We need to check for recovd='Y' not as an outcome field
+      // We need to check for recovd='yes' - for now, use base pagination and filter
       const baseQuery = await reportRepo.getPaginated(limit, offset);
-      // For now, use base pagination until we add a specific recovd filter
       return {
         reports: baseQuery.reports
-          .filter(r => r.recovd === 'Y')
+          .filter(r => r.recovd === 'yes')
           .map(dbRecordToVaersReport),
         pagination: {
           total: baseQuery.total,
@@ -219,11 +217,11 @@ function convertToDbRecord(report: Partial<VaersReport>) {
     ...dbFields,
     vaersId: report.vaersId ? Number(report.vaersId) : undefined,
     ageYrs: report.ageYrs ? report.ageYrs.toString() : undefined,
-    died: report.died === true ? 'Y' : report.died === false ? 'N' : undefined,
-    lThreat: report.lThreat === true ? 'Y' : report.lThreat === false ? 'N' : undefined,
-    erVisit: report.erVisit === true ? 'Y' : report.erVisit === false ? 'N' : undefined,
-    hospital: report.hospital === true ? 'Y' : report.hospital === false ? 'N' : undefined,
-    disable: report.disable === true ? 'Y' : report.disable === false ? 'N' : undefined,
+    died: report.died,
+    lThreat: report.lThreat,
+    erVisit: report.erVisit,
+    hospital: report.hospital,
+    disable: report.disable,
     recvDate: report.recvDate ? report.recvDate.toLocaleDateString('en-US') : undefined,
     vaxDate: report.vaxDate ? report.vaxDate.toLocaleDateString('en-US') : undefined,
     onsetDate: report.onsetDate ? report.onsetDate.toLocaleDateString('en-US') : undefined,

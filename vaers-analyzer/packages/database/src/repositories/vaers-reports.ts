@@ -38,7 +38,7 @@ export class VaersReportRepository {
   }
 
   async getReportsByOutcome(outcome: 'died' | 'lThreat' | 'erVisit' | 'hospital' | 'disable'): Promise<VaersReportRecord[]> {
-    return await db.select().from(vaersReports).where(eq(vaersReports[outcome], 'Y'));
+    return await db.select().from(vaersReports).where(eq(vaersReports[outcome], true));
   }
 
   async getReportsWithMultipleVaccines(): Promise<VaersReportRecord[]> {
@@ -120,7 +120,7 @@ export class VaersReportRepository {
     }
 
     if (filters.outcome) {
-      conditions.push(eq(vaersReports[filters.outcome], 'Y'));
+      conditions.push(eq(vaersReports[filters.outcome], true));
     }
 
     if (filters.dateRange) {
