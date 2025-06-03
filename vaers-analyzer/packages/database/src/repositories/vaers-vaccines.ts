@@ -5,6 +5,9 @@ import { vaersVaccines, type VaersVaccineRecord, type NewVaersVaccineRecord } fr
 export class VaersVaccineRepository {
   async insert(vaccineData: NewVaersVaccineRecord): Promise<VaersVaccineRecord> {
     const [vaccine] = await db.insert(vaersVaccines).values(vaccineData).returning();
+    if (!vaccine) {
+      throw new Error('Failed to insert VAERS vaccine');
+    }
     return vaccine;
   }
 

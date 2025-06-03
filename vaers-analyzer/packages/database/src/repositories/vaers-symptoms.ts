@@ -6,6 +6,9 @@ import { symptomAnalogies } from '../schema/symptom-analogies';
 export class VaersSymptomRepository {
   async insert(symptomData: NewVaersSymptomRecord): Promise<VaersSymptomRecord> {
     const [symptom] = await db.insert(vaersSymptoms).values(symptomData).returning();
+    if (!symptom) {
+      throw new Error('Failed to insert VAERS symptom');
+    }
     return symptom;
   }
 

@@ -20,7 +20,7 @@ export default async function ReportsPage({
     outcome: (params.outcome as ReportFilters['outcome']) || undefined,
     dateRange: (params.dateRange as ReportFilters['dateRange']) || undefined,
   };
-  const { reports, pagination } = await getReports(limit, offset, true, filters);
+  const { reports, pagination } = await getReports(limit, offset, filters);
   const totalPages = Math.ceil(pagination.total / limit);
 
   // Calculate real statistics

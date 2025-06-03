@@ -5,6 +5,9 @@ import { fdaReports, type FdaReportRecord, type NewFdaReportRecord } from '../sc
 export class FdaReportRepository {
   async insert(reportData: NewFdaReportRecord): Promise<FdaReportRecord> {
     const [report] = await db.insert(fdaReports).values(reportData).returning();
+    if (!report) {
+      throw new Error('Failed to insert FDA report');
+    }
     return report;
   }
 

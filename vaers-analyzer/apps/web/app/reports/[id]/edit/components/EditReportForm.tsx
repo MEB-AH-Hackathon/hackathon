@@ -31,7 +31,7 @@ export function EditReportForm({ report }: EditReportFormProps) {
   const [erVisit, setErVisit] = useState(report.erVisit || false);
   const [hospital, setHospital] = useState(report.hospital || false);
   const [disable, setDisable] = useState(report.disable || false);
-  const [recovd, setRecovd] = useState<VaersReport['recovd']>(report.recovd || '');
+  const [recovd, setRecovd] = useState<VaersReport['recovd']>(report.recovd || 'U');
 
   const [vaccines, setVaccines] = useState<VaccineInput[]>(
     report.vaccines.length > 0
@@ -69,7 +69,7 @@ export function EditReportForm({ report }: EditReportFormProps) {
         vaersId,
         state: state || undefined,
         ageYrs: ageYrs ? parseFloat(ageYrs) : undefined,
-        sex: sex || undefined,
+        sex: (sex as 'F' | 'M' | 'U') || undefined,
         symptomText: symptomText || undefined,
         died,
         lThreat,

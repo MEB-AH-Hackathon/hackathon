@@ -13,9 +13,15 @@ export function parseVaersDate(dateStr: string | null | undefined): Date | null 
   const parts = dateStr.split('/');
   if (parts.length !== 3) return null;
   
-  const month = parseInt(parts[0], 10);
-  const day = parseInt(parts[1], 10);
-  const year = parseInt(parts[2], 10);
+  const monthStr = parts[0];
+  const dayStr = parts[1];
+  const yearStr = parts[2];
+  
+  if (!monthStr || !dayStr || !yearStr) return null;
+  
+  const month = parseInt(monthStr, 10);
+  const day = parseInt(dayStr, 10);
+  const year = parseInt(yearStr, 10);
   
   if (isNaN(month) || isNaN(day) || isNaN(year)) return null;
   

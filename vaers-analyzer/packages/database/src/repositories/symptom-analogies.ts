@@ -5,6 +5,9 @@ import { symptomAnalogies, type SymptomAnalogyRecord, type NewSymptomAnalogyReco
 export class SymptomAnalogyRepository {
   async insert(analogyData: NewSymptomAnalogyRecord): Promise<SymptomAnalogyRecord> {
     const [analogy] = await db.insert(symptomAnalogies).values(analogyData).returning();
+    if (!analogy) {
+      throw new Error('Failed to insert symptom analogy');
+    }
     return analogy;
   }
 

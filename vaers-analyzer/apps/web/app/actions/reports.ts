@@ -33,7 +33,6 @@ export interface ReportFilters {
 export async function getReports(
   limit: number = 20,
   offset: number = 0,
-  includeDetails: boolean = true,
   filters: ReportFilters = {}
 ): Promise<PaginatedReports> {
   try {
@@ -254,7 +253,7 @@ export async function deleteReport(id: number): Promise<void> {
 
 export async function getExampleReports(limit: number = 5): Promise<VaersReport[]> {
   try {
-    const { reports } = await getReports(limit, 0, true);
+    const { reports } = await getReports(limit, 0);
     return reports;
   } catch (error) {
     console.error('Error fetching example reports:', error);

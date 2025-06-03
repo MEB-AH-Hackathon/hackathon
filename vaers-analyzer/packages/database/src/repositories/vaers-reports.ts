@@ -7,6 +7,9 @@ import { vaersVaccines } from '../schema/vaers-vaccines';
 export class VaersReportRepository {
   async insert(reportData: NewVaersReportRecord): Promise<VaersReportRecord> {
     const [report] = await db.insert(vaersReports).values(reportData).returning();
+    if (!report) {
+      throw new Error('Failed to insert VAERS report');
+    }
     return report;
   }
 
