@@ -1,0 +1,247 @@
+{
+  "database": "unified_vaers_analysis.duckdb",
+  "description": "Complete VAERS analysis system with crosswalked vaccines, individual reports, and symptom classifications",
+  "tables": {
+    "canonical_symptoms": {
+      "row_count": 31,
+      "columns": [
+        {
+          "name": "canonical_symptom",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "total_vaers_reports",
+          "type": "INTEGER"
+        },
+        {
+          "name": "vaccine_count",
+          "type": "INTEGER"
+        },
+        {
+          "name": "most_common_vaers_form",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "example_vaccines",
+          "type": "JSON"
+        }
+      ],
+      "sample_data": [
+        [
+          "headache",
+          5898,
+          1,
+          "Headache",
+          "[\"SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)\"]"
+        ],
+        [
+          "redness",
+          1399,
+          3,
+          "Injection site rash",
+          "[\"DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)\", \"SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)\", \"HEPATITIS A (HAVRIX)\"]"
+        ]
+      ]
+    },
+    "symptom_classifications": {
+      "row_count": 81,
+      "columns": [
+        {
+          "name": "vaccine_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "symptom",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "classification",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "vaers_count",
+          "type": "INTEGER"
+        }
+      ],
+      "sample_data": [
+        [
+          14,
+          "No adverse event",
+          "not_confirmed",
+          0
+        ],
+        [
+          14,
+          "Incorrect route of product administration",
+          "not_confirmed",
+          0
+        ]
+      ]
+    },
+    "symptom_mappings": {
+      "row_count": 60,
+      "columns": [
+        {
+          "name": "canonical_symptom",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "vaers_symptom",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "vaccine_name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "vaers_count",
+          "type": "INTEGER"
+        },
+        {
+          "name": "mapping_confidence",
+          "type": "VARCHAR"
+        }
+      ],
+      "sample_data": [
+        [
+          "headache",
+          "Headache",
+          "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+          5898,
+          "exact_match"
+        ],
+        [
+          "redness",
+          "Injection site rash",
+          "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+          747,
+          "related"
+        ]
+      ]
+    },
+    "vaccines": {
+      "row_count": 16,
+      "columns": [
+        {
+          "name": "vaccine_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "vaers_name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "pdf_name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "total_vaers_reports",
+          "type": "INTEGER"
+        },
+        {
+          "name": "pdf_adverse_events",
+          "type": "JSON"
+        }
+      ],
+      "sample_data": [
+        [
+          1,
+          "COVID19 (COVID19 (MODERNA))",
+          "COVID19 (SPIKEVAX)",
+          606035,
+          "[\"pain at the injection site\", \"fatigue\", \"headache\", \"myalgia\", \"chills\", \"axillary swelling/tenderness\", \"arthralgia\", \"nausea/vomiting\", \"swelling at the injection site\"]"
+        ],
+        [
+          2,
+          "COVID19 (COVID19 (PFIZER-BIONTECH))",
+          "COVID19 (COVID19 (MNEXSPIKE))",
+          631983,
+          "[\"pain at the injection site\", \"headache\", \"fatigue\", \"myalgia\", \"axillary swelling or tenderness\", \"chills\", \"arthralgia\", \"nausea/vomiting\"]"
+        ]
+      ]
+    },
+    "vaers_reports": {
+      "row_count": 1089660,
+      "columns": [
+        {
+          "name": "vaers_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "vaccine_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "age_yrs",
+          "type": "FLOAT"
+        },
+        {
+          "name": "sex",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "died",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "hospital",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "er_visit",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "symptoms",
+          "type": "JSON"
+        },
+        {
+          "name": "vax_date",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "onset_date",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "year",
+          "type": "INTEGER"
+        }
+      ],
+      "sample_data": [
+        [
+          855017,
+          3,
+          55.0,
+          "F",
+          "HI",
+          "nan",
+          "nan",
+          "nan",
+          "[\"Arthralgia\", \"Chills\", \"Injection site pain\", \"Pyrexia\"]",
+          "12/30/2019",
+          "12/30/2019",
+          2020
+        ],
+        [
+          855019,
+          3,
+          50.0,
+          "F",
+          "nan",
+          "nan",
+          "nan",
+          "nan",
+          "[\"Pain\", \"Pruritus\", \"Rash\"]",
+          "12/23/2019",
+          "12/29/2019",
+          2020
+        ]
+      ]
+    }
+  }
+}

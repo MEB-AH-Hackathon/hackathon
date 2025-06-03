@@ -1,0 +1,2242 @@
+[
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Sacral pain",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 15
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Sensory overload",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Ear pain",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 2376
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Base excess increased",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Electrocardiogram QT interval",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 51
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Transferrin",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Chondrocalcinosis pyrophosphate",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Myelopathy",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 17
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Non-Hodgkin's lymphoma",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 14
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Alcohol poisoning",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 16
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Nipple pain",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 81
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Culture stool",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 82
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Hand-eye coordination impaired",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Heart injury",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 26
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Anti-thyroid antibody positive",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 43
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Renal function test",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 164
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Renal cyst",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 71
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Laryngitis",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 131
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Microscopy",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 64
+  },
+  {
+    "vaccine_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "symptom": "Superficial vein prominence",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Cough",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 296
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Weight bearing difficulty",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 23
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Sinus pain",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 13
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Borrelia test negative",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 24
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Injected limb mobility decreased",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 501
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Hallucination",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 39
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Antinuclear antibody",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 14
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Dysgeusia",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 48
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Mental status changes",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 24
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Gait disturbance",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 370
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Night sweats",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 113
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Limb discomfort",
+    "classification": "confirmed",
+    "matched_pdf_event": "myalgia",
+    "vaers_count": 186
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Swelling of eyelid",
+    "classification": "confirmed",
+    "matched_pdf_event": "swelling",
+    "vaers_count": 49
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Eye disorder",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 23
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Erythema multiforme",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Lip blister",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 36
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Depressed level of consciousness",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 20
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Gastrooesophageal reflux disease",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 17
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Diarrhoea",
+    "classification": "confirmed",
+    "matched_pdf_event": "gastrointestinal symptoms",
+    "vaers_count": 855
+  },
+  {
+    "vaccine_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "symptom": "Laboratory test normal",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 109
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Hypoaesthesia",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 23
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Unresponsive to stimuli",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 50
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Disorientation",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 13
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Eye movement disorder",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 37
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Somnolence",
+    "classification": "confirmed",
+    "matched_pdf_event": "drowsiness",
+    "vaers_count": 20
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Cyanosis",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 17
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Death",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 18
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Sleep disorder",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 19
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Accidental underdose",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 14
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Fall",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 62
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Swelling",
+    "classification": "confirmed",
+    "matched_pdf_event": "redness",
+    "vaers_count": 37
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Injection site erythema",
+    "classification": "confirmed",
+    "matched_pdf_event": "redness",
+    "vaers_count": 170
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Cough",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 43
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Incomplete course of vaccination",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 39
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Vomiting",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 140
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Pain in extremity",
+    "classification": "confirmed",
+    "matched_pdf_event": "pain",
+    "vaers_count": 59
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Vaccination error",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 19
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Febrile convulsion",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 41
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Streptococcus test negative",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "HEPATITIS A (HAVRIX)",
+    "vaers_name": "HEP A (HAVRIX)",
+    "symptom": "Inflammation",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Myalgia",
+    "classification": "confirmed",
+    "matched_pdf_event": "body ache or muscle weakness",
+    "vaers_count": 77
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Hypoaesthesia",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 81
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Discomfort",
+    "classification": "confirmed",
+    "matched_pdf_event": "body ache or muscle weakness",
+    "vaers_count": 23
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Flushing",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 15
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Syncope",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 193
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Injection site warmth",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 172
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Diarrhoea",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 52
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Heart rate increased",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 22
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Oedema peripheral",
+    "classification": "confirmed",
+    "matched_pdf_event": "injection site swelling",
+    "vaers_count": 17
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Rash macular",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 19
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Underdose",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 28
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Inflammation",
+    "classification": "confirmed",
+    "matched_pdf_event": "injection site swelling",
+    "vaers_count": 19
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Syringe issue",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Gait disturbance",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 25
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Speech disorder",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Injection site swelling",
+    "classification": "confirmed",
+    "matched_pdf_event": "injection site swelling",
+    "vaers_count": 306
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Swelling",
+    "classification": "confirmed",
+    "matched_pdf_event": "injection site swelling",
+    "vaers_count": 106
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Decreased appetite",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 28
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Injection site bruising",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 26
+  },
+  {
+    "vaccine_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vaers_name": "TDAP (ADACEL)",
+    "symptom": "Skin discolouration",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Extra dose administered",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 173
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Seizure",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 15
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Pain",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 68
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Injection site rash",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 74
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Circumstance or information capable of leading to medication error",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 14
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Feeling hot",
+    "classification": "confirmed",
+    "matched_pdf_event": "Fever",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Pain in extremity",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 41
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Diarrhoea",
+    "classification": "confirmed",
+    "matched_pdf_event": "Gastroenteritis",
+    "vaers_count": 18
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Cough",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 31
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Syncope",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 18
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Injection site bruising",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 16
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Lip swelling",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Skin warm",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 119
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Peripheral swelling",
+    "classification": "confirmed",
+    "matched_pdf_event": "Swelling",
+    "vaers_count": 77
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Incorrect dose administered",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 39
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Abdominal pain",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Immunisation reaction",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "No adverse event",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 496
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Injection site vesicles",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 15
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "symptom": "Decreased appetite",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 28
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Product administered to patient of inappropriate age",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 124
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Seizure like phenomena",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Somnolence",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 24
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Wrong technique in product usage process",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Eczema",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Injection site urticaria",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Peripheral swelling",
+    "classification": "confirmed",
+    "matched_pdf_event": "increase in arm circumference",
+    "vaers_count": 27
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Mucous stools",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Respiratory arrest",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 13
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Decreased appetite",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 36
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Single component of a two-component product administered",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 72
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Screaming",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 23
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Erythema",
+    "classification": "confirmed",
+    "matched_pdf_event": "tenderness",
+    "vaers_count": 64
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "No adverse event",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 935
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Injection site swelling",
+    "classification": "confirmed",
+    "matched_pdf_event": "increase in arm circumference",
+    "vaers_count": 76
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Intussusception",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 30
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Fatigue",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 22
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Laboratory test",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 13
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Faeces discoloured",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "symptom": "Eye movement disorder",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 22
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Differential white blood cell count",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "White blood cell count increased",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "No adverse event",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 348
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Pruritus",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Swelling",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 13
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Erythema",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 53
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Respiratory viral panel",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Death",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 44
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Metabolic function test normal",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Hypophagia",
+    "classification": "confirmed",
+    "matched_pdf_event": "loss of appetite",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Chest X-ray",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Product preparation issue",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 13
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Injection site induration",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 23
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Staring",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 13
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Febrile convulsion",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 19
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Ultrasound abdomen abnormal",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 14
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Polymerase chain reaction",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Syncope",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Immediate post-injection reaction",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 20
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "symptom": "Product preparation error",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Rash pruritic",
+    "classification": "confirmed",
+    "matched_pdf_event": "skin disorder",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Deafness neurosensory",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 40
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Blindness unilateral",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 14
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Headache",
+    "classification": "confirmed",
+    "matched_pdf_event": "headache",
+    "vaers_count": 49
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Loss of personal independence in daily activities",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Malaise",
+    "classification": "confirmed",
+    "matched_pdf_event": "asthenia",
+    "vaers_count": 15
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Asthenia",
+    "classification": "confirmed",
+    "matched_pdf_event": "asthenia",
+    "vaers_count": 28
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Swelling",
+    "classification": "confirmed",
+    "matched_pdf_event": "injection-site reactions",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Myelitis transverse",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Myocardial infarction",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Cough",
+    "classification": "confirmed",
+    "matched_pdf_event": "respiratory disorder",
+    "vaers_count": 17
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Balance disorder",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 66
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Hypersensitivity",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 13
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Hemiparesis",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 16
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Ill-defined disorder",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 75
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Dyspnoea",
+    "classification": "confirmed",
+    "matched_pdf_event": "respiratory disorder",
+    "vaers_count": 29
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Ophthalmic herpes zoster",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 48
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Rash erythematous",
+    "classification": "confirmed",
+    "matched_pdf_event": "skin disorder",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Cardiac failure congestive",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 28
+  },
+  {
+    "vaccine_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "symptom": "Vaccination complication",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Injection site warmth",
+    "classification": "confirmed",
+    "matched_pdf_event": "redness",
+    "vaers_count": 87
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Aphasia",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Rash pruritic",
+    "classification": "confirmed",
+    "matched_pdf_event": "redness",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Condition aggravated",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Cough",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Rash",
+    "classification": "confirmed",
+    "matched_pdf_event": "redness",
+    "vaers_count": 88
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Vaccination site erythema",
+    "classification": "confirmed",
+    "matched_pdf_event": "redness",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Hypersensitivity",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Cellulitis",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 19
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Full blood count",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 15
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Skin warm",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 42
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Seizure",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 30
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Pain in extremity",
+    "classification": "confirmed",
+    "matched_pdf_event": "pain",
+    "vaers_count": 22
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Pallor",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 13
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Peripheral swelling",
+    "classification": "confirmed",
+    "matched_pdf_event": "swelling",
+    "vaers_count": 37
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Diarrhoea",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 34
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Injection site erythema",
+    "classification": "confirmed",
+    "matched_pdf_event": "redness",
+    "vaers_count": 232
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Feeling hot",
+    "classification": "confirmed",
+    "matched_pdf_event": "fever",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Laboratory test",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vaers_name": "DTAP (INFANRIX)",
+    "symptom": "Injection site pruritus",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 28
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Inappropriate schedule of product administration",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 43
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Cough",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 26
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Lethargy",
+    "classification": "confirmed",
+    "matched_pdf_event": "drowsiness",
+    "vaers_count": 32
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Pain in extremity",
+    "classification": "confirmed",
+    "matched_pdf_event": "tenderness",
+    "vaers_count": 67
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Wrong product administered",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 280
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Injection site inflammation",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Skin warm",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 48
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Injection site swelling",
+    "classification": "confirmed",
+    "matched_pdf_event": "swelling",
+    "vaers_count": 176
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Underdose",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 22
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Product administration error",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Laboratory test normal",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Dyspnoea",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 21
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Injection site reaction",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 19
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Hypersensitivity",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 17
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Erythema",
+    "classification": "confirmed",
+    "matched_pdf_event": "redness",
+    "vaers_count": 75
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Eczema",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Exposure during pregnancy",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 21
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Medication error",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 125
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Lymphadenopathy",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vaers_name": "DTAP (DAPTACEL)",
+    "symptom": "Product storage error",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 66
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Injection site erythema",
+    "classification": "confirmed",
+    "matched_pdf_event": "injection-site erythema",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Death",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 17
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Postural orthostatic tachycardia syndrome",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 184
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Muscle twitching",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Migraine",
+    "classification": "confirmed",
+    "matched_pdf_event": "headache",
+    "vaers_count": 58
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Rash",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 41
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Erythema",
+    "classification": "confirmed",
+    "matched_pdf_event": "injection-site erythema",
+    "vaers_count": 19
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Wheelchair user",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 18
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Small fibre neuropathy",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 19
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Tremor",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 45
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Abdominal pain upper",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 29
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Injection site pain",
+    "classification": "confirmed",
+    "matched_pdf_event": "injection-site pain",
+    "vaers_count": 21
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Balance disorder",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 21
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Pain in extremity",
+    "classification": "confirmed",
+    "matched_pdf_event": "injection-site pain",
+    "vaers_count": 47
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Blood test",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 17
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Dysmenorrhoea",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 23
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Dysphagia",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 15
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Chest pain",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 46
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Immunisation reaction",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 18
+  },
+  {
+    "vaccine_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vaers_name": "HPV (GARDASIL)",
+    "symptom": "Disturbance in attention",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 52
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Product storage error",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 76
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Vomiting projectile",
+    "classification": "confirmed",
+    "matched_pdf_event": "vomiting",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Product preparation error",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 60
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Lethargy",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 37
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Unresponsive to stimuli",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 20
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Vomiting",
+    "classification": "confirmed",
+    "matched_pdf_event": "vomiting",
+    "vaers_count": 70
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Regurgitation",
+    "classification": "confirmed",
+    "matched_pdf_event": "vomiting",
+    "vaers_count": 24
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Underdose",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 13
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Cyanosis",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 15
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Oral administration complication",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Eye movement disorder",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Metabolic function test",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Product preparation issue",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 60
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "No adverse event",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 163
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Rash",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 50
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Interchange of vaccine products",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 18
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Ultrasound scan",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Inappropriate schedule of product administration",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 39
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Extra dose administered",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 74
+  },
+  {
+    "vaccine_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "symptom": "Decreased appetite",
+    "classification": "confirmed",
+    "matched_pdf_event": "loss of appetite",
+    "vaers_count": 15
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Vomiting",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Erythema",
+    "classification": "confirmed",
+    "matched_pdf_event": "erythema",
+    "vaers_count": 26
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Malaise",
+    "classification": "confirmed",
+    "matched_pdf_event": "malaise",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Pyrexia",
+    "classification": "confirmed",
+    "matched_pdf_event": "fever",
+    "vaers_count": 27
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Injection site erythema",
+    "classification": "confirmed",
+    "matched_pdf_event": "erythema",
+    "vaers_count": 42
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Syncope",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Expired product administered",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 38
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Rash",
+    "classification": "confirmed",
+    "matched_pdf_event": "rash",
+    "vaers_count": 19
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Nausea",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 26
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "No adverse event",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 171
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Pallor",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 15
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Dizziness",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 28
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Medication error",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 42
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Loss of consciousness",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 23
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Wrong product administered",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 13
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Urticaria",
+    "classification": "confirmed",
+    "matched_pdf_event": "urticaria",
+    "vaers_count": 41
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Hyperhidrosis",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Dyspnoea",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 23
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Injection site warmth",
+    "classification": "confirmed",
+    "matched_pdf_event": "pain at the injection site",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "YELLOW FEVER (YF-VAX)",
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "symptom": "Chills",
+    "classification": "confirmed",
+    "matched_pdf_event": "fever",
+    "vaers_count": 13
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Injection site pruritus",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Wrong product administered",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 14
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Product administered to patient of inappropriate age",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 16
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Incorrect route of product administration",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 17
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Arthralgia",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 14
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Loss of consciousness",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 23
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Pyrexia",
+    "classification": "confirmed",
+    "matched_pdf_event": "elevated oral temperature",
+    "vaers_count": 28
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Hyperhidrosis",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 22
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Malaise",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 16
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "No adverse event",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 99
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Urticaria",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 31
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Diarrhoea",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 11
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Chills",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 14
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Pain in extremity",
+    "classification": "confirmed",
+    "matched_pdf_event": "injection site pain",
+    "vaers_count": 15
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Rash pruritic",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 12
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Vomiting",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 21
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Rash",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 32
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Injection site pain",
+    "classification": "confirmed",
+    "matched_pdf_event": "injection site pain",
+    "vaers_count": 30
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Presyncope",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 10
+  },
+  {
+    "vaccine_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "symptom": "Product storage error",
+    "classification": "not_confirmed",
+    "matched_pdf_event": "none",
+    "vaers_count": 14
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "description": "VAERS Adverse Event Analysis System - Complete JSON Export",
+  "created_date": "2025-06-03",
+  "data_files": {
+    "pdf_extraction_results.json": {
+      "description": "Raw PDF extraction results from FDA package inserts",
+      "contains": "Adverse events extracted from 37 vaccine PDFs"
+    },
+    "vaccine_comparisons.json": {
+      "description": "Main vaccine comparison data",
+      "contains": "16 crosswalked vaccines with VAERS symptom counts and PDF adverse events"
+    },
+    "vaccine_symptom_counts.json": {
+      "description": "Simplified symptom count data by vaccine",
+      "contains": "Symptom frequency data for each vaccine"
+    },
+    "strict_symptom_classifications.json": {
+      "description": "LLM-validated symptom classifications",
+      "contains": "Symptoms classified as confirmed/not_confirmed based on PDF matches"
+    },
+    "symptom_mappings_initial.json": {
+      "description": "Initial symptom mappings from LLM classification",
+      "contains": "Raw mappings between VAERS symptoms and PDF adverse events"
+    },
+    "symptom_mappings_final.json": {
+      "description": "Final consolidated symptom mappings",
+      "contains": "Complete mappings with confidence levels"
+    },
+    "vaccines.json": {
+      "description": "Master vaccine list",
+      "contains": "16 crosswalked vaccines with IDs and PDF adverse events"
+    },
+    "symptom_classifications_full.json": {
+      "description": "Full symptom classifications with vaccine details",
+      "contains": "All classified symptoms with vaccine names and counts"
+    },
+    "canonical_symptoms.json": {
+      "description": "Normalized symptom lookup table",
+      "contains": "Canonical symptoms across all vaccines with totals"
+    },
+    "database_summary.json": {
+      "description": "Summary statistics",
+      "contains": "Total counts of vaccines, reports, and classifications"
+    },
+    "vaers_reports_sample_1k.json": {
+      "description": "Random sample of 1,000 VAERS reports",
+      "contains": "Individual VAERS reports with all fields including symptoms"
+    },
+    "vaers_reports_sample_10k.json": {
+      "description": "Random sample of 10,000 VAERS reports",
+      "contains": "Larger sample for statistical analysis"
+    },
+    "vaers_reports_sample_100k.json": {
+      "description": "Random sample of 100,000 VAERS reports",
+      "contains": "Large sample covering all 16 crosswalked vaccines"
+    },
+    "vaers_reports_summary.json": {
+      "description": "Summary of exported VAERS report files",
+      "contains": "File counts and descriptions"
+    }
+  },
+  "usage_notes": {
+    "vaccine_lookup": "Use vaccines.json to get vaccine IDs and names",
+    "symptom_validation": "Use symptom_classifications_full.json to check if a symptom is in PDF",
+    "symptom_normalization": "Use canonical_symptoms.json to find all variations of a symptom",
+    "raw_pdf_data": "Use pdf_extraction_results.json for original PDF text"
+  },
+  "key_statistics": {
+    "total_vaccines": 16,
+    "total_vaers_reports": 1089660,
+    "total_symptom_mappings": 60,
+    "total_canonical_symptoms": 31
+  }
+}

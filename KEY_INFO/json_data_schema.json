@@ -1,0 +1,129 @@
+{
+  "description": "Schema for JSON data files exported for frontend consumption",
+  "last_updated": "2025-06-03",
+  "core_files": {
+    "vaccines.json": {
+      "description": "Master list of 14 crosswalked vaccines with PDF adverse events",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "vaccine_id": {"type": "integer"},
+            "vaers_name": {"type": "string"},
+            "pdf_name": {"type": "string"},
+            "total_vaers_reports": {"type": "integer"},
+            "pdf_adverse_events": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    },
+    "strict_symptom_classifications.json": {
+      "description": "LLM-validated symptom classifications (~2200 records)",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "vaccine_name": {"type": "string"},
+            "vaers_name": {"type": "string"},
+            "symptom": {"type": "string"},
+            "classification": {"type": "string", "enum": ["confirmed", "not_confirmed"]},
+            "matched_pdf_event": {"type": "string"},
+            "vaers_count": {"type": "integer"}
+          }
+        }
+      }
+    }
+  },
+  "reference_files": {
+    "manifest.json": "Complete file descriptions and metadata",
+    "pdf_extraction_results.json": "Raw adverse events from FDA PDFs", 
+    "vaccine_symptom_counts.json": "Symptom frequencies by vaccine",
+    "symptom_mappings_initial.json": "Symptom normalization mappings",
+    "pdf_vaccine_names_only.json": "PDF filename to vaccine name mapping"
+  },
+        "items": {
+          "type": "object",
+          "properties": {
+            "canonical_symptom": {"type": "string", "description": "Standardized symptom name"},
+            "total_vaers_reports": {"type": "integer", "description": "Total reports across all vaccines"},
+            "vaccine_count": {"type": "integer", "description": "Number of vaccines that report this symptom"},
+            "most_common_vaers_form": {"type": "string", "description": "Most common way symptom is reported in VAERS"},
+            "example_vaccines": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Example vaccines that report this symptom"
+            }
+          }
+        }
+      }
+    },
+    "pdf_extraction_results.json": {
+      "description": "Raw adverse events extracted from FDA package inserts",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "successful": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "filename": {"type": "string", "description": "PDF filename"},
+                "success": {"type": "boolean", "description": "Whether extraction succeeded"},
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "controlled_trial_text": {"type": "string", "description": "Extracted clinical trial text"},
+                    "symptoms_list": {
+                      "type": "array",
+                      "items": {"type": "string"},
+                      "description": "List of adverse events found in PDF"
+                    },
+                    "study_type": {"type": "string", "description": "Type of clinical study"},
+                    "source_section": {"type": "string", "description": "Section of PDF where data was found"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "pdf_vaccine_names_only.json": {
+      "description": "Mapping between PDF filenames and vaccine names",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "filename": {"type": "string", "description": "PDF filename"},
+            "vax_type": {"type": "string", "description": "CDC vaccine type abbreviation"},
+            "vax_name": {"type": "string", "description": "Full vaccine name in VAERS format"},
+            "vax_manu": {"type": "string", "description": "Manufacturer name"}
+          }
+        }
+      }
+    }
+  },
+  "usage_patterns": {
+    "frontend_development": {
+      "primary_files": ["vaccines.json", "vaers_reports_sample_10k.json", "symptom_classifications_full.json"],
+      "description": "Core files needed for most frontend functionality"
+    },
+    "symptom_validation": {
+      "workflow": [
+        "Load symptom_classifications_full.json",
+        "Check if symptom exists for vaccine",
+        "Return classification (confirmed/not_confirmed)"
+      ]
+    },
+    "similar_reports": {
+      "workflow": [
+        "Load vaers_reports_sample_*.json",
+        "Filter by vaccine_name and symptoms array",
+        "Return matching reports"
+      ]
+    }
+  }
+}

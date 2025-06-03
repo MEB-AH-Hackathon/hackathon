@@ -1,0 +1,219 @@
+[
+  {
+    "vaccine_id": 1,
+    "vaers_name": "COVID19 (COVID19 (PFIZER-BIONTECH))",
+    "pdf_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "total_vaers_reports": 631983,
+    "pdf_adverse_events": [
+      "pain at the injection site",
+      "headache",
+      "fatigue",
+      "myalgia",
+      "axillary swelling or tenderness",
+      "chills",
+      "arthralgia",
+      "nausea/vomiting"
+    ]
+  },
+  {
+    "vaccine_id": 2,
+    "vaers_name": "ZOSTER (SHINGRIX)",
+    "pdf_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "total_vaers_reports": 49725,
+    "pdf_adverse_events": [
+      "pain",
+      "redness",
+      "swelling",
+      "myalgia",
+      "fatigue",
+      "headache",
+      "shivering",
+      "fever",
+      "gastrointestinal symptoms"
+    ]
+  },
+  {
+    "vaccine_id": 3,
+    "vaers_name": "HPV (GARDASIL)",
+    "pdf_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "total_vaers_reports": 2084,
+    "pdf_adverse_events": [
+      "headache",
+      "fever",
+      "nausea",
+      "dizziness",
+      "injection-site pain",
+      "injection-site swelling",
+      "injection-site erythema",
+      "injection-site pruritus",
+      "injection-site bruising"
+    ]
+  },
+  {
+    "vaccine_id": 4,
+    "vaers_name": "ZOSTER LIVE (ZOSTAVAX)",
+    "pdf_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "total_vaers_reports": 2351,
+    "pdf_adverse_events": [
+      "headache",
+      "injection-site reactions",
+      "respiratory infection",
+      "fever",
+      "flu syndrome",
+      "diarrhea",
+      "rhinitis",
+      "skin disorder",
+      "respiratory disorder",
+      "asthenia"
+    ]
+  },
+  {
+    "vaccine_id": 5,
+    "vaers_name": "TDAP (ADACEL)",
+    "pdf_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "total_vaers_reports": 4698,
+    "pdf_adverse_events": [
+      "injection site pain",
+      "headache",
+      "body ache or muscle weakness",
+      "tiredness",
+      "injection site swelling",
+      "injection site erythema",
+      "fever",
+      "myalgia",
+      "malaise"
+    ]
+  },
+  {
+    "vaccine_id": 6,
+    "vaers_name": "HEP A (HAVRIX)",
+    "pdf_name": "HEPATITIS A (HAVRIX)",
+    "total_vaers_reports": 5157,
+    "pdf_adverse_events": [
+      "injection-site soreness",
+      "headache",
+      "pain",
+      "redness",
+      "irritability",
+      "drowsiness",
+      "loss of appetite"
+    ]
+  },
+  {
+    "vaccine_id": 7,
+    "vaers_name": "DTAP (INFANRIX)",
+    "pdf_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "total_vaers_reports": 2202,
+    "pdf_adverse_events": [
+      "pain",
+      "redness",
+      "swelling",
+      "fever",
+      "drowsiness",
+      "irritability/fussiness",
+      "loss of appetite"
+    ]
+  },
+  {
+    "vaccine_id": 8,
+    "vaers_name": "ROTAVIRUS (ROTARIX)",
+    "pdf_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "total_vaers_reports": 1341,
+    "pdf_adverse_events": [
+      "fussiness/irritability",
+      "cough/runny nose",
+      "fever",
+      "loss of appetite",
+      "vomiting"
+    ]
+  },
+  {
+    "vaccine_id": 9,
+    "vaers_name": "DTAP (DAPTACEL)",
+    "pdf_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "total_vaers_reports": 2114,
+    "pdf_adverse_events": [
+      "tenderness",
+      "redness",
+      "swelling",
+      "fever",
+      "fretfulness",
+      "anorexia",
+      "drowsiness",
+      "crying",
+      "vomiting"
+    ]
+  },
+  {
+    "vaccine_id": 10,
+    "vaers_name": "DTAP + HEPB + IPV (PEDIARIX)",
+    "pdf_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "total_vaers_reports": 2648,
+    "pdf_adverse_events": [
+      "fever (100.4\u00b0F)",
+      "drowsiness",
+      "irritability/fussiness",
+      "loss of appetite"
+    ]
+  },
+  {
+    "vaccine_id": 11,
+    "vaers_name": "DTAP + IPV (KINRIX)",
+    "pdf_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "total_vaers_reports": 3564,
+    "pdf_adverse_events": [
+      "Swelling",
+      "Dehydration",
+      "Hypernatremia",
+      "Cerebrovascular accident",
+      "Gastroenteritis",
+      "Cellulitis",
+      "Constipation",
+      "Foreign body trauma",
+      "Fever"
+    ]
+  },
+  {
+    "vaccine_id": 12,
+    "vaers_name": "DTAP + IPV + HIB (PENTACEL)",
+    "pdf_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "total_vaers_reports": 2904,
+    "pdf_adverse_events": [
+      "fussiness/irritability",
+      "inconsolable crying",
+      "fever \u226538.0\u00b0C",
+      "tenderness",
+      "increase in arm circumference"
+    ]
+  },
+  {
+    "vaccine_id": 13,
+    "vaers_name": "YELLOW FEVER (YF-VAX)",
+    "pdf_name": "YELLOW FEVER (YF-VAX)",
+    "total_vaers_reports": 672,
+    "pdf_adverse_events": [
+      "erythema",
+      "pain at the injection site",
+      "headache",
+      "fever",
+      "rash",
+      "urticaria",
+      "headache",
+      "myalgia",
+      "malaise",
+      "asthenia"
+    ]
+  },
+  {
+    "vaccine_id": 14,
+    "vaers_name": "TYPHOID VI POLYSACCHARIDE (TYPHIM VI)",
+    "pdf_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "total_vaers_reports": 644,
+    "pdf_adverse_events": [
+      "injection site pain",
+      "erythema",
+      "induration",
+      "elevated oral temperature"
+    ]
+  }
+]
