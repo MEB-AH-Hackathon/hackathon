@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
@@ -26,7 +28,7 @@ export default function Home() {
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                 Submit a new VAERS report for intelligent analysis. Our AI searches FDA databases and validated reports for symptom patterns.
               </p>
-              <a 
+              <Link 
                 href="/reports/new" 
                 className="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
               >
@@ -34,7 +36,7 @@ export default function Home() {
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -50,7 +52,7 @@ export default function Home() {
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                 Browse analyzed VAERS reports with detailed symptom validation. Filter by vaccine type, status, and similarity scores.
               </p>
-              <a 
+              <Link 
                 href="/reports" 
                 className="inline-flex items-center text-emerald-600 dark:text-emerald-400 font-medium hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
               >
@@ -58,7 +60,7 @@ export default function Home() {
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
