@@ -193,26 +193,36 @@ console.log(headacheMapping.fda_adverse_events); // ["headache", "cephalgia"]
 
 ## Building the System
 
-### Requirements
-- Python 3.8+
-- pandas, requests
-- Anthropic API key for Claude AI mapping
-- VAERS data files (2023-2024) in `vaers_data/vaers_data/`
+### What We Actually Do To Build This Thing
 
-### Build Process
+**Step 1: Get the Raw Data**
+- Download VAERS CSV files from https://vaers.hhs.gov/data.html
+- Put them in `vaers_data/vaers_data/` (like `2023VAERSDATA.csv`, `2023VAERSSYMPTOMS.csv`, etc.)
+- We already have FDA package insert PDFs processed into `fda_reports.json`
+
+**Step 2: Requirements**
+```bash
+pip install pandas requests python-dotenv
+export ANTHROPIC_API_KEY=your_key_here  # For Claude AI symptom mapping
+```
+
+**Step 3: Run The Build**
 ```bash
 cd code
 ./build_complete_system.sh
 ```
 
-This will:
-1. Extract 100K VAERS reports from 2023-2024 CSV files
-2. Create symptom mappings using Claude AI (~10-15 minutes for 500 symptoms)
-3. Generate the 3 core JSON files
+**What Actually Happens:**
+1. **`create_proper_vaers_subset.py`** - Loads 2023-2024 VAERS CSVs, merges the 3 tables (DATA + SYMPTOMS + VAX) by VAERS_ID, samples 100K reports, saves as `vaers_subset.json` (144MB)
 
-### Build Output
-- **Total processing time**: ~15 minutes
-- **JSON files**: 3 files in `json_data/` ready for analysis
+2. **`create_real_symptom_mappings.py`** - Takes ~500 random VAERS symptoms, asks Claude "what FDA adverse events does this map to?", saves as `symptom_mappings.json` (~10-15 minutes, costs ~$5 in API calls)
+
+3. **Done!** - You now have 3 JSON files ready for frontend
+
+**Build Output:**
+- **Time**: ~15 minutes (mostly waiting for Claude API)
+- **Cost**: ~$5 in Anthropic API credits
+- **Files**: 3 JSON files (~145MB total) ready for your frontend dev
 
 ## Linking the Datasets
 
