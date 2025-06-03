@@ -1,12 +1,7 @@
 {
-  "buildCommand": "bash scripts/build-debug.sh",
-  "installCommand": "pnpm install",
-  "outputDirectory": "apps/web",
+  "buildCommand": "echo 'Building...'",
+  "installCommand": "echo 'Skipping default install'",
   "framework": "nextjs",
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
   ]
 }
