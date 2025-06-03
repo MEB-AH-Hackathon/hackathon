@@ -2,6 +2,7 @@ import { db } from '../db-connection';
 import { eq, and, sql } from 'drizzle-orm';
 import { vaersReports, type VaersReportRecord, type NewVaersReportRecord } from '../schema/vaers-reports';
 import { vaersSymptoms } from '../schema/vaers-symptoms';
+import { vaersVaccines } from '../schema/vaers-vaccines';
 
 export class VaersReportRepository {
   async insert(reportData: NewVaersReportRecord): Promise<VaersReportRecord> {
@@ -31,29 +32,42 @@ export class VaersReportRepository {
     await db.delete(vaersReports).where(eq(vaersReports.id, reportId));
   }
 
-  async getByVaccine(vaccineName: string): Promise<VaersReportRecord[]> {
-    return await db.select().from(vaersReports).where(eq(vaersReports.vaccineName, vaccineName));
+  async getAll(): Promise<VaersReportRecord[]> {
+    return await db.select().from(vaersReports).orderBy(vaersReports.createdAt);
   }
 
-  async getReportWithSymptoms(reportId: number) {
+  async getReportWithDetails(reportId: number) {
     const report = await this.getById(reportId);
     if (!report) return null;
 
-    const symptoms = await db
-      .select()
-      .from(vaersSymptoms)
-      .where(eq(vaersSymptoms.reportId, reportId));
+    const [symptoms, vaccines] = await Promise.all([
+      db.select().from(vaersSymptoms).where(eq(vaersSymptoms.reportId, reportId)),
+      db.select().from(vaersVaccines).where(eq(vaersVaccines.reportId, reportId))
+    ]);
 
-    return { ...report, symptoms };
+    return { ...report, symptoms, vaccines };
   }
 
-  private preparedReportsByVaccine = db
-    .select()
-    .from(vaersReports)
-    .where(eq(vaersReports.vaccineName, sql.placeholder('vaccineName')))
-    .prepare('get_reports_by_vaccine');
+  async getReportsByOutcome(outcome: 'died' | 'lThreat' | 'erVisit' | 'hospital' | 'disable'): Promise<VaersReportRecord[]> {
+    return await db.select().from(vaersReports).where(eq(vaersReports[outcome], true));
+  }
 
-  async executePreparedReportsByVaccine(vaccineName: string): Promise<VaersReportRecord[]> {
-    return await this.preparedReportsByVaccine.execute({ vaccineName });
+  async getReportsWithMultipleVaccines(): Promise<VaersReportRecord[]> {
+    const reportsWithMultipleVaccines = await db
+      .select({ 
+        reportId: vaersVaccines.reportId,
+        vaccineCount: sql<number>`count(*)::int` 
+      })
+      .from(vaersVaccines)
+      .groupBy(vaersVaccines.reportId)
+      .having(sql`count(*) > 1`);
+
+    if (reportsWithMultipleVaccines.length === 0) return [];
+
+    const reportIds = reportsWithMultipleVaccines.map(r => r.reportId);
+    return await db
+      .select()
+      .from(vaersReports)
+      .where(sql`${vaersReports.id} = ANY(${reportIds})`);
   }
 }

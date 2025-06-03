@@ -1,11 +1,9 @@
 import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 import * as schema from './schema';
-import * as dotenv from 'dotenv';
-import * as path from 'path';
 
-// Load environment variables from the root .env file
-dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
+// Next.js will automatically load environment variables from .env files
+// No need for manual dotenv.config() in a Next.js environment
 
 const isDev = process.env.NODE_ENV !== 'production';
 const connectionString = isDev 

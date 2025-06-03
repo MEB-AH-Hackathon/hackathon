@@ -1,4 +1,4 @@
-import { serial, integer, text, timestamp, date, pgTable, pgEnum, varchar } from "drizzle-orm/pg-core";
+import { serial, integer, text, timestamp, date, pgTable, pgEnum, varchar, numeric, boolean } from "drizzle-orm/pg-core";
 import { REPORT_STATUS } from '@vaers/types';
 
 export const reportStatus = pgEnum("report_status", REPORT_STATUS as unknown as [string, ...string[]]);
@@ -6,16 +6,21 @@ export const reportStatus = pgEnum("report_status", REPORT_STATUS as unknown as 
 export const vaersReports = pgTable("vaers_reports", {
   id: serial("id").primaryKey(),
   vaersId: varchar("vaers_id", { length: 50 }).notNull().unique(),
-  patientAge: integer("patient_age"),
-  patientSex: varchar("patient_sex", { length: 10 }),
-  vaccineName: text("vaccine_name").notNull(),
-  vaccineManufacturer: text("vaccine_manufacturer").notNull(),
-  vaccineLot: varchar("vaccine_lot", { length: 100 }),
-  vaccineDate: date("vaccine_date", { mode: 'date' }).notNull(),
+  recvDate: date("recv_date", { mode: 'date' }),
+  state: varchar("state", { length: 2 }),
+  ageYrs: numeric("age_yrs", { precision: 5, scale: 2 }),
+  sex: varchar("sex", { length: 1 }),
+  symptomText: text("symptom_text"),
+  died: boolean("died"),
+  lThreat: boolean("l_threat"),
+  erVisit: boolean("er_visit"),
+  hospital: boolean("hospital"),
+  disable: boolean("disable"),
+  recovd: varchar("recovd", { length: 1 }), // Y/N/U
+  vaxDate: date("vax_date", { mode: 'date' }),
   onsetDate: date("onset_date", { mode: 'date' }),
-  reportedDate: date("reported_date", { mode: 'date' }).notNull(),
+  numDays: integer("num_days"),
   status: reportStatus("status").notNull().default("new"),
-  narrative: text("narrative"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
 });
