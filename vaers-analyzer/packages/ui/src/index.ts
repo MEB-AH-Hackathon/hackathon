@@ -18,4 +18,5 @@ export { Code } from "./code";
 export { PageLayout, PageContainer, Section } from "./page-layout";
 export { IconContainer, iconContainerVariants, type IconContainerProps } from "./icon-container";
 export { PageHeader } from "./page-header";
+export { SiteHeader } from "./site-header";
 export { cn } from "./utils";
