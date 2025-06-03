@@ -20,6 +20,12 @@ importers:
 
   apps/web:
     dependencies:
+      '@vaers/database':
+        specifier: workspace:^
+        version: link:../../packages/database
+      '@vaers/types':
+        specifier: workspace:^
+        version: link:../../packages/types
       next:
         specifier: 15.3.3
         version: 15.3.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)

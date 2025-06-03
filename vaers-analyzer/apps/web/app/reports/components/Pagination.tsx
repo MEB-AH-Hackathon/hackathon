@@ -157,9 +157,9 @@ function DesktopPagination({
 
 function getPageNumbers(currentPage: number, totalPages: number): (number | string)[] {
   const delta = 2;
-  const range = [];
-  const rangeWithDots = [];
-  let l;
+  const range: number[] = [];
+  const rangeWithDots: (number | string)[] = [];
+  let l: number;
 
   for (let i = 1; i <= totalPages; i++) {
     if (i === 1 || i === totalPages || (i >= currentPage - delta && i <= currentPage + delta)) {

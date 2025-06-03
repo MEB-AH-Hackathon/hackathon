@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from 'react';
 
 export interface VaccineInput {
   id: string;

@@ -40,19 +40,29 @@ export async function getReports(
       paginatedReports.map(async (report) => {
         if (includeDetails) {
           const details = await reportRepo.getReportWithDetails(report.id);
-          return details as VaersReport;
+          if (!details) return null;
+          
+          // Convert database types to interface types
+          return {
+            ...details,
+            ageYrs: details.ageYrs ? parseFloat(details.ageYrs as string) : undefined,
+          } as VaersReport;
         }
         // Convert basic report to VaersReport type
         return {
           ...report,
+          ageYrs: report.ageYrs ? parseFloat(report.ageYrs as string) : undefined,
           vaccines: [],
           symptoms: []
         } as VaersReport;
       })
     );
     
+    // Filter out null values
+    const validReports = reports.filter((report): report is VaersReport => report !== null);
+    
     return {
-      reports,
+      reports: validReports,
       pagination: {
         total: allReports.length,
         limit,
@@ -69,7 +79,12 @@ export async function getReports(
 export async function getReportById(id: number): Promise<VaersReport | null> {
   try {
     const report = await reportRepo.getReportWithDetails(id);
-    return report as VaersReport | null;
+    if (!report) return null;
+    
+    return {
+      ...report,
+      ageYrs: report.ageYrs ? parseFloat(report.ageYrs as string) : undefined,
+    } as VaersReport;
   } catch (error) {
     console.error('Error fetching report:', error);
     throw new Error('Failed to fetch report');
@@ -82,7 +97,12 @@ export async function getReportByVaersId(vaersId: string): Promise<VaersReport |
     if (!report) return null;
     
     const details = await reportRepo.getReportWithDetails(report.id);
-    return details as VaersReport | null;
+    if (!details) return null;
+    
+    return {
+      ...details,
+      ageYrs: details.ageYrs ? parseFloat(details.ageYrs as string) : undefined,
+    } as VaersReport;
   } catch (error) {
     console.error('Error fetching report by VAERS ID:', error);
     throw new Error('Failed to fetch report');
@@ -116,16 +136,33 @@ export async function createReport(data: VaersRawData): Promise<VaersReport> {
     }
     
     const reportWithDetails = await reportRepo.getReportWithDetails(createdReport.id);
+    if (!reportWithDetails) {
+      throw new Error('Failed to retrieve created report details');
+    }
     
     // Revalidate the reports pages
     revalidatePath('/reports');
     revalidatePath('/reports/new');
     
-    return reportWithDetails as VaersReport;
+    return {
+      ...reportWithDetails,
+      ageYrs: reportWithDetails.ageYrs ? parseFloat(reportWithDetails.ageYrs as string) : undefined,
+    } as VaersReport;
   } catch (error) {
     console.error('Error creating report:', error);
     throw error;
   }
+}
+
+// Helper function to convert VaersReport to database record type
+function convertToDbRecord(report: Partial<VaersReport>) {
+  return {
+    ...report,
+    ageYrs: report.ageYrs ? report.ageYrs.toString() : undefined,
+    // Remove fields that don't exist in the database record
+    vaccines: undefined,
+    symptoms: undefined,
+  };
 }
 
 export async function updateReport(
@@ -133,7 +170,8 @@ export async function updateReport(
   updateData: Partial<VaersReport>
 ): Promise<VaersReport> {
   try {
-    await reportRepo.update(id, updateData);
+    const dbUpdateData = convertToDbRecord(updateData);
+    await reportRepo.update(id, dbUpdateData);
     const updated = await reportRepo.getReportWithDetails(id);
     
     if (!updated) {
@@ -144,7 +182,10 @@ export async function updateReport(
     revalidatePath('/reports');
     revalidatePath(`/reports/${id}`);
     
-    return updated as VaersReport;
+    return {
+      ...updated,
+      ageYrs: updated.ageYrs ? parseFloat(updated.ageYrs as string) : undefined,
+    } as VaersReport;
   } catch (error) {
     console.error('Error updating report:', error);
     throw error;
@@ -184,7 +225,12 @@ export async function getReportsByOutcome(
       reports.map(report => reportRepo.getReportWithDetails(report.id))
     );
     
-    return reportsWithDetails.filter(Boolean) as VaersReport[];
+    return reportsWithDetails
+      .filter(Boolean)
+      .map(report => ({
+        ...report!,
+        ageYrs: report!.ageYrs ? parseFloat(report!.ageYrs as string) : undefined,
+      })) as VaersReport[];
   } catch (error) {
     console.error('Error fetching reports by outcome:', error);
     throw error;
