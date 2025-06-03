@@ -1,0 +1,134 @@
+{
+  "description": "VAERS subset containing 100K reports from 2023-2024 with complete symptom data",
+  "file_path": "json_data/vaers_subset.json", 
+  "record_count": "100,000 reports",
+  "data_source": "VAERS CSV files (2023VAERSDATA.csv, 2024VAERSDATA.csv, etc.)",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "VAERS_ID": {
+          "type": "integer",
+          "description": "Unique VAERS report identifier"
+        },
+        "RECVDATE": {
+          "type": "string",
+          "description": "Date report was received (MM/DD/YYYY)"
+        },
+        "STATE": {
+          "type": "string",
+          "description": "State where adverse event occurred"
+        },
+        "AGE_YRS": {
+          "type": ["number", "null"],
+          "description": "Patient age in years"
+        },
+        "SEX": {
+          "type": "string",
+          "description": "Patient sex (M/F/U)"
+        },
+        "SYMPTOM_TEXT": {
+          "type": "string",
+          "description": "Free text description of symptoms"
+        },
+        "DIED": {
+          "type": ["string", "null"],
+          "description": "Did patient die (Y/N)"
+        },
+        "L_THREAT": {
+          "type": ["string", "null"],
+          "description": "Life threatening event (Y/N)"
+        },
+        "ER_VISIT": {
+          "type": ["string", "null"],
+          "description": "Emergency room visit (Y/N)"
+        },
+        "HOSPITAL": {
+          "type": ["string", "null"],
+          "description": "Hospitalization (Y/N)"
+        },
+        "DISABLE": {
+          "type": ["string", "null"],
+          "description": "Disability (Y/N)"
+        },
+        "RECOVD": {
+          "type": ["string", "null"],
+          "description": "Recovered (Y/N)"
+        },
+        "VAX_DATE": {
+          "type": "string",
+          "description": "Vaccination date"
+        },
+        "ONSET_DATE": {
+          "type": "string",
+          "description": "Symptom onset date"
+        },
+        "NUMDAYS": {
+          "type": ["number", "null"],
+          "description": "Days between vaccination and onset"
+        },
+        "VAX_TYPE_list": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of vaccine types"
+        },
+        "VAX_MANU_list": {
+          "type": "array", 
+          "items": {"type": "string"},
+          "description": "List of vaccine manufacturers"
+        },
+        "VAX_NAME_list": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of vaccine names"
+        },
+        "VAX_DOSE_SERIES_list": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of dose series numbers"
+        },
+        "VAX_ROUTE_list": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of administration routes"
+        },
+        "VAX_SITE_list": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of injection sites"
+        },
+        "symptom_list": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of standardized symptom terms"
+        }
+      },
+      "required": ["VAERS_ID", "symptom_list"]
+    }
+  },
+  "sample_record": {
+    "VAERS_ID": 2696276,
+    "RECVDATE": "10/15/2023",
+    "STATE": "CO",
+    "AGE_YRS": 49.0,
+    "SEX": "M",
+    "SYMPTOM_TEXT": "Patient was given the Shingrix vaccine, despite not being age 50 yet (1 month shy).",
+    "DIED": null,
+    "L_THREAT": null,
+    "ER_VISIT": null,
+    "HOSPITAL": null,
+    "DISABLE": null,
+    "RECOVD": "Y",
+    "VAX_DATE": "06/15/2023",
+    "ONSET_DATE": "06/15/2023",
+    "NUMDAYS": 0.0,
+    "VAX_TYPE_list": ["VARZOS"],
+    "VAX_MANU_list": ["GLAXOSMITHKLINE BIOLOGICALS"],
+    "VAX_NAME_list": ["ZOSTER (SHINGRIX)"],
+    "VAX_DOSE_SERIES_list": ["1"],
+    "VAX_ROUTE_list": ["IM"],
+    "VAX_SITE_list": ["RA"],
+    "symptom_list": ["Product administered to patient of inappropriate age"]
+  }
+}

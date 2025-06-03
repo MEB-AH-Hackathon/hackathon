@@ -1,0 +1,39 @@
+{
+  "description": "FDA reports containing adverse events extracted from vaccine package inserts",
+  "file_path": "json_data/fda_reports.json",
+  "record_count": "14 vaccines",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "vaccine_name": {
+          "type": "string",
+          "description": "Name of the vaccine"
+        },
+        "manufacturer": {
+          "type": "string", 
+          "description": "Vaccine manufacturer"
+        },
+        "adverse_events": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of adverse events from FDA package insert"
+        },
+        "pdf_file": {
+          "type": "string",
+          "description": "Source PDF filename"
+        }
+      },
+      "required": ["vaccine_name", "manufacturer", "adverse_events", "pdf_file"]
+    }
+  },
+  "sample_record": {
+    "vaccine_name": "ADACEL",
+    "manufacturer": "Sanofi Pasteur",
+    "adverse_events": ["Injection site pain", "Injection site redness", "Headache", "Fatigue"],
+    "pdf_file": "adacel_pi.pdf"
+  }
+}
