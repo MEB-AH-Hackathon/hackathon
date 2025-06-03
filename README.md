@@ -194,6 +194,34 @@ hackathon/
 3. **Large Files**: Only vaers_subset.json uses Git LFS (77MB)
 4. **Match Rate**: Low (0.5%) because most symptoms aren't mapped yet
 
+## Unmapped Symptom Examples
+
+The `json_data/unmapped_symptom_examples.json` file contains 22 examples of frequent unmapped symptoms with manual analysis of whether they should match FDA adverse events:
+
+### Should Match (based on symptom list)
+- **VAERS_ID 2547752** - "Pyrexia" → FDA has "chills" (similar fever symptoms)
+- **VAERS_ID 2548069** - "Injection site erythema" → FDA has "redness" (exact match)
+- **VAERS_ID 2548844** - "Chills" → FDA has "shivering" (synonymous)
+- **VAERS_ID 2547752** - "Nausea" → FDA has "nausea/vomiting" (exact match)
+
+### Should Match (based on symptom text)
+- **VAERS_ID 2548071** - "Pyrexia" → Text: "Fever of 101" (clear fever description)
+- **VAERS_ID 2547752** - "Asthenia" → Text: "too weak to stand", "lethargy" (weakness/fatigue)
+- **VAERS_ID 2547741** - "Pain in extremity" → Text: "throbbing pain in various areas" (pain symptoms)
+- **VAERS_ID 2548256** - "Malaise" → Text: "generalized malaise, fatigue" (matches fatigue)
+
+### Should Match (based on both)
+- **VAERS_ID 2547741** - "Pain" → FDA has "pain at injection site" + Text: "throbbing pain"
+- **VAERS_ID 2548069** - "Injection site pain" → FDA has "pain" + Text: "soreness"
+- **VAERS_ID 2549437** - "Pain in extremity" → FDA has "pain" + Text: "sore arm"
+
+### Should Not Match (neither symptom list nor text)
+- **VAERS_ID 2548827** - "Herpes zoster" → Disease the vaccine prevents, not adverse event
+- **VAERS_ID 2551623** - "Rash" → Text describes shingles disease rash, not vaccine reaction
+- **VAERS_ID 2547752** - "Dizziness" → Not in FDA adverse events, text unclear on causation
+- **VAERS_ID 2547959** - "Incomplete course of vaccination" → Administrative issue, not medical symptom
+- **VAERS_ID 2548813** - "Cough" → Text shows COVID infection symptoms, not vaccine effects
+
 ## Next Steps
 
 To improve the system:

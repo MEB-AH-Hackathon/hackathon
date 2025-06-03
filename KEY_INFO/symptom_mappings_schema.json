@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e4be2534420c7f280644bdab7ccc5215810cd942898d0c775cababf9ba4582f3
-size 1381
+{
+  "description": "Crosswalk mapping VAERS symptoms to FDA adverse events using Claude API",
+  "file_path": "json_data/symptom_mappings.json",
+  "record_count": "500 sampled VAERS symptoms",
+  "data_source": "VAERS symptoms extracted from vaers_subset.json, mapped to FDA adverse events from fda_reports.json",
+  "mapping_method": "Claude API (claude-3-haiku-20240307) with intelligent matching",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "vaers_symptom": {
+          "type": "string",
+          "description": "Original VAERS symptom term"
+        },
+        "fda_adverse_events": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of matching FDA adverse events (empty array if no matches)"
+        }
+      },
+      "required": ["vaers_symptom", "fda_adverse_events"]
+    }
+  },
+  "sample_record": {
+    "vaers_symptom": "Chronic kidney disease",
+    "fda_adverse_events": ["renal failure", "kidney disease"]
+  },
+  "mapping_rules": [
+    "Exact matches prioritized",
+    "Synonyms and medical terminology equivalents included",
+    "Related terms mapped when clinically relevant",
+    "Empty array returned when no reasonable matches exist",
+    "Multiple FDA events can match a single VAERS symptom"
+  ]
+}
