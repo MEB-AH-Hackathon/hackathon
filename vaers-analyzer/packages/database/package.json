@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e7cc5e14031d86854c47b23ecd54afcc1188ff1ae1b83867848ab6f1bdffdfe2
-size 667
+{
+  "name": "@vaers/database",
+  "version": "0.0.0",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/migrate.ts",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "tsx src/seed.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
+    "@vaers/types": "workspace:^",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.44.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "drizzle-kit": "^0.31.1",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
