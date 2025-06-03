@@ -1,0 +1,167 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VAERS Categorization Schema",
+  "description": "Schema for VAERS report categorization based on symptom mapping status",
+  "type": "object",
+  "required": ["metadata", "summary", "reports"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["description", "categories", "generated_date"],
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Description of the categorization system"
+        },
+        "categories": {
+          "type": "object",
+          "description": "Definitions of each category type",
+          "properties": {
+            "fully_matched": {
+              "type": "string",
+              "description": "All symptoms are documented in FDA package insert"
+            },
+            "mapped_not_matched": {
+              "type": "string", 
+              "description": "All symptoms are mapped but not in FDA list"
+            },
+            "not_mapped": {
+              "type": "string",
+              "description": "All symptoms have not been mapped yet"
+            },
+            "fully_matched_and_mapped_not_matched": {
+              "type": "string",
+              "description": "Mix of FDA-documented and mapped-but-not-matched symptoms"
+            },
+            "fully_matched_and_not_mapped": {
+              "type": "string",
+              "description": "Mix of FDA-documented and unmapped symptoms"
+            },
+            "mapped_not_matched_and_not_mapped": {
+              "type": "string",
+              "description": "Mix of mapped-but-not-matched and unmapped symptoms"
+            },
+            "fully_matched_and_mapped_not_matched_and_not_mapped": {
+              "type": "string",
+              "description": "Mix of all three types"
+            }
+          }
+        },
+        "generated_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date when categorization was generated"
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["total_reports", "category_counts", "category_percentages"],
+      "properties": {
+        "total_reports": {
+          "type": "integer",
+          "description": "Total number of VAERS reports categorized"
+        },
+        "category_counts": {
+          "type": "object",
+          "description": "Count of reports in each category",
+          "patternProperties": {
+            "^(fully_matched|mapped_not_matched|not_mapped|fully_matched_and_mapped_not_matched|fully_matched_and_not_mapped|mapped_not_matched_and_not_mapped|fully_matched_and_mapped_not_matched_and_not_mapped)$": {
+              "type": "integer"
+            }
+          }
+        },
+        "category_percentages": {
+          "type": "object",
+          "description": "Percentage of reports in each category",
+          "patternProperties": {
+            "^(fully_matched|mapped_not_matched|not_mapped|fully_matched_and_mapped_not_matched|fully_matched_and_not_mapped|mapped_not_matched_and_not_mapped|fully_matched_and_mapped_not_matched_and_not_mapped)$": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "reports": {
+      "type": "array",
+      "description": "Individual VAERS reports with categorization",
+      "items": {
+        "type": "object",
+        "required": ["VAERS_ID", "vaccine", "category", "total_symptoms", "symptom_breakdown", "symptom_percentages"],
+        "properties": {
+          "VAERS_ID": {
+            "type": "string",
+            "description": "Unique VAERS report identifier"
+          },
+          "vaccine": {
+            "type": "string",
+            "description": "Vaccine name in VAERS format"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "fully_matched",
+              "mapped_not_matched", 
+              "not_mapped",
+              "fully_matched_and_mapped_not_matched",
+              "fully_matched_and_not_mapped",
+              "mapped_not_matched_and_not_mapped",
+              "fully_matched_and_mapped_not_matched_and_not_mapped"
+            ],
+            "description": "Categorization based on symptom mapping status"
+          },
+          "total_symptoms": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Total number of symptoms in this report"
+          },
+          "symptom_breakdown": {
+            "type": "object",
+            "required": ["fully_matched", "mapped_not_matched", "not_mapped"],
+            "properties": {
+              "fully_matched": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Number of symptoms documented in FDA package insert"
+              },
+              "mapped_not_matched": {
+                "type": "integer", 
+                "minimum": 0,
+                "description": "Number of symptoms mapped but not in FDA list"
+              },
+              "not_mapped": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Number of symptoms not yet mapped"
+              }
+            }
+          },
+          "symptom_percentages": {
+            "type": "object",
+            "required": ["fully_matched_pct", "mapped_not_matched_pct", "not_mapped_pct"],
+            "properties": {
+              "fully_matched_pct": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Percentage of symptoms that are fully matched"
+              },
+              "mapped_not_matched_pct": {
+                "type": "number",
+                "minimum": 0, 
+                "maximum": 100,
+                "description": "Percentage of symptoms that are mapped but not matched"
+              },
+              "not_mapped_pct": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Percentage of symptoms that are not mapped"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
