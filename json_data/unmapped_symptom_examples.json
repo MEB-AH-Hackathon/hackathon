@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "description": "Top unmapped VAERS symptoms that need manual mapping review",
+    "purpose": "Find symptoms that could match FDA adverse events but haven't been mapped yet",
+    "criteria": "Symptoms appearing \u22655 times, not exact matches to FDA adverse events, excluding administrative symptoms",
+    "generated_date": "2025-06-03"
+  },
+  "examples": [
+    {
+      "VAERS_ID": "2547972",
+      "vaccine": "COVID19 (COVID19 (MODERNA))",
+      "unmapped_symptom": "COVID-19",
+      "symptom_frequency": 4286,
+      "fda_adverse_events_for_vaccine": [
+        "arthralgia",
+        "axillary swelling or tenderness",
+        "chills",
+        "fatigue",
+        "headache",
+        "myalgia",
+        "nausea/vomiting",
+        "pain at the injection site"
+      ],
+      "potential_matches": [],
+      "should_find": false,
+      "notes": "Symptom appears 4286 times and may match one of the FDA adverse events"
+    },
+    {
+      "VAERS_ID": "2548048",
+      "vaccine": "COVID19 (COVID19 (MODERNA))",
+      "unmapped_symptom": "SARS-CoV-2 test positive",
+      "symptom_frequency": 3355,
+      "fda_adverse_events_for_vaccine": [
+        "arthralgia",
+        "axillary swelling or tenderness",
+        "chills",
+        "fatigue",
+        "headache",
+        "myalgia",
+        "nausea/vomiting",
+        "pain at the injection site"
+      ],
+      "potential_matches": [],
+      "should_find": false,
+      "notes": "Symptom appears 3355 times and may match one of the FDA adverse events"
+    },
+    {
+      "VAERS_ID": "2547752",
+      "vaccine": "COVID19 (COVID19 (MODERNA))",
+      "unmapped_symptom": "Pyrexia",
+      "symptom_frequency": 1997,
+      "fda_adverse_events_for_vaccine": [
+        "arthralgia",
+        "axillary swelling or tenderness",
+        "chills",
+        "fatigue",
+        "headache",
+        "myalgia",
+        "nausea/vomiting",
+        "pain at the injection site"
+      ],
+      "potential_matches": [],
+      "should_find": true,
+      "notes": "Symptom appears 1997 times and may match one of the FDA adverse events"
+    },
+    {
+      "VAERS_ID": "2547788",
+      "vaccine": "COVID19 (COVID19 (MODERNA BIVALENT))",
+      "unmapped_symptom": "COVID-19",
+      "symptom_frequency": 1727,
+      "fda_adverse_events_for_vaccine": [],
+      "potential_matches": [],
+      "should_find": false,
+      "notes": "Symptom appears 1727 times and may match one of the FDA adverse events"
+    },
+    {
+      "VAERS_ID": "2548057",
+      "vaccine": "COVID19 (COVID19 (MODERNA))",
+      "unmapped_symptom": "Dyspnoea",
+      "symptom_frequency": 1482,
+      "fda_adverse_events_for_vaccine": [
+        "arthralgia",
+        "axillary swelling or tenderness",
+        "chills",
+        "fatigue",
+        "headache",
+        "myalgia",
+        "nausea/vomiting",
+        "pain at the injection site"
+      ],
+      "potential_matches": [],
+      "should_find": false,
+      "notes": "Symptom appears 1482 times and may match one of the FDA adverse events"
+    },
+    {
+      "VAERS_ID": "2547788",
+      "vaccine": "COVID19 (COVID19 (MODERNA BIVALENT))",
+      "unmapped_symptom": "SARS-CoV-2 test positive",
+      "symptom_frequency": 1455,
+      "fda_adverse_events_for_vaccine": [],
+      "potential_matches": [],
+      "should_find": false,
+      "notes": "Symptom appears 1455 times and may match one of the FDA adverse events"
+    },
+    {
+      "VAERS_ID": "2547741",
+      "vaccine": "COVID19 (COVID19 (MODERNA))",
+      "unmapped_symptom": "Pain",
+      "symptom_frequency": 1396,
+      "fda_adverse_events_for_vaccine": [
+        "arthralgia",
+        "axillary swelling or tenderness",
+        "chills",
+        "fatigue",
+        "headache",
+        "myalgia",
+        "nausea/vomiting",
+        "pain at the injection site"
+      ],
+      "potential_matches": [],
+      "should_find": true,
+      "notes": "Symptom appears 1396 times and may match one of the FDA adverse events"
+    },
+    {
+      "VAERS_ID": "2548069",
+      "vaccine": "ZOSTER (SHINGRIX)",
+      "unmapped_symptom": "Injection site pain",
+      "symptom_frequency": 1291,
+      "fda_adverse_events_for_vaccine": [
+        "fatigue",
+        "fever",
+        "gastrointestinal symptoms",
+        "headache",
+        "myalgia",
+        "pain",
+        "redness",
+        "shivering",
+        "swelling"
+      ],
+      "potential_matches": [],
+      "should_find": true,
+      "notes": "Symptom appears 1291 times and may match one of the FDA adverse events"
+    },
+    {
+      "VAERS_ID": "2548785",
+      "vaccine": "COVID19 (COVID19 (MODERNA))",
+      "unmapped_symptom": "Cough",
+      "symptom_frequency": 1226,
+      "fda_adverse_events_for_vaccine": [
+        "arthralgia",
+        "axillary swelling or tenderness",
+        "chills",
+        "fatigue",
+        "headache",
+        "myalgia",
+        "nausea/vomiting",
+        "pain at the injection site"
+      ],
+      "potential_matches": [],
+      "should_find": false,
+      "notes": "Symptom appears 1226 times and may match one of the FDA adverse events"
+    },
+    {
+      "VAERS_ID": "2549437",
+      "vaccine": "ZOSTER (SHINGRIX)",
+      "unmapped_symptom": "Pain in extremity",
+      "symptom_frequency": 1158,
+      "fda_adverse_events_for_vaccine": [
+        "fatigue",
+        "fever",
+        "gastrointestinal symptoms",
+        "headache",
+        "myalgia",
+        "pain",
+        "redness",
+        "shivering",
+        "swelling"
+      ],
+      "potential_matches": [],
+      "should_find": true,
+      "notes": "Symptom appears 1158 times and may match one of the FDA adverse events"
+    }
+  ]
+}

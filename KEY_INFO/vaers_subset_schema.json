@@ -1,0 +1,174 @@
+{
+  "description": "VAERS subset containing 51,976 reports from 2023-2024 with complete symptom data - filtered to only include vaccines in FDA reports",
+  "file_path": "json_data/vaers_subset.json", 
+  "record_count": "51,976 reports",
+  "data_source": "VAERS CSV files (2023VAERSDATA.csv, 2024VAERSDATA.csv, etc.)",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "VAERS_ID": {
+          "type": "integer",
+          "description": "Unique VAERS report identifier"
+        },
+        "RECVDATE": {
+          "type": ["string", "null"],
+          "description": "Date report was received (MM/DD/YYYY)"
+        },
+        "STATE": {
+          "type": ["string", "null"],
+          "description": "State where adverse event occurred"
+        },
+        "AGE_YRS": {
+          "type": ["number", "null"],
+          "description": "Patient age in years"
+        },
+        "SEX": {
+          "type": ["string", "null"],
+          "enum": ["male", "female", "unknown", null],
+          "description": "Patient sex (mapped from M/F/U to male/female/unknown)"
+        },
+        "SYMPTOM_TEXT": {
+          "type": ["string", "null"],
+          "description": "Free text description of symptoms"
+        },
+        "DIED": {
+          "type": "boolean",
+          "description": "Did patient die (Y→true, null→false)"
+        },
+        "L_THREAT": {
+          "type": "boolean",
+          "description": "Life threatening event (Y→true, null→false)"
+        },
+        "ER_VISIT": {
+          "type": "boolean",
+          "description": "Emergency room visit (Y→true, null→false)"
+        },
+        "HOSPITAL": {
+          "type": "boolean",
+          "description": "Hospitalization (Y→true, null→false)"
+        },
+        "DISABLE": {
+          "type": "boolean",
+          "description": "Disability (Y→true, null→false)"
+        },
+        "RECOVD": {
+          "type": ["string", "null"],
+          "enum": ["yes", "no", "unknown", null],
+          "description": "Recovered (mapped from Y/N/U to yes/no/unknown)"
+        },
+        "VAX_DATE": {
+          "type": ["string", "null"],
+          "description": "Vaccination date"
+        },
+        "ONSET_DATE": {
+          "type": ["string", "null"],
+          "description": "Symptom onset date"
+        },
+        "NUMDAYS": {
+          "type": ["number", "null"],
+          "description": "Days between vaccination and onset"
+        },
+        "VAX_TYPE_list": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of vaccine types"
+        },
+        "VAX_MANU_list": {
+          "type": "array", 
+          "items": {"type": "string"},
+          "description": "List of vaccine manufacturers"
+        },
+        "VAX_NAME_list": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of vaccine names - all match FDA reports"
+        },
+        "VAX_DOSE_SERIES_list": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of dose series numbers"
+        },
+        "VAX_ROUTE_list": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of administration routes"
+        },
+        "VAX_SITE_list": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of injection sites"
+        },
+        "symptom_list": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of standardized symptom terms"
+        }
+      },
+      "required": ["VAERS_ID", "symptom_list"]
+    }
+  },
+  "value_mappings": {
+    "SEX": {
+      "M": "male",
+      "F": "female", 
+      "U": "unknown"
+    },
+    "DIED": {
+      "Y": true,
+      "null/missing": false
+    },
+    "L_THREAT": {
+      "Y": true,
+      "null/missing": false
+    },
+    "ER_VISIT": {
+      "Y": true,
+      "null/missing": false
+    },
+    "HOSPITAL": {
+      "Y": true,
+      "null/missing": false
+    },
+    "DISABLE": {
+      "Y": true,
+      "null/missing": false
+    },
+    "RECOVD": {
+      "Y": "yes",
+      "N": "no",
+      "U": "unknown",
+      "null/missing": null
+    }
+  },
+  "field_types": {
+    "boolean_fields": ["DIED", "L_THREAT", "ER_VISIT", "HOSPITAL", "DISABLE"],
+    "string_enum_fields": ["SEX", "RECOVD"],
+    "notes": "Boolean fields use true/false instead of yes/null. RECOVD remains a string to capture yes/no/unknown states."
+  },
+  "sample_record": {
+    "VAERS_ID": 2547732,
+    "RECVDATE": "01/01/2023",
+    "STATE": "MA",
+    "AGE_YRS": 38.0,
+    "SEX": "female",
+    "SYMPTOM_TEXT": "Error: Patient Accidentally Stuck by Needle-",
+    "DIED": false,
+    "L_THREAT": false,
+    "ER_VISIT": false,
+    "HOSPITAL": false,
+    "DISABLE": false,
+    "RECOVD": "yes",
+    "VAX_DATE": "12/28/2022",
+    "ONSET_DATE": "12/28/2022",
+    "NUMDAYS": 0.0,
+    "VAX_TYPE_list": ["COVID19-2"],
+    "VAX_MANU_list": ["MODERNA"],
+    "VAX_NAME_list": ["COVID19 (COVID19 (MODERNA BIVALENT))"],
+    "VAX_DOSE_SERIES_list": ["4"],
+    "VAX_ROUTE_list": ["IM"],
+    "VAX_SITE_list": ["LA"],
+    "symptom_list": ["Injury associated with device"]
+  }
+}
