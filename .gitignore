@@ -23,3 +23,4 @@ myenv/
 # Development files
 TODO.md
 scratch/
+duckdb/vaers_analysis.db
