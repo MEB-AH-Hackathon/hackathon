@@ -1,1 +1,2 @@
 json_data/vaers_subset.json filter=lfs diff=lfs merge=lfs -text
+duckdb/vaers_analysis.db filter=lfs diff=lfs merge=lfs -text
