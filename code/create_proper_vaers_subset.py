@@ -111,20 +111,24 @@ def create_proper_vaers_subset():
         
         # Define value mappers
         sex_map = {'M': 'male', 'F': 'female', 'U': 'unknown'}
-        yes_no_map = {'Y': 'yes', 'N': 'no'}
-        recovd_map = {'Y': 'yes', 'N': 'no', 'U': 'unknown'}
         
         # Convert to proper format
         for _, row in merged.iterrows():
-            # Helper function to convert Y/N values
-            def map_yes_no(value, allow_no=False, allow_unknown=False):
-                if pd.isna(value):
+            # Helper function to convert Y/null to boolean
+            def map_yes_null_to_bool(value):
+                if pd.isna(value) or value is None:
+                    return False
+                return value == 'Y'
+            
+            # Helper function for Y/N/U fields (keep as strings)
+            def map_yes_no_unknown(value):
+                if pd.isna(value) or value is None:
                     return None
                 if value == 'Y':
                     return 'yes'
-                elif allow_no and value == 'N':
+                elif value == 'N':
                     return 'no'
-                elif allow_unknown and value == 'U':
+                elif value == 'U':
                     return 'unknown'
                 else:
                     return None
@@ -136,12 +140,12 @@ def create_proper_vaers_subset():
                 "AGE_YRS": float(row['AGE_YRS']) if pd.notna(row['AGE_YRS']) else None,
                 "SEX": sex_map.get(row['SEX'], None) if pd.notna(row['SEX']) else None,
                 "SYMPTOM_TEXT": row['SYMPTOM_TEXT'] if pd.notna(row['SYMPTOM_TEXT']) else None,
-                "DIED": map_yes_no(row['DIED']),
-                "L_THREAT": map_yes_no(row['L_THREAT']),
-                "ER_VISIT": map_yes_no(row['ER_VISIT']),
-                "HOSPITAL": map_yes_no(row['HOSPITAL']),
-                "DISABLE": map_yes_no(row['DISABLE']),
-                "RECOVD": map_yes_no(row['RECOVD'], allow_no=True, allow_unknown=True),
+                "DIED": map_yes_null_to_bool(row['DIED']),  # Boolean
+                "L_THREAT": map_yes_null_to_bool(row['L_THREAT']),  # Boolean
+                "ER_VISIT": map_yes_null_to_bool(row['ER_VISIT']),  # Boolean
+                "HOSPITAL": map_yes_null_to_bool(row['HOSPITAL']),  # Boolean
+                "DISABLE": map_yes_null_to_bool(row['DISABLE']),  # Boolean
+                "RECOVD": map_yes_no_unknown(row['RECOVD']),  # String: yes/no/unknown
                 "VAX_DATE": row['VAX_DATE'] if pd.notna(row['VAX_DATE']) else None,
                 "ONSET_DATE": row['ONSET_DATE'] if pd.notna(row['ONSET_DATE']) else None,
                 "NUMDAYS": float(row['NUMDAYS']) if pd.notna(row['NUMDAYS']) else None,
