@@ -173,8 +173,8 @@ if __name__ == "__main__":
     # Redirect output to file
     import sys
     original_stdout = sys.stdout
-    with open('intermediate_results/vaers_sample_analysis.txt', 'w') as f:
+    with open('vaers_sample_analysis.txt', 'w') as f:
         sys.stdout = f
         get_samples()
     sys.stdout = original_stdout
-    print("Sample analysis saved to intermediate_results/vaers_sample_analysis.txt")
+    print("Sample analysis saved to vaers_sample_analysis.txt")
