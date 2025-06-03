@@ -6,12 +6,24 @@ import * as schema from './schema';
 // No need for manual dotenv.config() in a Next.js environment
 
 const isDev = process.env.NODE_ENV !== 'production';
+
+// Use environment-specific URLs, with fallback only for development
 const connectionString = isDev 
-  ? process.env.DATABASE_URL_DEV 
-  : process.env.DATABASE_URL_PROD;
+  ? (process.env.DATABASE_URL_DEV || process.env.DATABASE_URL)
+  : process.env.DATABASE_URL_PROD; // Production requires explicit prod URL
 
 if (!connectionString) {
-  throw new Error(`${isDev ? 'DATABASE_URL_DEV' : 'DATABASE_URL_PROD'} environment variable is not set`);
+  const availableVars = [
+    process.env.DATABASE_URL_DEV && 'DATABASE_URL_DEV',
+    process.env.DATABASE_URL_PROD && 'DATABASE_URL_PROD', 
+    process.env.DATABASE_URL && 'DATABASE_URL'
+  ].filter(Boolean);
+  
+  throw new Error(
+    `No database URL found. Looking for: ${isDev ? 'DATABASE_URL_DEV' : 'DATABASE_URL_PROD'} or DATABASE_URL.\n` +
+    `Available environment variables: ${availableVars.length > 0 ? availableVars.join(', ') : 'none'}\n` +
+    `Current NODE_ENV: ${process.env.NODE_ENV || 'undefined'}`
+  );
 }
 
 const sql = neon(connectionString);

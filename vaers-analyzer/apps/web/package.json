@@ -13,7 +13,8 @@
     "react-dom": "^19.0.0",
     "next": "15.3.3",
     "@vaers/database": "workspace:^",
-    "@vaers/types": "workspace:^"
+    "@vaers/types": "workspace:^",
+    "@repo/ui": "workspace:^"
   },
   "devDependencies": {
     "typescript": "^5",

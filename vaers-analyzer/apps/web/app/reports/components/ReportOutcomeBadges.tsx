@@ -1,4 +1,5 @@
 import type { VaersReport } from '@vaers/types';
+import { Badge } from '@repo/ui';
 
 interface ReportOutcomeBadgesProps {
   report: VaersReport;
@@ -8,41 +9,20 @@ export function ReportOutcomeBadges({ report }: ReportOutcomeBadgesProps) {
   return (
     <div className="ml-2 flex-shrink-0 flex">
       {report.died && (
-        <OutcomeBadge type="death" label="Death" />
+        <Badge variant="death" className="ml-2">Death</Badge>
       )}
       {report.lThreat && (
-        <OutcomeBadge type="lifeThreat" label="Life Threat" />
+        <Badge variant="lifeThreat" className="ml-2">Life Threat</Badge>
       )}
       {report.hospital && (
-        <OutcomeBadge type="hospital" label="Hospitalized" />
+        <Badge variant="hospital" className="ml-2">Hospitalized</Badge>
       )}
       {report.erVisit && (
-        <OutcomeBadge type="emergency" label="ER Visit" />
+        <Badge variant="emergency" className="ml-2">ER Visit</Badge>
       )}
       {report.disable && (
-        <OutcomeBadge type="disability" label="Disability" />
+        <Badge variant="disability" className="ml-2">Disability</Badge>
       )}
     </div>
-  );
-}
-
-interface OutcomeBadgeProps {
-  type: 'death' | 'lifeThreat' | 'hospital' | 'emergency' | 'disability';
-  label: string;
-}
-
-function OutcomeBadge({ type, label }: OutcomeBadgeProps) {
-  const styles = {
-    death: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
-    lifeThreat: 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
-    hospital: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200',
-    emergency: 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200',
-    disability: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200',
-  };
-
-  return (
-    <span className={`ml-2 px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${styles[type]}`}>
-      {label}
-    </span>
   );
 }

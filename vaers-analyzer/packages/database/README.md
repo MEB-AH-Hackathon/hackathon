@@ -75,3 +75,35 @@ psql -U your_user -d your_database -f src/migrations/001_update_vaers_schema.sql
 ```
 
 **WARNING**: This migration will drop existing tables. Backup your data first!
+
+## Database Seeding
+
+### Development Environment
+```bash
+# From monorepo root
+pnpm db:seed:dev
+
+# Or directly from database package
+cd packages/database
+NODE_ENV=development pnpm db:seed
+```
+
+### Production Environment
+```bash
+# Requires confirmation for safety
+SEED_PRODUCTION_CONFIRM=true pnpm db:seed:prod
+
+# Or directly from database package
+cd packages/database
+NODE_ENV=production SEED_PRODUCTION_CONFIRM=true pnpm db:seed
+```
+
+### Environment-Specific Behavior
+- **Development**: Seeds with sample data for testing
+- **Production**: Requires `SEED_PRODUCTION_CONFIRM=true` to prevent accidental data modification
+
+### Sample Data Included
+- 5 VAERS reports with realistic adverse event data
+- Multiple vaccines per report examples
+- FDA reports with controlled trial data
+- Various outcome scenarios (hospitalization, recovery, etc.)

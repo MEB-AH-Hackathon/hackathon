@@ -51,7 +51,7 @@ function MobilePagination({ currentPage, totalPages, limit, baseUrl }: {
       {currentPage > 1 && (
         <Link
           href={`${baseUrl}?page=${currentPage - 1}&limit=${limit}`}
-          className="relative inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700"
+          className="relative inline-flex items-center px-4 py-2 border border-stone-300 dark:border-stone-600 text-sm font-medium rounded-xl text-stone-700 dark:text-stone-300 bg-white/80 dark:bg-stone-800/80 hover:bg-white dark:hover:bg-stone-800 transition-all duration-300 shadow-sm"
         >
           Previous
         </Link>
@@ -59,7 +59,7 @@ function MobilePagination({ currentPage, totalPages, limit, baseUrl }: {
       {currentPage < totalPages && (
         <Link
           href={`${baseUrl}?page=${currentPage + 1}&limit=${limit}`}
-          className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700"
+          className="ml-3 relative inline-flex items-center px-4 py-2 border border-stone-300 dark:border-stone-600 text-sm font-medium rounded-xl text-stone-700 dark:text-stone-300 bg-white/80 dark:bg-stone-800/80 hover:bg-white dark:hover:bg-stone-800 transition-all duration-300 shadow-sm"
         >
           Next
         </Link>
@@ -89,24 +89,24 @@ function DesktopPagination({
   return (
     <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
       <div>
-        <p className="text-sm text-gray-700 dark:text-gray-300">
+        <p className="text-sm text-stone-600 dark:text-stone-400">
           Showing{' '}
-          <span className="font-medium">{offset + 1}</span>
+          <span className="font-semibold text-stone-900 dark:text-stone-100">{offset + 1}</span>
           {' to '}
-          <span className="font-medium">
+          <span className="font-semibold text-stone-900 dark:text-stone-100">
             {Math.min(offset + limit, total)}
           </span>
           {' of '}
-          <span className="font-medium">{total}</span>
+          <span className="font-semibold text-stone-900 dark:text-stone-100">{total}</span>
           {' results'}
         </p>
       </div>
       <div>
-        <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+        <nav className="relative z-0 inline-flex rounded-xl shadow-sm -space-x-px" aria-label="Pagination">
           {currentPage > 1 && (
             <Link
               href={`${baseUrl}?page=${currentPage - 1}&limit=${limit}`}
-              className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700"
+              className="relative inline-flex items-center px-3 py-2 rounded-l-xl border border-stone-300 dark:border-stone-600 bg-white/80 dark:bg-stone-800/80 text-sm font-medium text-stone-500 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-800 transition-all duration-300"
             >
               <span className="sr-only">Previous</span>
               <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -119,7 +119,7 @@ function DesktopPagination({
             pageNum === '...' ? (
               <span
                 key={`ellipsis-${idx}`}
-                className="relative inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-300"
+                className="relative inline-flex items-center px-4 py-2 border border-stone-300 dark:border-stone-600 bg-white/80 dark:bg-stone-800/80 text-sm font-medium text-stone-700 dark:text-stone-300"
               >
                 ...
               </span>
@@ -127,10 +127,10 @@ function DesktopPagination({
               <Link
                 key={pageNum}
                 href={`${baseUrl}?page=${pageNum}&limit=${limit}`}
-                className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${
+                className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium transition-all duration-300 ${
                   pageNum === currentPage
-                    ? 'z-10 bg-blue-50 dark:bg-blue-900/20 border-blue-500 text-blue-600 dark:text-blue-400'
-                    : 'bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700'
+                    ? 'z-10 bg-stone-100 dark:bg-stone-700 border-stone-400 dark:border-stone-500 text-stone-900 dark:text-stone-100'
+                    : 'bg-white/80 dark:bg-stone-800/80 border-stone-300 dark:border-stone-600 text-stone-500 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-800'
                 }`}
               >
                 {pageNum}
@@ -141,7 +141,7 @@ function DesktopPagination({
           {currentPage < totalPages && (
             <Link
               href={`${baseUrl}?page=${currentPage + 1}&limit=${limit}`}
-              className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700"
+              className="relative inline-flex items-center px-3 py-2 rounded-r-xl border border-stone-300 dark:border-stone-600 bg-white/80 dark:bg-stone-800/80 text-sm font-medium text-stone-500 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-800 transition-all duration-300"
             >
               <span className="sr-only">Next</span>
               <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

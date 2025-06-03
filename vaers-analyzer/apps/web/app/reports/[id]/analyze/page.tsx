@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getReportById } from '../../../actions/reports';
+import { PageLayout, PageContainer, PageHeader, Card, CardContent, IconContainer } from '@repo/ui';
 
 export default async function AnalyzePage({
   params,
@@ -21,64 +22,103 @@ export default async function AnalyzePage({
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="mb-8">
-        <Link
-          href={`/reports/${reportId}`}
-          className="inline-flex items-center text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
-        >
-          <svg className="mr-1 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          Back to Report
-        </Link>
-        
-        <h1 className="mt-4 text-3xl font-light text-gray-900 dark:text-white">
-          AI Analysis Results
-        </h1>
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-          VAERS Report {report.vaersId} Analysis
-        </p>
-      </div>
-
-      {/* Phase 2 Placeholder */}
-      <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-8 text-center">
-        <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 dark:bg-blue-900/30">
-          <svg className="h-6 w-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-        </div>
-        <h3 className="mt-4 text-lg font-medium text-gray-900 dark:text-white">
-          AI Analysis Coming Soon
-        </h3>
-        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 max-w-md mx-auto">
-          This is where the AI-powered analysis will appear in Phase 2. The system will search FDA databases, 
-          find similar reports, and provide a comprehensive analysis.
-        </p>
-        
-        <div className="mt-6 bg-gray-50 dark:bg-gray-900 rounded-lg p-4 text-left">
-          <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-2">
-            Planned Features:
-          </h4>
-          <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-            <li>• Real-time search progress visualization</li>
-            <li>• FDA-validated symptom comparison</li>
-            <li>• Similar VAERS report matching</li>
-            <li>• Controlled trial data analysis</li>
-            <li>• Structured confidence scoring</li>
-            <li>• Safety signal detection</li>
-          </ul>
-        </div>
-        
-        <div className="mt-6">
+    <PageLayout>
+      <PageContainer size="wide" className="py-12">
+        <div className="mb-8">
           <Link
             href={`/reports/${reportId}`}
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            className="inline-flex items-center text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100 transition-colors group mb-6"
           >
-            Return to Report
+            <svg className="mr-2 h-5 w-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Back to Report
           </Link>
         </div>
-      </div>
-    </div>
+
+        <PageHeader
+          title="AI Analysis Results"
+          subtitle={`VAERS Report ${report.vaersId} Analysis • Phase 2 Development`}
+          description="Advanced AI-powered analysis with FDA database cross-referencing and symptom validation"
+          icon={
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          }
+          iconVariant="blue"
+        />
+
+        {/* Phase 2 Placeholder */}
+        <Card variant="elevated" size="xlarge" className="text-center">
+          <CardContent className="p-12">
+            <IconContainer
+              variant="blue"
+              size="xl"
+              className="mx-auto mb-8"
+              icon={
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              }
+            />
+            <h3 className="text-2xl font-semibold text-stone-900 dark:text-stone-100 mb-4">
+              AI Analysis Coming Soon
+            </h3>
+            <p className="text-stone-600 dark:text-stone-400 max-w-2xl mx-auto mb-8 leading-relaxed">
+              This is where the AI-powered analysis will appear in Phase 2. The system will search FDA databases, 
+              find similar reports, and provide a comprehensive analysis with statistical confidence scoring.
+            </p>
+            
+            <Card variant="muted" size="large" className="mb-8">
+              <CardContent className="p-6 text-left">
+                <h4 className="text-lg font-semibold text-stone-900 dark:text-stone-100 mb-4">
+                  Planned Features:
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <ul className="text-stone-600 dark:text-stone-400 space-y-2">
+                    <li className="flex items-center">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                      Real-time search progress visualization
+                    </li>
+                    <li className="flex items-center">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                      FDA-validated symptom comparison
+                    </li>
+                    <li className="flex items-center">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                      Similar VAERS report matching
+                    </li>
+                  </ul>
+                  <ul className="text-stone-600 dark:text-stone-400 space-y-2">
+                    <li className="flex items-center">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                      Controlled trial data analysis
+                    </li>
+                    <li className="flex items-center">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                      Structured confidence scoring
+                    </li>
+                    <li className="flex items-center">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                      Safety signal detection
+                    </li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Link
+              href={`/reports/${reportId}`}
+              className="inline-flex items-center px-6 py-3 bg-stone-700 dark:bg-stone-300 text-white dark:text-stone-800 font-medium rounded-xl hover:bg-stone-800 dark:hover:bg-stone-200 transition-all duration-300 shadow-sm hover:shadow-md"
+            >
+              Return to Report
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </CardContent>
+        </Card>
+      </PageContainer>
+    </PageLayout>
   );
 }
