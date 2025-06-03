@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "description": "Top unmapped VAERS symptoms that need manual mapping review",
+    "description": "Top unmapped VAERS symptoms that need manual mapping review - 22 examples",
     "purpose": "Find symptoms that could match FDA adverse events but haven't been mapped yet",
     "criteria": "Symptoms appearing \u22655 times, not exact matches to FDA adverse events, excluding administrative symptoms",
     "generated_date": "2025-06-03"
@@ -189,6 +189,243 @@
       "should_find": true,
       "notes": "Symptom appears 1158 times and may match one of the FDA adverse events",
       "symptom_text": "sore arm, like someone punched hard; This case was reported by a consumer via interactive digital media and described the occurrence of pain in arm in a patient who received Herpes zoster (Shingrix) for prophylaxis.   In November 2022, the patient received the 1st dose of Shingrix. On 24th December 2022, less than 2 months after receiving Shingrix, the patient experienced pain in arm. On 24th December 2022, the outcome of the pain in arm was recovered/resolved.   The reporter considered the pain in arm to be possibly related to Shingrix.     Additional Information: GSK Receipt Date: 24-DEC-2022 Reporter's Comment: This case was reported by a patient via interactive digital media. The patient got 1st dose last month and would get 2nd dose in January 2023. The patients arm was sore like someone punched hard for about half a day. The patient was ok after that. The follow-up could not be possible as no contact details were available."
+    },
+    {
+      "VAERS_ID": "2548827",
+      "vaccine": "ZOSTER (SHINGRIX)",
+      "unmapped_symptom": "Herpes zoster",
+      "symptom_frequency": 1131,
+      "fda_adverse_events_for_vaccine": [
+        "fatigue",
+        "fever",
+        "gastrointestinal symptoms",
+        "headache",
+        "myalgia",
+        "pain",
+        "redness",
+        "shivering",
+        "swelling"
+      ],
+      "potential_matches": [],
+      "should_find": false,
+      "notes": "Symptom appears 1131 times and may match one of the FDA adverse events",
+      "symptom_text": "Before this vax, patient was diagnosed with shingles 11 years prior and has herpes upon taking Zoster. No herpes or shingles outbreak. Valtrex is used for both. Wasn't taking Valtrex for 11 years because she recovered. Patient had Shingrix shot on 8/22 and experienced shingles and herpes outbreak. Takes the medicine and it goes away. When she does not take medication, her outbreak appears. Herpes on the lip, shingles on her back. \"This shot is not working!!\" Seen doctor and has appointment coming up. Also has part 2 of Shingrix vax coming up."
+    },
+    {
+      "VAERS_ID": "2548071",
+      "vaccine": "ZOSTER (SHINGRIX)",
+      "unmapped_symptom": "Pyrexia",
+      "symptom_frequency": 1120,
+      "fda_adverse_events_for_vaccine": [
+        "fatigue",
+        "fever",
+        "gastrointestinal symptoms",
+        "headache",
+        "myalgia",
+        "pain",
+        "redness",
+        "shivering",
+        "swelling"
+      ],
+      "potential_matches": [],
+      "should_find": true,
+      "notes": "Symptom appears 1120 times and may match one of the FDA adverse events",
+      "symptom_text": "Severe body aches and headache. Fever of 101 and lethargy."
+    },
+    {
+      "VAERS_ID": "2547752",
+      "vaccine": "COVID19 (COVID19 (MODERNA))",
+      "unmapped_symptom": "Asthenia",
+      "symptom_frequency": 1114,
+      "fda_adverse_events_for_vaccine": [
+        "arthralgia",
+        "axillary swelling or tenderness",
+        "chills",
+        "fatigue",
+        "headache",
+        "myalgia",
+        "nausea/vomiting",
+        "pain at the injection site"
+      ],
+      "potential_matches": [],
+      "should_find": true,
+      "notes": "Symptom appears 1114 times and may match one of the FDA adverse events",
+      "symptom_text": "MODERNA SHOT #1  6/5/21: Day One 6:00pm First Dose  6:05pm numbness in right fingers and arm 6:20pm numbness subsides, nose clears up 6:45pm slight pain in chest on upper right breast, pain in chest comes and goes 6:45pm Throat felt like it was closing, hard to swallow but airway not actually blocked, felt like thyroid swelling  6:50pm Lips/tongue feel slightly numb, I feel spaced out in my brain, and slight numbness in sinuses under eyes on each side of the nose. Slight tingle in right toes. 7:00pm: I feel weirdly euphoric, smiling and sort of dissociated. Tingle in right fingers comes and goes.  6/6/21: Day Two 10:00am Slight red rash around injection site, shoulder soreness  3:00pm rash is darker and raised, soreness is way worse (I've also been holding my phone playing a game all day).  7:30pm almost passed out after short walk. Fever chills. 7:45pm feeling tired after dinner. Stomach is acting up/gas  6/7/21: Day Three Felt fine, rash area got larger but no longer raised. Very little arm soreness today, no issues moving normally.  MODERNA SHOT #2 7/3/21: My face and lips went slightly numb 30 minutes after each shot (including booster) along with brain fog. I had a sore arm, red rash at site, chills, lethargy, extreme hunger/thirst.  MODERNA BOOSTER 1/8/22: Numbness in face, lips and tongue. Tightness in heart.  1/9/22: (Morning after shot) Throwing up, almost passed out, too weak to stand for a few hours, stomach wildy churning. Felt like I was poisoned. Was also on period. The worst sickness I've ever felt."
+    },
+    {
+      "VAERS_ID": "2547741",
+      "vaccine": "COVID19 (COVID19 (MODERNA))",
+      "unmapped_symptom": "Pain in extremity",
+      "symptom_frequency": 1061,
+      "fda_adverse_events_for_vaccine": [
+        "arthralgia",
+        "axillary swelling or tenderness",
+        "chills",
+        "fatigue",
+        "headache",
+        "myalgia",
+        "nausea/vomiting",
+        "pain at the injection site"
+      ],
+      "potential_matches": [],
+      "should_find": true,
+      "notes": "Symptom appears 1061 times and may match one of the FDA adverse events",
+      "symptom_text": "Considerable swelling of left hand which prevented closure of the hand with a loss of range of motion of 60 to 70 percent  of normal. There was throbbing pain in various areas and significant ratiating pain during efforts to close the hand ."
+    },
+    {
+      "VAERS_ID": "2548069",
+      "vaccine": "ZOSTER (SHINGRIX)",
+      "unmapped_symptom": "Injection site erythema",
+      "symptom_frequency": 1048,
+      "fda_adverse_events_for_vaccine": [
+        "fatigue",
+        "fever",
+        "gastrointestinal symptoms",
+        "headache",
+        "myalgia",
+        "pain",
+        "redness",
+        "shivering",
+        "swelling"
+      ],
+      "potential_matches": [],
+      "should_find": true,
+      "notes": "Symptom appears 1048 times and may match one of the FDA adverse events",
+      "symptom_text": "patient has a knot on her arm and redness about 1.5 inches out around her injection site , as well as, soreness I told patient to use cold compresses for about 15 minutes at a time , and to take benadryl and ibuprofen"
+    },
+    {
+      "VAERS_ID": "2551623",
+      "vaccine": "ZOSTER (SHINGRIX)",
+      "unmapped_symptom": "Rash",
+      "symptom_frequency": 1034,
+      "fda_adverse_events_for_vaccine": [
+        "fatigue",
+        "fever",
+        "gastrointestinal symptoms",
+        "headache",
+        "myalgia",
+        "pain",
+        "redness",
+        "shivering",
+        "swelling"
+      ],
+      "potential_matches": [],
+      "should_find": false,
+      "notes": "Symptom appears 1034 times and may match one of the FDA adverse events",
+      "symptom_text": "pain in left shoulder and arm  This was followed by blisters on the left all the way to the wrist and a few on left upper quadrant of my back  The injection date was 12/7/2022  and the pain from in my arm started the next day   The rash and blisters started around 12/14/2022  I had an appointment with my doctor on 12/19/2022 and he expected Shingles.  Lab test confirmed his diagnosis.  He prescribed Valtrex and I am recovering"
+    },
+    {
+      "VAERS_ID": "2548844",
+      "vaccine": "ZOSTER (SHINGRIX)",
+      "unmapped_symptom": "Chills",
+      "symptom_frequency": 981,
+      "fda_adverse_events_for_vaccine": [
+        "fatigue",
+        "fever",
+        "gastrointestinal symptoms",
+        "headache",
+        "myalgia",
+        "pain",
+        "redness",
+        "shivering",
+        "swelling"
+      ],
+      "potential_matches": [],
+      "should_find": true,
+      "notes": "Symptom appears 981 times and may match one of the FDA adverse events",
+      "symptom_text": "Approximately 11 hours after vaccine developed mild headache, severe chills, muscle aches, low grade temperature, extreme fatigue and slept about 20 hours out of 24."
+    },
+    {
+      "VAERS_ID": "2547752",
+      "vaccine": "COVID19 (COVID19 (MODERNA))",
+      "unmapped_symptom": "Dizziness",
+      "symptom_frequency": 967,
+      "fda_adverse_events_for_vaccine": [
+        "arthralgia",
+        "axillary swelling or tenderness",
+        "chills",
+        "fatigue",
+        "headache",
+        "myalgia",
+        "nausea/vomiting",
+        "pain at the injection site"
+      ],
+      "potential_matches": [],
+      "should_find": false,
+      "notes": "Symptom appears 967 times and may match one of the FDA adverse events",
+      "symptom_text": "MODERNA SHOT #1  6/5/21: Day One 6:00pm First Dose  6:05pm numbness in right fingers and arm 6:20pm numbness subsides, nose clears up 6:45pm slight pain in chest on upper right breast, pain in chest comes and goes 6:45pm Throat felt like it was closing, hard to swallow but airway not actually blocked, felt like thyroid swelling  6:50pm Lips/tongue feel slightly numb, I feel spaced out in my brain, and slight numbness in sinuses under eyes on each side of the nose. Slight tingle in right toes. 7:00pm: I feel weirdly euphoric, smiling and sort of dissociated. Tingle in right fingers comes and goes.  6/6/21: Day Two 10:00am Slight red rash around injection site, shoulder soreness  3:00pm rash is darker and raised, soreness is way worse (I've also been holding my phone playing a game all day).  7:30pm almost passed out after short walk. Fever chills. 7:45pm feeling tired after dinner. Stomach is acting up/gas  6/7/21: Day Three Felt fine, rash area got larger but no longer raised. Very little arm soreness today, no issues moving normally.  MODERNA SHOT #2 7/3/21: My face and lips went slightly numb 30 minutes after each shot (including booster) along with brain fog. I had a sore arm, red rash at site, chills, lethargy, extreme hunger/thirst.  MODERNA BOOSTER 1/8/22: Numbness in face, lips and tongue. Tightness in heart.  1/9/22: (Morning after shot) Throwing up, almost passed out, too weak to stand for a few hours, stomach wildy churning. Felt like I was poisoned. Was also on period. The worst sickness I've ever felt."
+    },
+    {
+      "VAERS_ID": "2547752",
+      "vaccine": "COVID19 (COVID19 (MODERNA))",
+      "unmapped_symptom": "Nausea",
+      "symptom_frequency": 919,
+      "fda_adverse_events_for_vaccine": [
+        "arthralgia",
+        "axillary swelling or tenderness",
+        "chills",
+        "fatigue",
+        "headache",
+        "myalgia",
+        "nausea/vomiting",
+        "pain at the injection site"
+      ],
+      "potential_matches": [],
+      "should_find": true,
+      "notes": "Symptom appears 919 times and may match one of the FDA adverse events",
+      "symptom_text": "MODERNA SHOT #1  6/5/21: Day One 6:00pm First Dose  6:05pm numbness in right fingers and arm 6:20pm numbness subsides, nose clears up 6:45pm slight pain in chest on upper right breast, pain in chest comes and goes 6:45pm Throat felt like it was closing, hard to swallow but airway not actually blocked, felt like thyroid swelling  6:50pm Lips/tongue feel slightly numb, I feel spaced out in my brain, and slight numbness in sinuses under eyes on each side of the nose. Slight tingle in right toes. 7:00pm: I feel weirdly euphoric, smiling and sort of dissociated. Tingle in right fingers comes and goes.  6/6/21: Day Two 10:00am Slight red rash around injection site, shoulder soreness  3:00pm rash is darker and raised, soreness is way worse (I've also been holding my phone playing a game all day).  7:30pm almost passed out after short walk. Fever chills. 7:45pm feeling tired after dinner. Stomach is acting up/gas  6/7/21: Day Three Felt fine, rash area got larger but no longer raised. Very little arm soreness today, no issues moving normally.  MODERNA SHOT #2 7/3/21: My face and lips went slightly numb 30 minutes after each shot (including booster) along with brain fog. I had a sore arm, red rash at site, chills, lethargy, extreme hunger/thirst.  MODERNA BOOSTER 1/8/22: Numbness in face, lips and tongue. Tightness in heart.  1/9/22: (Morning after shot) Throwing up, almost passed out, too weak to stand for a few hours, stomach wildy churning. Felt like I was poisoned. Was also on period. The worst sickness I've ever felt."
+    },
+    {
+      "VAERS_ID": "2547959",
+      "vaccine": "ZOSTER (SHINGRIX)",
+      "unmapped_symptom": "Incomplete course of vaccination",
+      "symptom_frequency": 914,
+      "fda_adverse_events_for_vaccine": [
+        "fatigue",
+        "fever",
+        "gastrointestinal symptoms",
+        "headache",
+        "myalgia",
+        "pain",
+        "redness",
+        "shivering",
+        "swelling"
+      ],
+      "potential_matches": [],
+      "should_find": false,
+      "notes": "Symptom appears 914 times and may match one of the FDA adverse events",
+      "symptom_text": "1st dose around 2018-2019, 2nd not yet; This case was reported by a nurse via call center representative and described the occurrence of incomplete course of vaccination in a 60-year-old patient who received Herpes zoster (Shingrix) for prophylaxis.   Previously administered products included Shingrix (1st dose received on an unknown date around 2018 to 2019).   On an unknown date, the patient did not receive the 2nd dose of Shingrix. On an unknown date, unknown after receiving Shingrix, the patient experienced incomplete course of vaccination. On an unknown date, the outcome of the incomplete course of vaccination was unknown.   Additional Information: GSK Receipt Date: 28-DEC-2022 Reporter's Comments: A nurse practitioner reported that a patient wanted to receive a 2nd dose of Shingrix vaccine. The health care professional (HCP) wanted to remain anonymous, also did not want to give out information on the patient or the situation in general.  The HCP dropped the called before getting transferred to another specialist. The reporter did not consent to follow-up. Additional Supportive Information: Till the time of reporting, the patient did not receive 2nd dose of Shingrix, which led to incomplete course of vaccination."
+    },
+    {
+      "VAERS_ID": "2548813",
+      "vaccine": "COVID19 (COVID19 (MODERNA BIVALENT))",
+      "unmapped_symptom": "Cough",
+      "symptom_frequency": 879,
+      "fda_adverse_events_for_vaccine": [],
+      "potential_matches": [],
+      "should_find": false,
+      "notes": "Symptom appears 879 times and may match one of the FDA adverse events",
+      "symptom_text": "As I recall, I did not have symptoms when I tested positive. I was feeling fine. My wife had tested positive so I tested on Wednesday 12/23. She had plenty of symptoms when she tested positive, like a bad cold. When I tested positive I still felt fine but I moved to the other bedroom. It seemed like a bad cold, I had a high fever at one time, congestion, tiredness. The cough came later and I'm still dealing with that. on Friday we called the doctor and she prescribed Paxlovid. I took that for 5 days. Its hard to know whether that made any difference or not, I've never had COVID-19 before. After the Paxlovid ended this cough kicked in that would not go away. The doctor prescribed a cough medicine that has helped a lot, but I still have it, just not as severe."
+    },
+    {
+      "VAERS_ID": "2548256",
+      "vaccine": "COVID19 (COVID19 (MODERNA))",
+      "unmapped_symptom": "Malaise",
+      "symptom_frequency": 858,
+      "fda_adverse_events_for_vaccine": [
+        "arthralgia",
+        "axillary swelling or tenderness",
+        "chills",
+        "fatigue",
+        "headache",
+        "myalgia",
+        "nausea/vomiting",
+        "pain at the injection site"
+      ],
+      "potential_matches": [],
+      "should_find": true,
+      "notes": "Symptom appears 858 times and may match one of the FDA adverse events",
+      "symptom_text": "Fatigue     After second Moderna vaccine given on 3/4/21, Started with pain in her arm and headache that night.  Next day she had a fever 103.0, palpitations, lightheaded, joint pain/muscle pain, SOB, blood pressure 125/55, HR 125.  Many symptoms lasted until Sunday.  Still doesn't feel right.  Has been taking tylenol for the fever.   generalized malaise, fatigue, heart palpitations and blood pressure fluctuations.  Patient reports she received the 2nd Moderna vaccine  and had symptoms that started approximately 24 hours after the vaccine was administered.  Patient reported fever up to 103 initially which is since resolved, she has had continued myalgias, joint pain fatigue and heart palpitations.  Patient denies any shortness of breath or difficulty breathing."
     }
   ]
 }
