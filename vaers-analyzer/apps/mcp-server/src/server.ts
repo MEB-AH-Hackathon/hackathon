@@ -28,7 +28,7 @@ app.post('/fda', async (req, res) => {
         
         // Search for FDA reports containing these symptoms
         const symptomResults = await Promise.all(
-          symptoms.map((symptom: string) => fdaRepo.searchBySymptom(symptom))
+          symptoms.map((symptom: string) => fdaRepo.searchByAdverseEvent(symptom))
         );
         
         // Flatten and deduplicate results
@@ -42,10 +42,10 @@ app.post('/fda', async (req, res) => {
           foundReports: allResults.length,
           reports: allResults.map(report => ({
             id: report.id,
-            studyType: report.studyType,
-            sourceSection: report.sourceSection,
-            symptoms: report.symptomsList,
-            excerpt: report.controlledTrialText.substring(0, 500) + '...'
+            vaccineName: report.vaccineName,
+            manufacturer: report.manufacturer,
+            adverseEvents: report.adverseEvents,
+            pdfFile: report.pdfFile
           }))
         };
         break;
@@ -56,10 +56,12 @@ app.post('/fda', async (req, res) => {
           return res.status(400).json({ error: 'Missing vaccine or indication' });
         }
         
-        // Search FDA reports by text for this vaccine and indication
-        const trialResults = await fdaRepo.searchByText(trialVaccine);
+        // Search FDA reports by vaccine name
+        const trialResults = await fdaRepo.searchVaccineNames(trialVaccine);
         const filteredResults = trialResults.filter(report => 
-          report.controlledTrialText.toLowerCase().includes(indication.toLowerCase())
+          report.adverseEvents.some(event => 
+            event.toLowerCase().includes(indication.toLowerCase())
+          )
         );
         
         result = {
@@ -68,10 +70,10 @@ app.post('/fda', async (req, res) => {
           foundReports: filteredResults.length,
           trialData: filteredResults.map(report => ({
             id: report.id,
-            studyType: report.studyType,
-            sourceSection: report.sourceSection,
-            controlledTrialText: report.controlledTrialText,
-            symptoms: report.symptomsList
+            vaccineName: report.vaccineName,
+            manufacturer: report.manufacturer,
+            adverseEvents: report.adverseEvents,
+            pdfFile: report.pdfFile
           }))
         };
         break;

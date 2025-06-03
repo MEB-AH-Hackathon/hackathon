@@ -1,5 +1,5 @@
 import { db } from '../db-connection';
-import { eq, sql, ilike } from 'drizzle-orm';
+import { eq, sql, like } from 'drizzle-orm';
 import { fdaReports, type FdaReportRecord, type NewFdaReportRecord } from '../schema/fda-reports';
 
 export class FdaReportRepository {
@@ -24,51 +24,52 @@ export class FdaReportRepository {
     return results.length ? results[0] : undefined;
   }
 
-  async getByFilename(filename: string): Promise<FdaReportRecord | undefined> {
-    const results = await db.select().from(fdaReports).where(eq(fdaReports.filename, filename));
+  async getByVaccineName(vaccineName: string): Promise<FdaReportRecord | undefined> {
+    const results = await db.select().from(fdaReports).where(eq(fdaReports.vaccineName, vaccineName));
     return results.length ? results[0] : undefined;
+  }
+
+  async getByManufacturer(manufacturer: string): Promise<FdaReportRecord[]> {
+    return await db.select().from(fdaReports).where(eq(fdaReports.manufacturer, manufacturer));
   }
 
   async delete(reportId: number): Promise<void> {
     await db.delete(fdaReports).where(eq(fdaReports.id, reportId));
   }
 
-  async getAllReports(): Promise<FdaReportRecord[]> {
-    return await db.select().from(fdaReports).where(eq(fdaReports.success, true));
+  async getAll(): Promise<FdaReportRecord[]> {
+    return await db.select().from(fdaReports).orderBy(fdaReports.vaccineName);
   }
 
-  async getReportsByStudyType(studyType: string): Promise<FdaReportRecord[]> {
-    return await db.select().from(fdaReports).where(eq(fdaReports.studyType, studyType));
-  }
-
-  async searchBySymptom(symptom: string): Promise<FdaReportRecord[]> {
+  async searchByAdverseEvent(adverseEvent: string): Promise<FdaReportRecord[]> {
     return await db
       .select()
       .from(fdaReports)
-      .where(sql`${fdaReports.symptomsList}::jsonb @> ${JSON.stringify([symptom])}::jsonb`);
+      .where(sql`${fdaReports.adverseEvents} @> ${JSON.stringify([adverseEvent])}`);
   }
 
-  async searchByText(searchText: string): Promise<FdaReportRecord[]> {
+  async searchVaccineNames(searchTerm: string): Promise<FdaReportRecord[]> {
     return await db
       .select()
       .from(fdaReports)
-      .where(
-        sql`${fdaReports.controlledTrialText} ILIKE ${`%${searchText}%`} OR 
-            ${fdaReports.fullPdfText} ILIKE ${`%${searchText}%`}`
-      );
+      .where(like(fdaReports.vaccineName, `%${searchTerm}%`));
   }
 
-  async getUniqueSymptoms(): Promise<string[]> {
+  async getUniqueAdverseEvents(): Promise<string[]> {
     const results = await db
       .select({
-        symptoms: sql<string[]>`DISTINCT jsonb_array_elements_text(${fdaReports.symptomsList})`
+        events: sql<string[]>`DISTINCT jsonb_array_elements_text(${fdaReports.adverseEvents})`
       })
       .from(fdaReports);
     
-    return results.map(r => r.symptoms).flat();
+    return results.map(r => r.events).flat();
   }
 
-  async getReportsBySourceSection(sourceSection: string): Promise<FdaReportRecord[]> {
-    return await db.select().from(fdaReports).where(eq(fdaReports.sourceSection, sourceSection));
+  async getUniqueManufacturers(): Promise<string[]> {
+    const results = await db
+      .selectDistinct({ manufacturer: fdaReports.manufacturer })
+      .from(fdaReports);
+    
+    return results.map(r => r.manufacturer);
   }
 }

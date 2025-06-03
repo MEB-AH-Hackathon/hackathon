@@ -1,9 +1,9 @@
 import { MCPClient } from '../mcp-client';
 import { LLMProvider } from './llm-provider';
 import { 
-  VaersReportRepository, 
-  VaersSymptomRepository,
-  VaersVaccineRepository 
+  VaersReportRepository,
+  SymptomMappingRepository,
+  FdaReportRepository
 } from '@vaers/database';
 import type { VaersReport } from '@vaers/types';
 import type { 
@@ -20,8 +20,8 @@ export class VaersAnalysisPipeline {
     private llm: LLMProvider,
     private mcpClient: MCPClient,
     private reportRepo: VaersReportRepository,
-    private symptomRepo: VaersSymptomRepository,
-    private vaccineRepo: VaersVaccineRepository
+    private symptomMappingRepo: SymptomMappingRepository,
+    private fdaReportRepo: FdaReportRepository
   ) {}
 
   async analyze(report: VaersReport, stream: StreamController): Promise<AnalysisResult> {
@@ -135,12 +135,13 @@ export class VaersAnalysisPipeline {
       const symptomMatches = new Map<string, Set<string>>();
 
       for (const term of searchTerms) {
-        const reports = await this.symptomRepo.findReportsBySymptom(term);
-        for (const report of reports) {
-          if (!symptomMatches.has(report.vaersId)) {
-            symptomMatches.set(report.vaersId, new Set());
+        const reports = await this.reportRepo.getReportsBySymptom(term);
+        for (const dbReport of reports) {
+          const vaersId = String(dbReport.vaersId);
+          if (!symptomMatches.has(vaersId)) {
+            symptomMatches.set(vaersId, new Set());
           }
-          symptomMatches.get(report.vaersId)!.add(term);
+          symptomMatches.get(vaersId)!.add(term);
         }
       }
 
@@ -157,24 +158,21 @@ export class VaersAnalysisPipeline {
 
       // Get full report details for top matches
       for (const scoreData of reportScores) {
-        const fullReport = await this.reportRepo.getByVaersId(scoreData.vaersId);
+        const fullReport = await this.reportRepo.getByVaersId(Number(scoreData.vaersId));
         if (fullReport) {
-          const reportWithDetails = await this.reportRepo.getReportWithDetails(fullReport.id);
-          if (reportWithDetails) {
-            similarReports.push({
-              vaersId: scoreData.vaersId,
-              similarityScore: scoreData.similarityScore,
-              matchedSymptoms: scoreData.matchedSymptoms,
-              vaccines: reportWithDetails.vaccines.map(v => v.vaxType || '').filter(Boolean),
-              outcomes: [
-                reportWithDetails.died && 'Death',
-                reportWithDetails.lThreat && 'Life Threatening',
-                reportWithDetails.hospital && 'Hospitalized',
-                reportWithDetails.disable && 'Disabled',
-                reportWithDetails.erVisit && 'ER Visit'
-              ].filter(Boolean) as string[]
-            });
-          }
+          similarReports.push({
+            vaersId: scoreData.vaersId,
+            similarityScore: scoreData.similarityScore,
+            matchedSymptoms: scoreData.matchedSymptoms,
+            vaccines: (fullReport.vaxTypeList || []).filter(Boolean),
+            outcomes: [
+              fullReport.died === 'Y' && 'Death',
+              fullReport.lThreat === 'Y' && 'Life Threatening',
+              fullReport.hospital === 'Y' && 'Hospitalized',
+              fullReport.disable === 'Y' && 'Disabled',
+              fullReport.erVisit === 'Y' && 'ER Visit'
+            ].filter(Boolean) as string[]
+          });
         }
       }
 

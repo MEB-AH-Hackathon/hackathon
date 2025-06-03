@@ -1,49 +1,28 @@
 import type { VaersRawData } from '@vaers/types';
 import type { NewVaersReportRecord } from '../schema/vaers-reports';
-import type { NewVaersVaccineRecord } from '../schema/vaers-vaccines';
-import type { NewVaersSymptomRecord } from '../schema/vaers-symptoms';
 
 /**
- * Parse date string in MM/DD/YYYY format to Date object
+ * Parse date string in MM/DD/YYYY format to string (keep original format)
  */
-export function parseVaersDate(dateStr: string | null | undefined): Date | null {
+export function parseVaersDate(dateStr: string | null | undefined): string | null {
   if (!dateStr) return null;
-  
-  // Handle MM/DD/YYYY format
-  const parts = dateStr.split('/');
-  if (parts.length !== 3) return null;
-  
-  const monthStr = parts[0];
-  const dayStr = parts[1];
-  const yearStr = parts[2];
-  
-  if (!monthStr || !dayStr || !yearStr) return null;
-  
-  const month = parseInt(monthStr, 10);
-  const day = parseInt(dayStr, 10);
-  const year = parseInt(yearStr, 10);
-  
-  if (isNaN(month) || isNaN(day) || isNaN(year)) return null;
-  
-  // JavaScript Date uses 0-based months
-  return new Date(year, month - 1, day);
+  return dateStr;
 }
 
 /**
- * Convert Y/N/U string to boolean or null
+ * Keep Y/N/U string as is
  */
-export function parseYesNo(value: string | null | undefined): boolean | null {
-  if (value === 'Y') return true;
-  if (value === 'N') return false;
+export function parseYesNo(value: string | null | undefined): string | null {
+  if (value === 'Y' || value === 'N') return value;
   return null;
 }
 
 /**
  * Convert raw VAERS data to database report record
  */
-export function convertToReportRecord(raw: VaersRawData): Omit<NewVaersReportRecord, 'id'> {
+export function convertToReportRecord(raw: VaersRawData): Omit<NewVaersReportRecord, 'id' | 'createdAt' | 'updatedAt'> {
   return {
-    vaersId: String(raw.VAERS_ID),
+    vaersId: Number(raw.VAERS_ID),
     recvDate: parseVaersDate(raw.RECVDATE),
     state: raw.STATE || null,
     ageYrs: raw.AGE_YRS !== null && !isNaN(Number(raw.AGE_YRS)) ? String(raw.AGE_YRS) : null,
@@ -57,78 +36,25 @@ export function convertToReportRecord(raw: VaersRawData): Omit<NewVaersReportRec
     recovd: (raw.RECOVD === 'Y' || raw.RECOVD === 'N' || raw.RECOVD === 'U') ? raw.RECOVD : null,
     vaxDate: parseVaersDate(raw.VAX_DATE),
     onsetDate: parseVaersDate(raw.ONSET_DATE),
-    numDays: raw.NUMDAYS !== null && !isNaN(Number(raw.NUMDAYS)) ? Number(raw.NUMDAYS) : null,
+    numDays: raw.NUMDAYS !== null && !isNaN(Number(raw.NUMDAYS)) ? String(raw.NUMDAYS) : null,
+    vaxTypeList: raw.VAX_TYPE_list || [],
+    vaxManuList: raw.VAX_MANU_list || [],
+    vaxNameList: raw.VAX_NAME_list || [],
+    vaxDoseSeriesList: raw.VAX_DOSE_SERIES_list?.map(d => d || '') || [],
+    vaxRouteList: raw.VAX_ROUTE_list?.map(r => r || '') || [],
+    vaxSiteList: raw.VAX_SITE_list?.map(s => s || '') || [],
+    symptomList: raw.symptom_list || [],
     status: 'new'
   };
 }
 
-/**
- * Convert raw VAERS data to vaccine records
- */
-export function convertToVaccineRecords(raw: VaersRawData, reportId: number): NewVaersVaccineRecord[] {
-  const vaccines: NewVaersVaccineRecord[] = [];
-  
-  const vaxTypes = raw.VAX_TYPE_list || [];
-  const vaxManus = raw.VAX_MANU_list || [];
-  const vaxNames = raw.VAX_NAME_list || [];
-  const vaxDoses = raw.VAX_DOSE_SERIES_list || [];
-  const vaxRoutes = raw.VAX_ROUTE_list || [];
-  const vaxSites = raw.VAX_SITE_list || [];
-  
-  // Create vaccine records based on the longest array
-  const maxLength = Math.max(
-    vaxTypes.length,
-    vaxManus.length,
-    vaxNames.length,
-    vaxDoses.length,
-    vaxRoutes.length,
-    vaxSites.length
-  );
-  
-  for (let i = 0; i < maxLength; i++) {
-    vaccines.push({
-      reportId,
-      vaxType: vaxTypes[i] || null,
-      vaxManufacturer: vaxManus[i] || null,
-      vaxName: vaxNames[i] || null,
-      vaxDoseSeries: vaxDoses[i] || null,
-      vaxRoute: vaxRoutes[i] || null,
-      vaxSite: vaxSites[i] || null
-    });
-  }
-  
-  return vaccines;
-}
-
-/**
- * Convert raw VAERS data to symptom records
- */
-export function convertToSymptomRecords(raw: VaersRawData, reportId: number): NewVaersSymptomRecord[] {
-  const symptoms: NewVaersSymptomRecord[] = [];
-  
-  if (raw.symptom_list && Array.isArray(raw.symptom_list)) {
-    for (const symptomName of raw.symptom_list) {
-      if (symptomName && typeof symptomName === 'string') {
-        symptoms.push({
-          reportId,
-          symptomName,
-          validationStatus: 'unvalidated'
-        });
-      }
-    }
-  }
-  
-  return symptoms;
-}
 
 /**
  * Import a batch of raw VAERS data
  */
 export async function importVaersData(
   rawData: VaersRawData[],
-  reportRepo: any,
-  vaccineRepo: any,
-  symptomRepo: any
+  reportRepo: any
 ): Promise<{ imported: number; errors: string[] }> {
   let imported = 0;
   const errors: string[] = [];
@@ -136,7 +62,7 @@ export async function importVaersData(
   for (const raw of rawData) {
     try {
       // Check if report already exists
-      const existing = await reportRepo.getByVaersId(String(raw.VAERS_ID));
+      const existing = await reportRepo.getByVaersId(Number(raw.VAERS_ID));
       if (existing) {
         errors.push(`Report ${raw.VAERS_ID} already exists`);
         continue;
@@ -145,18 +71,6 @@ export async function importVaersData(
       // Convert and insert report
       const reportData = convertToReportRecord(raw);
       const report = await reportRepo.insert(reportData);
-      
-      // Insert vaccines
-      const vaccines = convertToVaccineRecords(raw, report.id);
-      if (vaccines.length > 0) {
-        await vaccineRepo.insertMany(vaccines);
-      }
-      
-      // Insert symptoms
-      const symptoms = convertToSymptomRecords(raw, report.id);
-      if (symptoms.length > 0) {
-        await symptomRepo.insertMany(symptoms);
-      }
       
       imported++;
     } catch (error) {

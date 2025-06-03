@@ -1,15 +1,11 @@
-import { serial, text, timestamp, pgTable, boolean, jsonb } from "drizzle-orm/pg-core";
+import { serial, text, timestamp, pgTable, jsonb } from "drizzle-orm/pg-core";
 
 export const fdaReports = pgTable("fda_reports", {
   id: serial("id").primaryKey(),
-  filename: text("filename").notNull(),
-  success: boolean("success").notNull().default(true),
-  controlledTrialText: text("controlled_trial_text").notNull(),
-  symptomsList: jsonb("symptoms_list").$type<string[]>().notNull(),
-  studyType: text("study_type"),
-  sourceSection: text("source_section"),
-  fullPdfText: text("full_pdf_text").notNull(),
-  rawResponse: text("raw_response").notNull(),
+  vaccineName: text("vaccine_name").notNull(),
+  manufacturer: text("manufacturer").notNull(),
+  adverseEvents: jsonb("adverse_events").$type<string[]>().notNull(),
+  pdfFile: text("pdf_file").notNull(),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
 });

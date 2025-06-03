@@ -6,11 +6,11 @@ import {
   ReportGenerator,
   type StreamController 
 } from '@vaers/analyzer';
-import type { VaersReport, SymptomSeverity, ValidationStatus, Sex, RecoveryStatus, ReportStatus } from '@vaers/types';
+import type { VaersReport, ValidationStatus, Sex, RecoveryStatus, ReportStatus } from '@vaers/types';
 import { 
-  VaersReportRepository, 
-  VaersSymptomRepository,
-  VaersVaccineRepository 
+  VaersReportRepository,
+  SymptomMappingRepository,
+  FdaReportRepository
 } from '@vaers/database';
 
 /**
@@ -26,11 +26,11 @@ export async function POST(request: NextRequest) {
 
     // Initialize repositories
     const reportRepo = new VaersReportRepository();
-    const symptomRepo = new VaersSymptomRepository();
-    const vaccineRepo = new VaersVaccineRepository();
+    const symptomMappingRepo = new SymptomMappingRepository();
+    const fdaReportRepo = new FdaReportRepository();
 
-    // Get the report with details
-    const report = await reportRepo.getReportWithDetails(reportId);
+    // Get the report
+    const report = await reportRepo.getById(reportId);
     if (!report) {
       return Response.json({ error: 'Report not found' }, { status: 404 });
     }
@@ -56,42 +56,46 @@ export async function POST(request: NextRequest) {
             llm,
             mcpClient,
             reportRepo,
-            symptomRepo,
-            vaccineRepo
+            symptomMappingRepo,
+            fdaReportRepo
           );
 
-          // Transform the report to match VaersReport type (null -> undefined)
+          // Transform the report to match VaersReport type
           const vaersReport: VaersReport = {
             ...report,
-            recvDate: report.recvDate || undefined,
+            vaersId: String(report.vaersId),
+            recvDate: report.recvDate ? new Date(report.recvDate) : undefined,
             state: report.state || undefined,
             ageYrs: report.ageYrs ? Number(report.ageYrs) : undefined,
             sex: (report.sex as Sex) || undefined,
             symptomText: report.symptomText || undefined,
-            died: report.died || undefined,
-            lThreat: report.lThreat || undefined,
-            erVisit: report.erVisit || undefined,
-            hospital: report.hospital || undefined,
-            disable: report.disable || undefined,
+            died: report.died === 'Y',
+            lThreat: report.lThreat === 'Y',
+            erVisit: report.erVisit === 'Y',
+            hospital: report.hospital === 'Y',
+            disable: report.disable === 'Y',
             recovd: (report.recovd as RecoveryStatus) || undefined,
-            vaxDate: report.vaxDate || undefined,
-            onsetDate: report.onsetDate || undefined,
-            numDays: report.numDays || undefined,
+            vaxDate: report.vaxDate ? new Date(report.vaxDate) : undefined,
+            onsetDate: report.onsetDate ? new Date(report.onsetDate) : undefined,
+            numDays: report.numDays ? Number(report.numDays) : undefined,
             status: report.status as ReportStatus,
-            vaccines: (report.vaccines || []).map(v => ({
-              ...v,
-              vaxType: v.vaxType || undefined,
-              vaxManufacturer: v.vaxManufacturer || undefined,
-              vaxName: v.vaxName || undefined,
-              vaxDoseSeries: v.vaxDoseSeries || undefined,
-              vaxRoute: v.vaxRoute || undefined,
-              vaxSite: v.vaxSite || undefined
+            vaccines: (report.vaxTypeList || []).map((type: string, i: number) => ({
+              id: i,
+              reportId: report.id,
+              vaxType: type,
+              vaxManufacturer: report.vaxManuList?.[i],
+              vaxName: report.vaxNameList?.[i],
+              vaxDoseSeries: report.vaxDoseSeriesList?.[i],
+              vaxRoute: report.vaxRouteList?.[i],
+              vaxSite: report.vaxSiteList?.[i],
+              createdAt: report.createdAt
             })),
-            symptoms: (report.symptoms || []).map(s => ({
-              ...s,
-              severity: (s.severity as SymptomSeverity) || undefined,
-              validationStatus: s.validationStatus as ValidationStatus,
-              fdaReference: s.fdaReference || undefined
+            symptoms: (report.symptomList || []).map((symptom: string, i: number) => ({
+              id: i,
+              reportId: report.id,
+              symptomName: symptom,
+              validationStatus: 'unvalidated' as ValidationStatus,
+              createdAt: report.createdAt
             }))
           };
 

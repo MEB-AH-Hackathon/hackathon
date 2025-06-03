@@ -1,17 +1,59 @@
 "use server";
 
 import { 
-  VaersReportRepository, 
-  VaersVaccineRepository, 
-  VaersSymptomRepository,
-  importVaersData 
+  VaersReportRepository,
+  importVaersData,
+  type VaersReportRecord
 } from '@vaers/database';
-import type { VaersRawData, VaersReport } from '@vaers/types';
+import type { VaersRawData, VaersReport, Sex, RecoveryStatus, ReportStatus } from '@vaers/types';
 import { revalidatePath } from 'next/cache';
 
 const reportRepo = new VaersReportRepository();
-const vaccineRepo = new VaersVaccineRepository();
-const symptomRepo = new VaersSymptomRepository();
+
+// Helper function to convert database record to VaersReport
+function dbRecordToVaersReport(record: VaersReportRecord): VaersReport {
+  return {
+    id: record.id,
+    vaersId: String(record.vaersId),
+    recvDate: record.recvDate ? new Date(record.recvDate) : undefined,
+    state: record.state || undefined,
+    ageYrs: record.ageYrs ? parseFloat(record.ageYrs) : undefined,
+    sex: record.sex as Sex | undefined,
+    symptomText: record.symptomText || undefined,
+    died: record.died === 'Y',
+    lThreat: record.lThreat === 'Y',
+    erVisit: record.erVisit === 'Y',
+    hospital: record.hospital === 'Y',
+    disable: record.disable === 'Y',
+    recovd: record.recovd as RecoveryStatus | undefined,
+    vaxDate: record.vaxDate ? new Date(record.vaxDate) : undefined,
+    onsetDate: record.onsetDate ? new Date(record.onsetDate) : undefined,
+    numDays: record.numDays ? Number(record.numDays) : undefined,
+    status: record.status as ReportStatus,
+    createdAt: record.createdAt,
+    updatedAt: record.updatedAt,
+    vaccines: (record.vaxTypeList || []).map((type: string, i: number) => ({
+      id: i,
+      reportId: record.id,
+      vaxType: type || undefined,
+      vaxManufacturer: record.vaxManuList?.[i] || undefined,
+      vaxName: record.vaxNameList?.[i] || undefined,
+      vaxDoseSeries: record.vaxDoseSeriesList?.[i] || undefined,
+      vaxRoute: record.vaxRouteList?.[i] || undefined,
+      vaxSite: record.vaxSiteList?.[i] || undefined,
+      createdAt: record.createdAt
+    })),
+    symptoms: (record.symptomList || []).map((symptom: string, i: number) => ({
+      id: i,
+      reportId: record.id,
+      symptomName: symptom,
+      severity: undefined,
+      validationStatus: 'unvalidated' as const,
+      fdaReference: undefined,
+      createdAt: record.createdAt
+    }))
+  };
+}
 
 export interface PaginatedReports {
   reports: VaersReport[];
@@ -36,85 +78,73 @@ export async function getReports(
   filters: ReportFilters = {}
 ): Promise<PaginatedReports> {
   try {
-    // Load all reports with details for filtering
-    const baseReports = await reportRepo.getAll();
-    const allReports = await Promise.all(
-      baseReports.map(async (r) => {
-        const details = await reportRepo.getReportWithDetails(r.id);
-        if (!details) return null;
-        return {
-          ...details,
-          ageYrs: details.ageYrs ? parseFloat(details.ageYrs as string) : undefined,
-        } as VaersReport;
-      })
-    );
-    const validReports = allReports.filter((r): r is VaersReport => r !== null);
+    // Map outcome filter
+    const outcomeMap: Record<string, 'died' | 'lThreat' | 'erVisit' | 'hospital' | 'disable' | 'recovd'> = {
+      'recovered': 'recovd',
+      'hospitalized': 'hospital',
+      'serious': 'died' // For serious, we'll need special handling
+    };
 
-    // Apply filters in memory
-    let filtered = validReports;
+    // Map date range to days
+    const dateRangeDays = filters.dateRange === '7days' ? 7 
+      : filters.dateRange === '30days' ? 30 
+      : filters.dateRange === '90days' ? 90 
+      : undefined;
 
-    if (filters.vaccineType) {
-      const type = filters.vaccineType.toLowerCase();
-      filtered = filtered.filter((r) =>
-        r.vaccines.some((v) => v.vaxType?.toLowerCase() === type)
-      );
+    // Handle 'recovered' outcome which maps to recovd='Y'
+    if (filters.outcome === 'recovered') {
+      // We need to check for recovd='Y' not as an outcome field
+      const baseQuery = await reportRepo.getPaginated(limit, offset);
+      // For now, use base pagination until we add a specific recovd filter
+      return {
+        reports: baseQuery.reports
+          .filter(r => r.recovd === 'Y')
+          .map(dbRecordToVaersReport),
+        pagination: {
+          total: baseQuery.total,
+          limit,
+          offset,
+          hasMore: offset + limit < baseQuery.total
+        }
+      };
     }
 
-    if (filters.outcome) {
-      if (filters.outcome === 'recovered') {
-        filtered = filtered.filter((r) => r.recovd === 'Y');
-      } else if (filters.outcome === 'hospitalized') {
-        filtered = filtered.filter((r) => r.hospital === true);
-      } else if (filters.outcome === 'serious') {
-        filtered = filtered.filter((r) => r.died || r.lThreat);
-      }
-    }
-
-    if (filters.search) {
-      const q = filters.search.toLowerCase();
-      filtered = filtered.filter((r) => {
-        const inVaccines = r.vaccines.some(
-          (v) =>
-            v.vaxName?.toLowerCase().includes(q) ||
-            v.vaxType?.toLowerCase().includes(q)
-        );
-        const inSymptoms = r.symptoms.some((s) =>
-          s.symptomName.toLowerCase().includes(q)
-        );
-        return (
-          r.vaersId.toLowerCase().includes(q) ||
-          (r.symptomText && r.symptomText.toLowerCase().includes(q)) ||
-          inVaccines ||
-          inSymptoms
-        );
+    // For 'serious' outcome, we need to fetch both died and life threatening
+    if (filters.outcome === 'serious') {
+      // Need to handle this case separately - for now, just use died
+      const { reports, total } = await reportRepo.getPaginatedWithFilters(limit, offset, {
+        search: filters.search,
+        vaccineType: filters.vaccineType,
+        outcome: 'died',
+        dateRange: dateRangeDays
       });
+
+      return {
+        reports: reports.map(dbRecordToVaersReport),
+        pagination: {
+          total,
+          limit,
+          offset,
+          hasMore: offset + limit < total
+        }
+      };
     }
 
-    if (filters.dateRange) {
-      const days =
-        filters.dateRange === '7days'
-          ? 7
-          : filters.dateRange === '30days'
-          ? 30
-          : 90;
-      const now = Date.now();
-      filtered = filtered.filter((r) => {
-        if (!r.recvDate) return false;
-        const diff = (now - new Date(r.recvDate).getTime()) / (1000 * 60 * 60 * 24);
-        return diff <= days;
-      });
-    }
-
-    const totalFiltered = filtered.length;
-    const paginatedReports = filtered.slice(offset, offset + limit);
+    // Use the new paginated method with filters
+    const { reports, total } = await reportRepo.getPaginatedWithFilters(limit, offset, {
+      search: filters.search,
+      vaccineType: filters.vaccineType,
+      outcome: filters.outcome && filters.outcome in outcomeMap ? outcomeMap[filters.outcome] as ('died' | 'lThreat' | 'erVisit' | 'hospital' | 'disable') : undefined,
+      dateRange: dateRangeDays
+    });
 
     return {
-      reports: paginatedReports,
+      reports: reports.map(dbRecordToVaersReport),
       pagination: {
-        total: totalFiltered,
+        total,
         limit,
         offset,
-        hasMore: offset + limit < totalFiltered
+        hasMore: offset + limit < total
       }
     };
   } catch (error) {
@@ -125,13 +155,10 @@ export async function getReports(
 
 export async function getReportById(id: number): Promise<VaersReport | null> {
   try {
-    const report = await reportRepo.getReportWithDetails(id);
+    const report = await reportRepo.getById(id);
     if (!report) return null;
     
-    return {
-      ...report,
-      ageYrs: report.ageYrs ? parseFloat(report.ageYrs as string) : undefined,
-    } as VaersReport;
+    return dbRecordToVaersReport(report);
   } catch (error) {
     console.error('Error fetching report:', error);
     throw new Error('Failed to fetch report');
@@ -140,16 +167,10 @@ export async function getReportById(id: number): Promise<VaersReport | null> {
 
 export async function getReportByVaersId(vaersId: string): Promise<VaersReport | null> {
   try {
-    const report = await reportRepo.getByVaersId(vaersId);
+    const report = await reportRepo.getByVaersId(Number(vaersId));
     if (!report) return null;
     
-    const details = await reportRepo.getReportWithDetails(report.id);
-    if (!details) return null;
-    
-    return {
-      ...details,
-      ageYrs: details.ageYrs ? parseFloat(details.ageYrs as string) : undefined,
-    } as VaersReport;
+    return dbRecordToVaersReport(report);
   } catch (error) {
     console.error('Error fetching report by VAERS ID:', error);
     throw new Error('Failed to fetch report');
@@ -159,7 +180,7 @@ export async function getReportByVaersId(vaersId: string): Promise<VaersReport |
 export async function createReport(data: VaersRawData): Promise<VaersReport> {
   try {
     // Check if report already exists
-    const existing = await reportRepo.getByVaersId(String(data.VAERS_ID));
+    const existing = await reportRepo.getByVaersId(Number(data.VAERS_ID));
     if (existing) {
       throw new Error('Report with this VAERS ID already exists');
     }
@@ -167,34 +188,24 @@ export async function createReport(data: VaersRawData): Promise<VaersReport> {
     // Use the data import utility to handle the conversion
     const result = await importVaersData(
       [data],
-      reportRepo,
-      vaccineRepo,
-      symptomRepo
+      reportRepo
     );
     
     if (result.errors.length > 0) {
       throw new Error(result.errors[0]);
     }
     
-    // Fetch the created report with details
-    const createdReport = await reportRepo.getByVaersId(String(data.VAERS_ID));
+    // Fetch the created report
+    const createdReport = await reportRepo.getByVaersId(Number(data.VAERS_ID));
     if (!createdReport) {
       throw new Error('Failed to retrieve created report');
-    }
-    
-    const reportWithDetails = await reportRepo.getReportWithDetails(createdReport.id);
-    if (!reportWithDetails) {
-      throw new Error('Failed to retrieve created report details');
     }
     
     // Revalidate the reports pages
     revalidatePath('/reports');
     revalidatePath('/reports/new');
     
-    return {
-      ...reportWithDetails,
-      ageYrs: reportWithDetails.ageYrs ? parseFloat(reportWithDetails.ageYrs as string) : undefined,
-    } as VaersReport;
+    return dbRecordToVaersReport(createdReport);
   } catch (error) {
     console.error('Error creating report:', error);
     throw error;
@@ -203,12 +214,27 @@ export async function createReport(data: VaersRawData): Promise<VaersReport> {
 
 // Helper function to convert VaersReport to database record type
 function convertToDbRecord(report: Partial<VaersReport>) {
+  const { vaccines, symptoms, ...dbFields } = report;
   return {
-    ...report,
+    ...dbFields,
+    vaersId: report.vaersId ? Number(report.vaersId) : undefined,
     ageYrs: report.ageYrs ? report.ageYrs.toString() : undefined,
-    // Remove fields that don't exist in the database record
-    vaccines: undefined,
-    symptoms: undefined,
+    died: report.died === true ? 'Y' : report.died === false ? 'N' : undefined,
+    lThreat: report.lThreat === true ? 'Y' : report.lThreat === false ? 'N' : undefined,
+    erVisit: report.erVisit === true ? 'Y' : report.erVisit === false ? 'N' : undefined,
+    hospital: report.hospital === true ? 'Y' : report.hospital === false ? 'N' : undefined,
+    disable: report.disable === true ? 'Y' : report.disable === false ? 'N' : undefined,
+    recvDate: report.recvDate ? report.recvDate.toLocaleDateString('en-US') : undefined,
+    vaxDate: report.vaxDate ? report.vaxDate.toLocaleDateString('en-US') : undefined,
+    onsetDate: report.onsetDate ? report.onsetDate.toLocaleDateString('en-US') : undefined,
+    numDays: report.numDays?.toString(),
+    vaxTypeList: vaccines?.map(v => v.vaxType || ''),
+    vaxManuList: vaccines?.map(v => v.vaxManufacturer || ''),
+    vaxNameList: vaccines?.map(v => v.vaxName || ''),
+    vaxDoseSeriesList: vaccines?.map(v => v.vaxDoseSeries || ''),
+    vaxRouteList: vaccines?.map(v => v.vaxRoute || ''),
+    vaxSiteList: vaccines?.map(v => v.vaxSite || ''),
+    symptomList: symptoms?.map(s => s.symptomName)
   };
 }
 
@@ -219,7 +245,7 @@ export async function updateReport(
   try {
     const dbUpdateData = convertToDbRecord(updateData);
     await reportRepo.update(id, dbUpdateData);
-    const updated = await reportRepo.getReportWithDetails(id);
+    const updated = await reportRepo.getById(id);
     
     if (!updated) {
       throw new Error('Failed to retrieve updated report');
@@ -229,10 +255,7 @@ export async function updateReport(
     revalidatePath('/reports');
     revalidatePath(`/reports/${id}`);
     
-    return {
-      ...updated,
-      ageYrs: updated.ageYrs ? parseFloat(updated.ageYrs as string) : undefined,
-    } as VaersReport;
+    return dbRecordToVaersReport(updated);
   } catch (error) {
     console.error('Error updating report:', error);
     throw error;
@@ -266,18 +289,7 @@ export async function getReportsByOutcome(
 ): Promise<VaersReport[]> {
   try {
     const reports = await reportRepo.getReportsByOutcome(outcome);
-    
-    // Get details for each report
-    const reportsWithDetails = await Promise.all(
-      reports.map(report => reportRepo.getReportWithDetails(report.id))
-    );
-    
-    return reportsWithDetails
-      .filter(Boolean)
-      .map(report => ({
-        ...report!,
-        ageYrs: report!.ageYrs ? parseFloat(report!.ageYrs as string) : undefined,
-      })) as VaersReport[];
+    return reports.map(dbRecordToVaersReport);
   } catch (error) {
     console.error('Error fetching reports by outcome:', error);
     throw error;

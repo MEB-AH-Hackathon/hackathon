@@ -1,0 +1,49 @@
+# Dependencies
+node_modules
+npm-debug.log
+
+# Git and version control
+.git
+.gitignore
+
+# Documentation
+README.md
+*.md
+
+# Environment files
+.env*
+!.env.example
+
+# Build outputs
+dist
+.next
+.turbo
+
+# Development files
+.nyc_output
+coverage
+.DS_Store
+*.log
+*.tsbuildinfo
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+
+# Test files
+**/*.test.*
+**/*.spec.*
+__tests__/
+**/__tests__/
+
+# Fly.io files
+fly.toml

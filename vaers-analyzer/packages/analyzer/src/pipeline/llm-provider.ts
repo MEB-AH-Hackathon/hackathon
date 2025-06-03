@@ -15,7 +15,7 @@ export class LLMProvider {
       model: 'claude-sonnet-4-20250514',
       max_tokens: 1000,
       temperature: 0,
-      system: `You are a medical data extraction assistant. Extract structured information from VAERS reports.`,
+      system: `You are a medical data extraction assistant. Extract structured information from VAERS reports. Always respond with valid JSON only, no additional text or markdown formatting.`,
       messages: [
         {
           role: 'user',
@@ -29,7 +29,7 @@ export class LLMProvider {
           Report text:
           ${reportText}
           
-          Return only valid JSON.`
+          Return ONLY valid JSON without any markdown formatting or explanation.`
         }
       ]
     });
@@ -37,9 +37,20 @@ export class LLMProvider {
     const content = message.content[0];
     if (content && content.type === 'text') {
       try {
-        return JSON.parse(content.text);
+        // Try to extract JSON from the response
+        let jsonText = content.text.trim();
+        
+        // Remove markdown code blocks if present
+        if (jsonText.startsWith('```json')) {
+          jsonText = jsonText.replace(/^```json\s*/, '').replace(/\s*```$/, '');
+        } else if (jsonText.startsWith('```')) {
+          jsonText = jsonText.replace(/^```\s*/, '').replace(/\s*```$/, '');
+        }
+        
+        return JSON.parse(jsonText);
       } catch (e) {
-        throw new Error('Failed to parse LLM response as JSON');
+        console.error('Failed to parse LLM response:', content.text);
+        throw new Error('Failed to parse LLM response as JSON: ' + (e instanceof Error ? e.message : String(e)));
       }
     }
     throw new Error('Unexpected response type from LLM');
@@ -55,7 +66,8 @@ export class LLMProvider {
       max_tokens: 2000,
       temperature: 0,
       system: `You are a medical analysis assistant specializing in vaccine adverse event reports. 
-      Provide objective, evidence-based analysis while being clear about limitations and uncertainties.`,
+      Provide objective, evidence-based analysis while being clear about limitations and uncertainties.
+      Always respond with valid JSON only, no additional text or markdown formatting.`,
       messages: [
         {
           role: 'user',
@@ -67,7 +79,8 @@ export class LLMProvider {
           Data:
           ${JSON.stringify(data, null, 2)}
           
-          Return as JSON with fields: summary, overallConfidence, recommendations (array)`
+          Return ONLY valid JSON with fields: summary (string), overallConfidence (string: "high" | "medium" | "low"), recommendations (array of strings).
+          Do not include any markdown formatting or explanation.`
         }
       ]
     });
@@ -75,9 +88,20 @@ export class LLMProvider {
     const content = message.content[0];
     if (content && content.type === 'text') {
       try {
-        return JSON.parse(content.text);
+        // Try to extract JSON from the response
+        let jsonText = content.text.trim();
+        
+        // Remove markdown code blocks if present
+        if (jsonText.startsWith('```json')) {
+          jsonText = jsonText.replace(/^```json\s*/, '').replace(/\s*```$/, '');
+        } else if (jsonText.startsWith('```')) {
+          jsonText = jsonText.replace(/^```\s*/, '').replace(/\s*```$/, '');
+        }
+        
+        return JSON.parse(jsonText);
       } catch (e) {
-        throw new Error('Failed to parse analysis response as JSON');
+        console.error('Failed to parse analysis response:', content.text);
+        throw new Error('Failed to parse analysis response as JSON: ' + (e instanceof Error ? e.message : String(e)));
       }
     }
     throw new Error('Unexpected response type from LLM');
@@ -88,7 +112,7 @@ export class LLMProvider {
       model: 'claude-sonnet-4-20250514',
       max_tokens: 500,
       temperature: 0,
-      system: `You are a medical search assistant. Generate relevant search terms for finding similar cases.`,
+      system: `You are a medical search assistant. Generate relevant search terms for finding similar cases. Always respond with valid JSON only, no additional text or markdown formatting.`,
       messages: [
         {
           role: 'user',
@@ -97,7 +121,7 @@ export class LLMProvider {
           
           ${JSON.stringify(extractedInfo, null, 2)}
           
-          Return as JSON array of strings.`
+          Return ONLY a JSON array of strings. No markdown or explanation.`
         }
       ]
     });
@@ -105,8 +129,19 @@ export class LLMProvider {
     const content = message.content[0];
     if (content && content.type === 'text') {
       try {
-        return JSON.parse(content.text);
+        // Try to extract JSON from the response
+        let jsonText = content.text.trim();
+        
+        // Remove markdown code blocks if present
+        if (jsonText.startsWith('```json')) {
+          jsonText = jsonText.replace(/^```json\s*/, '').replace(/\s*```$/, '');
+        } else if (jsonText.startsWith('```')) {
+          jsonText = jsonText.replace(/^```\s*/, '').replace(/\s*```$/, '');
+        }
+        
+        return JSON.parse(jsonText);
       } catch (e) {
+        console.error('Failed to parse search terms:', content.text);
         return [];
       }
     }

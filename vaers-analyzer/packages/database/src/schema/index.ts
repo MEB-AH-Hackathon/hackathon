@@ -1,5 +1,3 @@
 export * from './vaers-reports';
-export * from './vaers-symptoms';
-export * from './vaers-vaccines';
-export * from './symptom-analogies';
+export * from './symptom-mappings';
 export * from './fda-reports';

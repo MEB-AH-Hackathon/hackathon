@@ -15,12 +15,12 @@ const connectionString = isDev
   ? (process.env.DATABASE_URL_DEV || process.env.DATABASE_URL)
   : process.env.DATABASE_URL_PROD; // Production requires explicit prod URL
 
-  console.log('connectionString', connectionString);
-  console.log('isDev', isDev);
-  console.log('process.env.DATABASE_URL_DEV', process.env.DATABASE_URL_DEV);
-  console.log('process.env.DATABASE_URL_PROD', process.env.DATABASE_URL_PROD);
-  console.log('process.env.DATABASE_URL', process.env.DATABASE_URL);
-  console.log('process.env.NODE_ENV', process.env.NODE_ENV);
+  // console.log('connectionString', connectionString);
+  // console.log('isDev', isDev);
+  // console.log('process.env.DATABASE_URL_DEV', process.env.DATABASE_URL_DEV);
+  // console.log('process.env.DATABASE_URL_PROD', process.env.DATABASE_URL_PROD);
+  // console.log('process.env.DATABASE_URL', process.env.DATABASE_URL);
+  // console.log('process.env.NODE_ENV', process.env.NODE_ENV);
 
 if (!connectionString) {
   const availableVars = [

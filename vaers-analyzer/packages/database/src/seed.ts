@@ -1,18 +1,58 @@
 import * as dotenv from 'dotenv';
 import * as path from 'path';
+import * as fs from 'fs';
 
 // Load environment variables from .env file
 dotenv.config({ path: path.join(__dirname, '..', '.env') });
 
 import { db } from './db-connection';
 import { VaersReportRepository } from './repositories/vaers-reports';
-import { VaersVaccineRepository } from './repositories/vaers-vaccines';
-import { VaersSymptomRepository } from './repositories/vaers-symptoms';
 import { FdaReportRepository } from './repositories/fda-reports';
-import { importVaersData } from './utils/data-import';
-import type { VaersRawData, FdaReportItem } from '@vaers/types';
-import sampleData from './seed-data/vaers-samples.json';
-import fdaSampleData from './seed-data/fda-reports-samples.json';
+import { SymptomMappingRepository } from './repositories/symptom-mappings';
+import type { VaersRawData } from '@vaers/types';
+
+// Types for the JSON data files
+interface SymptomMappingData {
+  vaers_symptom: string;
+  fda_adverse_events: string[];
+}
+
+interface FdaReportData {
+  filename: string;
+  vax_type: string;
+  vax_name: string;
+  vax_manu: string;
+  extraction_success: boolean;
+  adverse_events: string[];
+  study_type: string;
+  source_section: string;
+  controlled_trial_text: string;
+}
+
+interface VaersSubsetData {
+  VAERS_ID: number;
+  RECVDATE: string;
+  STATE: string;
+  AGE_YRS: number | null;
+  SEX: string;
+  SYMPTOM_TEXT: string;
+  DIED: string | null;
+  L_THREAT: string | null;
+  ER_VISIT: string | null;
+  HOSPITAL: string | null;
+  DISABLE: string | null;
+  RECOVD: string | null;
+  VAX_DATE: string;
+  ONSET_DATE: string;
+  NUMDAYS: number | null;
+  VAX_TYPE_list: string[];
+  VAX_MANU_list: string[];
+  VAX_NAME_list: string[];
+  VAX_DOSE_SERIES_list: string[];
+  VAX_ROUTE_list: string[];
+  VAX_SITE_list: string[];
+  symptom_list: string[];
+}
 
 async function seed() {
   const environment = process.env.NODE_ENV || 'development';
@@ -32,53 +72,62 @@ async function seed() {
   try {
     // Initialize repositories
     const reportRepo = new VaersReportRepository();
-    const vaccineRepo = new VaersVaccineRepository();
-    const symptomRepo = new VaersSymptomRepository();
     const fdaReportRepo = new FdaReportRepository();
+    const symptomMappingRepo = new SymptomMappingRepository();
 
-    // Cast the JSON data to VaersRawData array
-    const vaersData = sampleData as VaersRawData[];
+    // Load data files
+    const jsonDataPath = path.join(__dirname, '..', '..', '..', '..', 'json_data');
+    
+    console.log('📂 Loading data files...');
+    
+    // Load symptom mappings
+    const symptomMappingsPath = path.join(jsonDataPath, 'symptom_mappings.json');
+    const symptomMappingsData: SymptomMappingData[] = JSON.parse(fs.readFileSync(symptomMappingsPath, 'utf8'));
+    
+    // Load FDA reports
+    const fdaReportsPath = path.join(jsonDataPath, 'fda_reports.json');
+    const fdaReportsData: FdaReportData[] = JSON.parse(fs.readFileSync(fdaReportsPath, 'utf8'));
+    
+    // For VAERS data, we'll process it in batches due to its size
+    const vaersSubsetPath = path.join(jsonDataPath, 'vaers_subset.json');
+    console.log('📊 Reading VAERS subset data (this may take a moment)...');
+    const vaersSubsetData: VaersSubsetData[] = JSON.parse(fs.readFileSync(vaersSubsetPath, 'utf8'));
 
-    // In production, you might want to use a larger or different dataset
-    const recordsToImport = environment === 'production'
-      ? vaersData
-      : vaersData; // Same data for now, but could be different
+    // 1. Seed symptom mappings
+    console.log(`📊 Importing ${symptomMappingsData.length} symptom mappings...`);
+    let symptomMappingsImported = 0;
+    const symptomMappingErrors: string[] = [];
 
-    console.log(`📊 Importing ${recordsToImport.length} VAERS reports for ${environment}...`);
-
-    // Import the data
-    const result = await importVaersData(
-      recordsToImport,
-      reportRepo,
-      vaccineRepo,
-      symptomRepo
-    );
-
-    console.log(`✅ Successfully imported ${result.imported} reports`);
-
-    if (result.errors.length > 0) {
-      console.log('⚠️  Errors encountered:');
-      result.errors.forEach(error => console.log(`   - ${error}`));
+    for (const mapping of symptomMappingsData) {
+      try {
+        await symptomMappingRepo.insert({
+          vaersSymptom: mapping.vaers_symptom,
+          fdaAdverseEvents: mapping.fda_adverse_events
+        });
+        symptomMappingsImported++;
+      } catch (error) {
+        symptomMappingErrors.push(`Failed to import symptom mapping ${mapping.vaers_symptom}: ${error}`);
+      }
     }
 
-    // Import FDA report data
-    const fdaData = fdaSampleData as FdaReportItem[];
-    console.log(`\n📊 Importing ${fdaData.length} FDA reports...`);
+    console.log(`✅ Successfully imported ${symptomMappingsImported} symptom mappings`);
+    if (symptomMappingErrors.length > 0) {
+      console.log(`⚠️  ${symptomMappingErrors.length} symptom mapping errors (showing first 5):`);
+      symptomMappingErrors.slice(0, 5).forEach(error => console.log(`   - ${error}`));
+    }
 
+    // 2. Seed FDA reports
+    console.log(`📊 Importing ${fdaReportsData.length} FDA reports...`);
     let fdaImported = 0;
     const fdaErrors: string[] = [];
 
-    for (const fdaItem of fdaData) {
+    for (const fdaItem of fdaReportsData) {
       try {
         await fdaReportRepo.insert({
-          filename: fdaItem.filename,
-          success: fdaItem.success,
-          controlledTrialText: fdaItem.data.controlled_trial_text,
-          symptomsList: fdaItem.data.symptoms_list,
-          studyType: fdaItem.data.study_type,
-          sourceSection: fdaItem.data.source_section,
-          fullPdfText: fdaItem.data.full_pdf_text,
-          rawResponse: fdaItem.raw_response
+          vaccineName: fdaItem.vax_name,
+          manufacturer: fdaItem.vax_manu,
+          adverseEvents: fdaItem.adverse_events,
+          pdfFile: fdaItem.filename
         });
         fdaImported++;
       } catch (error) {
@@ -87,45 +136,98 @@ async function seed() {
     }
 
     console.log(`✅ Successfully imported ${fdaImported} FDA reports`);
-
     if (fdaErrors.length > 0) {
-      console.log('⚠️  FDA import errors:');
-      fdaErrors.forEach(error => console.log(`   - ${error}`));
+      console.log(`⚠️  ${fdaErrors.length} FDA import errors (showing first 5):`);
+      fdaErrors.slice(0, 5).forEach(error => console.log(`   - ${error}`));
     }
 
-    // Log some statistics
+    // 3. Seed VAERS reports
+    console.log(`📊 Importing ${vaersSubsetData.length} VAERS reports...`);
+    let vaersImported = 0;
+    const vaersErrors: string[] = [];
+    const batchSize = 100; // Process in batches for better performance
+    
+    for (let i = 0; i < vaersSubsetData.length; i += batchSize) {
+      const batch = vaersSubsetData.slice(i, i + batchSize);
+      console.log(`   Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(vaersSubsetData.length / batchSize)}...`);
+      
+      for (const vaersItem of batch) {
+        try {
+          await reportRepo.insert({
+            vaersId: vaersItem.VAERS_ID,
+            recvDate: vaersItem.RECVDATE,
+            state: vaersItem.STATE,
+            ageYrs: vaersItem.AGE_YRS?.toString() || null,
+            sex: vaersItem.SEX,
+            symptomText: vaersItem.SYMPTOM_TEXT,
+            died: vaersItem.DIED,
+            lThreat: vaersItem.L_THREAT,
+            erVisit: vaersItem.ER_VISIT,
+            hospital: vaersItem.HOSPITAL,
+            disable: vaersItem.DISABLE,
+            recovd: vaersItem.RECOVD,
+            vaxDate: vaersItem.VAX_DATE,
+            onsetDate: vaersItem.ONSET_DATE,
+            numDays: vaersItem.NUMDAYS?.toString() || null,
+            vaxTypeList: vaersItem.VAX_TYPE_list,
+            vaxManuList: vaersItem.VAX_MANU_list,
+            vaxNameList: vaersItem.VAX_NAME_list,
+            vaxDoseSeriesList: vaersItem.VAX_DOSE_SERIES_list,
+            vaxRouteList: vaersItem.VAX_ROUTE_list,
+            vaxSiteList: vaersItem.VAX_SITE_list,
+            symptomList: vaersItem.symptom_list
+          });
+          vaersImported++;
+        } catch (error) {
+          vaersErrors.push(`Failed to import VAERS report ${vaersItem.VAERS_ID}: ${error}`);
+        }
+      }
+    }
+
+    console.log(`✅ Successfully imported ${vaersImported} VAERS reports`);
+    if (vaersErrors.length > 0) {
+      console.log(`⚠️  ${vaersErrors.length} VAERS import errors (showing first 5):`);
+      vaersErrors.slice(0, 5).forEach(error => console.log(`   - ${error}`));
+    }
+
+    // Log final statistics
     const reports = await db.query.vaersReports.findMany();
-    const vaccines = await db.query.vaersVaccines.findMany();
-    const symptoms = await db.query.vaersSymptoms.findMany();
     const fdaReports = await db.query.fdaReports.findMany();
+    const symptomMappings = await db.query.symptomMappings.findMany();
 
     console.log('\n📈 Database Statistics:');
     console.log(`   - Total VAERS Reports: ${reports.length}`);
-    console.log(`   - Total Vaccines: ${vaccines.length}`);
-    console.log(`   - Total Symptoms: ${symptoms.length}`);
     console.log(`   - Total FDA Reports: ${fdaReports.length}`);
+    console.log(`   - Total Symptom Mappings: ${symptomMappings.length}`);
 
     // Show sample data
     console.log('\n📋 Sample VAERS Report:');
     if (reports.length > 0 && reports[0]) {
-      const sampleReport = await reportRepo.getReportWithDetails(reports[0].id);
-      if (sampleReport) {
-        console.log(`   - VAERS ID: ${sampleReport.vaersId}`);
-        console.log(`   - State: ${sampleReport.state}`);
-        console.log(`   - Age: ${sampleReport.ageYrs}`);
-        console.log(`   - Vaccines: ${sampleReport.vaccines.length}`);
-        console.log(`   - Symptoms: ${sampleReport.symptoms.length}`);
-      }
+      const sampleReport = reports[0];
+      console.log(`   - VAERS ID: ${sampleReport.vaersId}`);
+      console.log(`   - State: ${sampleReport.state}`);
+      console.log(`   - Age: ${sampleReport.ageYrs}`);
+      console.log(`   - Vaccines: ${sampleReport.vaxTypeList.length}`);
+      console.log(`   - Symptoms: ${sampleReport.symptomList.length}`);
     }
 
     console.log('\n📋 Sample FDA Report:');
     if (fdaReports.length > 0) {
       const sampleFdaReport = fdaReports[0];
       if (sampleFdaReport) {
-        console.log(`   - Filename: ${sampleFdaReport.filename}`);
-        console.log(`   - Study Type: ${sampleFdaReport.studyType}`);
-        console.log(`   - Source Section: ${sampleFdaReport.sourceSection}`);
-        console.log(`   - Symptoms: ${sampleFdaReport.symptomsList.length}`);
+        console.log(`   - Vaccine Name: ${sampleFdaReport.vaccineName}`);
+        console.log(`   - Manufacturer: ${sampleFdaReport.manufacturer}`);
+        console.log(`   - PDF File: ${sampleFdaReport.pdfFile}`);
+        console.log(`   - Adverse Events: ${sampleFdaReport.adverseEvents.length}`);
+      }
+    }
+
+    console.log('\n📋 Sample Symptom Mapping:');
+    if (symptomMappings.length > 0) {
+      const sampleMapping = symptomMappings[0];
+      if (sampleMapping) {
+        console.log(`   - VAERS Symptom: ${sampleMapping.vaersSymptom}`);
+        console.log(`   - FDA Adverse Events: ${sampleMapping.fdaAdverseEvents.length}`);
       }
     }
 
