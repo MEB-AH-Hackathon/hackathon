@@ -33,7 +33,7 @@
       "description": "List of unmapped symptom examples for manual review",
       "items": {
         "type": "object",
-        "required": ["VAERS_ID", "vaccine", "unmapped_symptom", "symptom_frequency", "fda_adverse_events_for_vaccine", "potential_matches", "should_find", "notes"],
+        "required": ["VAERS_ID", "vaccine", "unmapped_symptom", "symptom_frequency", "fda_adverse_events_for_vaccine", "potential_matches", "should_find", "notes", "symptom_text"],
         "properties": {
           "VAERS_ID": {
             "type": "string",
@@ -73,6 +73,10 @@
           "notes": {
             "type": "string",
             "description": "Additional notes about the symptom and potential mapping"
+          },
+          "symptom_text": {
+            "type": "string",
+            "description": "Full SYMPTOM_TEXT from the VAERS report providing context for the unmapped symptom"
           }
         }
       }
