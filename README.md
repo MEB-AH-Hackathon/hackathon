@@ -1,74 +1,146 @@
 # VAERS Adverse Event Analysis System
 
-This system analyzes VAERS (Vaccine Adverse Event Reporting System) data against FDA package inserts to identify which reported symptoms are documented in official vaccine literature.
+## Quick Start for Frontend Developers
 
-## Overview
+**Three JSON files, that's it:**
 
-The system processes VAERS adverse event reports and cross-references them with FDA package insert data to determine:
-- Which symptoms reported in VAERS are documented in official vaccine literature
-- Frequency of symptoms across different vaccines  
-- Individual-level VAERS reports for detailed analysis
-- Normalized symptom mappings for finding similar reports
+1. **`json_data/fda_reports.json`** - 14 vaccines with their official FDA adverse events
+2. **`json_data/vaers_subset.json`** - 100K real VAERS reports with patient data and symptoms  
+3. **`json_data/symptom_mappings.json`** - AI mapping between VAERS terms and FDA terms
 
-## Key Statistics
+### Basic Usage Pattern
+```javascript
+// 1. Get a vaccine's official FDA adverse events
+const fdaReports = await fetch('json_data/fda_reports.json').then(r => r.json());
+const shingrix = fdaReports.find(v => v.vaccine_name === 'SHINGRIX');
+console.log(shingrix.adverse_events); // ["headache", "fatigue", "injection site pain", ...]
 
-- **14 crosswalked vaccines** between VAERS and FDA package inserts
-- **1M+ individual VAERS reports** with structured symptom data (2020-2024)
-- **Validated symptom classifications** using LLM analysis with PDF quotes
-- **Symptom normalization** for finding similar reports across different wordings
+// 2. Find VAERS reports for that vaccine
+const vaersReports = await fetch('json_data/vaers_subset.json').then(r => r.json());
+const shingrixReports = vaersReports.filter(report => 
+  report.VAX_NAME_list.some(name => name.includes('SHINGRIX'))
+);
 
-## Data Structure
+// 3. Use AI mappings to find related symptoms
+const mappings = await fetch('json_data/symptom_mappings.json').then(r => r.json());
+const headacheMapping = mappings.find(m => m.vaers_symptom === 'Cephalgia');
+console.log(headacheMapping.fda_adverse_events); // ["headache"] - maps to FDA term
+```
 
-### Input Data
-- **VAERS CSV files**: Raw adverse event reports from FDA (2020-2024)
-- **FDA Package Inserts**: 34 PDF documents with adverse event information
-- **Vaccine Name Crosswalk**: Manual mapping between VAERS and PDF vaccine names
+## System Overview
 
-### Output Formats
-- **DuckDB databases**: For complex queries and analysis (`duckdb_data/`)
-- **JSON files**: For web frontend consumption (`json_data/`)
+Three core datasets for analyzing VAERS symptoms against FDA package insert adverse events:
+1. **FDA Reports**: Adverse events extracted from 14 vaccine package inserts
+2. **VAERS Subset**: 100,000 individual VAERS reports (2023-2024) with structured symptom data
+3. **Symptom Mappings**: AI-powered crosswalk between VAERS symptoms and FDA adverse events
 
-## Available Data Files
+## File Structures (for frontend devs)
 
-### JSON Data (`json_data/`)
+### 1. FDA Reports - `json_data/fda_reports.json` (~100KB)
+```javascript
+[
+  {
+    "vaccine_name": "SHINGRIX",
+    "manufacturer": "GlaxoSmithKline",
+    "adverse_events": ["headache", "fatigue", "muscle pain", "injection site pain"],
+    "pdf_file": "shingrix_pi.pdf"
+  },
+  // ... 13 more vaccines
+]
+```
 
-#### Core Dataset Files
-- `vaccine_comparisons.json` - Complete vaccine comparison data with symptom counts
-- `vaccine_symptom_counts.json` - Symptom frequencies for each crosswalked vaccine
-- `pdf_extraction_results.json` - Raw adverse events extracted from FDA PDFs
+### 2. VAERS Subset - `json_data/vaers_subset.json` (~144MB)
+```javascript
+[
+  {
+    "VAERS_ID": 2696276,
+    "AGE_YRS": 49.0,
+    "SEX": "M",
+    "STATE": "CO",
+    "VAX_NAME_list": ["ZOSTER (SHINGRIX)"],
+    "symptom_list": ["Product administered to patient of inappropriate age"],
+    "DIED": null,
+    "HOSPITAL": null,
+    "ER_VISIT": null
+    // ... more fields
+  },
+  // ... 99,999 more reports
+]
+```
 
-#### VAERS Report Files  
-- `vaers_reports_sample_1k.json` - 1,000 random VAERS reports
-- `vaers_reports_sample_10k.json` - 10,000 random VAERS reports  
-- `vaers_reports_sample_100k.json` - 100,000 random VAERS reports
-- Each report includes: vaccine name, patient demographics, symptoms, dates
+### 3. Symptom Mappings - `json_data/symptom_mappings.json` (~500KB)
+```javascript
+[
+  {
+    "vaers_symptom": "Cephalgia",
+    "fda_adverse_events": ["headache"]
+  },
+  {
+    "vaers_symptom": "Injection site vasculitis", 
+    "fda_adverse_events": ["cellulitis", "erythema", "injection site reactions"]
+  },
+  // ... 498 more mappings
+]
+```
 
-#### Symptom Analysis Files  
-- `strict_symptom_classifications.json` - LLM-validated symptom classifications
-- `symptom_mappings_initial.json` - Maps VAERS symptoms to PDF adverse events
-- Additional files generated during build process
+## Common Frontend Patterns
 
-#### Reference Files
-- `pdf_vaccine_names_only.json` - Mapping between PDF filenames and vaccine names
-- `manifest.json` - Complete file descriptions and metadata
+### Get all vaccines
+```javascript
+const vaccines = fdaReports.map(v => v.vaccine_name);
+// ["SHINGRIX", "GARDASIL", "ADACEL", ...]
+```
 
-### DuckDB Data (`duckdb_data/`)
-- `vaccine_comparison.duckdb` - Aggregate vaccine and symptom data
-- `unified_vaers_analysis.duckdb` - Complete database with individual reports
-- `strict_symptom_classifications.duckdb` - LLM validation results
+### Filter reports by vaccine
+```javascript
+const covidReports = vaersReports.filter(r => 
+  r.VAX_NAME_list.some(name => name.includes('COVID'))
+);
+```
 
-### Schemas (`KEY_INFO/`)
-- `system_overview.json` - High-level system architecture and capabilities
-- `vaccines_schema.json` - Schema for vaccines.json
-- `strict_symptom_classifications_schema.json` - Schema for strict_symptom_classifications.json
-- `vaccine_symptom_counts_schema.json` - Schema for vaccine_symptom_counts.json
-- `vaccine_comparisons_schema.json` - Schema for vaccine_comparisons.json
-- `symptom_mappings_initial_schema.json` - Schema for symptom_mappings_initial.json
-- `pdf_extraction_results_schema.json` - Schema for pdf_extraction_results.json
-- `pdf_vaccine_names_only_schema.json` - Schema for pdf_vaccine_names_only.json
-- `manifest_schema.json` - Schema for manifest.json
+### Filter reports by demographics
+```javascript
+const elderlyWomen = vaersReports.filter(r => 
+  r.SEX === 'F' && r.AGE_YRS >= 65
+);
+```
 
-## 14 Crosswalked Vaccines
+### Check if symptom is FDA-documented
+```javascript
+function isSymptomDocumented(vaersSymptom, vaccineName) {
+  // Find mapping
+  const mapping = mappings.find(m => m.vaers_symptom === vaersSymptom);
+  if (!mapping || mapping.fda_adverse_events.length === 0) return false;
+  
+  // Check if any mapped FDA events are in vaccine's official list
+  const vaccine = fdaReports.find(v => v.vaccine_name === vaccineName);
+  return mapping.fda_adverse_events.some(fdaEvent => 
+    vaccine.adverse_events.includes(fdaEvent)
+  );
+}
+```
+
+### Get symptom statistics
+```javascript
+function getSymptomStats(vaccineName) {
+  const reports = vaersReports.filter(r => 
+    r.VAX_NAME_list.some(name => name.includes(vaccineName))
+  );
+  
+  const symptomCounts = {};
+  reports.forEach(r => {
+    r.symptom_list.forEach(symptom => {
+      symptomCounts[symptom] = (symptomCounts[symptom] || 0) + 1;
+    });
+  });
+  
+  return Object.entries(symptomCounts)
+    .sort(([,a], [,b]) => b - a)
+    .slice(0, 10); // Top 10
+}
+```
+
+## Available Vaccines (14 total)
 
 1. **COVID19 (COVID19 (PFIZER-BIONTECH))** → COVID19 (COVID19 (MNEXSPIKE))
 2. **ZOSTER (SHINGRIX)** → SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)  
@@ -87,46 +159,45 @@ The system processes VAERS adverse event reports and cross-references them with 
 
 ## Usage Examples
 
-### Check if a symptom is documented in FDA package insert
-```javascript
-// Load symptom classifications
-const classifications = await loadJSON('strict_symptom_classifications.json');
-
-// Find if "headache" is confirmed for Shingrix
-const isConfirmed = classifications.find(c => 
-  c.vaccine_name.includes('SHINGRIX') && 
-  c.symptom.toLowerCase() === 'headache' &&
-  c.classification === 'confirmed'
-);
-```
-
-### Get symptom counts for a vaccine
-```javascript
-// Load vaccine symptom data
-const symptomCounts = await loadJSON('vaccine_symptom_counts.json');
-const shingrixData = symptomCounts['ZOSTER (SHINGRIX)'];
-console.log(shingrixData.symptom_counts); // All VAERS symptoms with counts
-```
-
 ### Find VAERS reports with specific symptoms
 ```javascript  
 // Load VAERS reports
-const reports = await loadJSON('vaers_reports_sample_10k.json');
+const reports = await loadJSON('vaers_subset.json');
 
 // Find reports with headache for Shingrix
 const headacheReports = reports.filter(r => 
-  r.vaccine_name.includes('SHINGRIX') &&
-  r.symptoms.includes('Headache')
+  r.VAX_NAME_list.some(name => name.includes('SHINGRIX')) &&
+  r.symptom_list.includes('Headache')
 );
+```
+
+### Check FDA adverse events for a vaccine
+```javascript
+// Load FDA reports
+const fdaReports = await loadJSON('fda_reports.json');
+const shingrix = fdaReports.find(v => v.vaccine_name === 'SHINGRIX');
+console.log(shingrix.adverse_events); // Official FDA adverse events
+```
+
+### Map VAERS symptoms to FDA events
+```javascript
+// Load symptom mappings
+const mappings = await loadJSON('symptom_mappings.json');
+
+// Find what FDA events "headache" maps to
+const headacheMapping = mappings.find(m => 
+  m.vaers_symptom.toLowerCase() === 'headache'
+);
+console.log(headacheMapping.fda_adverse_events); // ["headache", "cephalgia"]
 ```
 
 ## Building the System
 
 ### Requirements
 - Python 3.8+
-- DuckDB, pandas, requests
-- Anthropic API key for LLM classification  
-- VAERS data files (2020-2024) in `vaers_data/vaers_data/`
+- pandas, requests
+- Anthropic API key for Claude AI mapping
+- VAERS data files (2023-2024) in `vaers_data/vaers_data/`
 
 ### Build Process
 ```bash
@@ -135,17 +206,85 @@ cd code
 ```
 
 This will:
-1. Process VAERS data for crosswalked vaccines only
-2. Run LLM validation of symptom classifications (~4 minutes)
-3. Build unified database with individual reports
-4. Create symptom normalization tables
-5. Export everything to JSON format
+1. Extract 100K VAERS reports from 2023-2024 CSV files
+2. Create symptom mappings using Claude AI (~10-15 minutes for 500 symptoms)
+3. Generate the 3 core JSON files
 
 ### Build Output
-- **Total processing time**: ~30 minutes (includes processing 1M+ VAERS reports)
-- **DuckDB databases**: `duckdb_data/` (for analysis)
-- **JSON files**: `json_data/` (for frontend)
-- **Individual scripts**: Can be run separately if needed
+- **Total processing time**: ~15 minutes
+- **JSON files**: 3 files in `json_data/` ready for analysis
+
+## Linking the Datasets
+
+The three JSON files are designed to work together:
+
+### 1. Find relevant symptoms for a vaccine
+```javascript
+// Get FDA-documented symptoms for a vaccine
+const fdaReports = await loadJSON('fda_reports.json');
+const vaccine = fdaReports.find(v => v.vaccine_name === 'SHINGRIX');
+const fdaSymptoms = vaccine.adverse_events; // ["headache", "fatigue", ...]
+```
+
+### 2. Find VAERS reports with those symptoms  
+```javascript
+// Get VAERS reports with those symptoms
+const vaersReports = await loadJSON('vaers_subset.json');
+const matchingReports = vaersReports.filter(report => 
+  report.VAX_NAME_list.some(name => name.includes('SHINGRIX')) &&
+  report.symptom_list.some(symptom => 
+    fdaSymptoms.includes(symptom) // Direct match
+  )
+);
+```
+
+### 3. Use mappings for fuzzy matching
+```javascript
+// Use AI mappings for broader symptom matching
+const mappings = await loadJSON('symptom_mappings.json');
+
+// Find all VAERS symptoms that map to FDA "headache"
+const headacheMappings = mappings.filter(m => 
+  m.fda_adverse_events.includes('headache')
+);
+const vaersHeadacheTerms = headacheMappings.map(m => m.vaers_symptom);
+
+// Now find reports with any of these VAERS terms
+const broadMatchingReports = vaersReports.filter(report =>
+  report.symptom_list.some(symptom => 
+    vaersHeadacheTerms.includes(symptom)
+  )
+);
+```
+
+### 4. Cross-reference analysis
+```javascript
+// Complete analysis: FDA events -> VAERS symptoms -> Reports
+function analyzeVaccineSymptoms(vaccineName) {
+  // 1. Get FDA documented symptoms
+  const vaccine = fdaReports.find(v => v.vaccine_name === vaccineName);
+  const fdaEvents = vaccine.adverse_events;
+  
+  // 2. Find VAERS symptoms that map to FDA events
+  const relevantMappings = mappings.filter(m => 
+    m.fda_adverse_events.some(event => fdaEvents.includes(event))
+  );
+  const vaersSymptoms = relevantMappings.map(m => m.vaers_symptom);
+  
+  // 3. Find VAERS reports with those symptoms
+  const reports = vaersReports.filter(r => 
+    r.VAX_NAME_list.some(name => name.includes(vaccineName)) &&
+    r.symptom_list.some(symptom => vaersSymptoms.includes(symptom))
+  );
+  
+  return {
+    fdaEvents,
+    vaersSymptoms,
+    reportCount: reports.length,
+    reports
+  };
+}
+```
 
 ## Data Processing Pipeline
 

@@ -1,0 +1,666 @@
+[
+  {
+    "filename": "Package-Insert-DENGVAXIA.pdf",
+    "vax_type": "DENGUE",
+    "vax_name": "DENGUE (DENGVAXIA)",
+    "vax_manu": "SANOFI PASTEUR INC.",
+    "extraction_success": true,
+    "adverse_events": [
+      "headache",
+      "injection site pain",
+      "malaise",
+      "asthenia",
+      "myalgia"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "The safety of DENGVAXIA in subjects 6 through 16 years of age was evaluated in 12 randomized, placebo-controlled, multicenter clinical trials with at least 28 days of follow-up conducted primarily in dengue endemic regions including Asia-Pacific and Latin American countries. In these studies, a total of 22,924 subjects 6 through 16 years of age received at least one dose of DENGVAXIA and 10,668 received placebo (0.9% sodium chloride). Solicited adverse reactions were recorded daily for 14 days following each vaccination. The most frequently reported adverse reactions regardless of the dengue serostatus prior to vaccination in ages 9 through 16 years were headache (40%), injection site pain (32%), malaise (25%), asthenia (25%), and myalgia (29%). The most frequently reported adverse reactions regardless of the dengue serostatus prior to vaccination in ages 6 through 8 years were headache (27%), injection site pain (28%), malaise (19%), asthenia (13%), and myalgia (15%)."
+  },
+  {
+    "filename": "Package Insert - Adenovirus Type 4 and Type 7 Vaccine, Live, Oral_0.pdf",
+    "vax_type": "UNKNOWN",
+    "vax_name": "ADENOVIRUS TYPE 4 AND TYPE 7 VACCINE, LIVE, ORAL",
+    "vax_manu": "TEVA PHARMACEUTICALS USA, INC.",
+    "extraction_success": true,
+    "adverse_events": [
+      "upper respiratory tract infections",
+      "headache",
+      "nasal congestion",
+      "pharyngolaryngeal pain",
+      "cough",
+      "arthralgia",
+      "nausea",
+      "abdominal pain",
+      "diarrhea",
+      "vomiting"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "The safety of Adenovirus Type 4 and Type 7 Vaccine, Live, Oral was evaluated in a multicenter, double-blind, randomized, placebo-controlled study that enrolled 3031 subjects who received vaccine and 1009 subjects who received placebo (lactose tablets). The study was conducted in healthy male (63%) and female (37%) active duty US Army and Navy military recruits during their basic training. Subjects in both groups were administered other vaccines concomitantly with Adenovirus Type 4 and Type 7 Vaccine, Live, Oral. The specific vaccines that each subject received varied and were dependent on their immunization history. The vaccines that were co-administered included Hepatitis A Vaccine, Inactivated (Merck & Co., Inc.), Hepatitis A Inactivated and Hepatitis B (Recombinant) Vaccine (GlaxoSmithKline Biologicals), Hepatitis B Vaccine (Recombinant) (Merck & Co., Inc.), Human Papillomavirus Quadrivalent (Types 6, 11, 16, 18) Vaccine, Recombinant (Merck & Co., Inc.), Influenza Vaccine, Live, Intranasal (MedImmune, LLC), Influenza Virus Vaccine (Sanofi Pasteur, Inc.), Measles, Mumps, and Rubella Virus Vaccine Live (Merck & Co., Inc.), Meningococcal (Groups A, C, Y and W-135) Polysaccharide, Diphtheria Toxoid Conjugate Vaccine (Sanofi Pasteur, Inc.), Meningococcal Polysaccharide Vaccine (Groups A, C, Y and W-135 Combined) (Sanofi Pasteur, Inc.), Poliovirus Vaccine Inactivated (Sanofi Pasteur, SA), Tetanus Toxoid, Reduced Diphtheria Toxoid and Acellular Pertussis Vaccine, Adsorbed (Sanofi Pasteur, Ltd.), Tetanus Toxoid, Reduced Diphtheria Toxoid and Acellular Pertussis Vaccine, Adsorbed (GlaxoSmithKline Biologicals), Typhoid Vi Polysaccharide Vaccine (Sanofi Pasteur, SA), Varicella Virus Vaccine Live (Merck & Co., Inc.), Yellow Fever Vaccine (Sanofi Pasteur, Inc.)."
+  },
+  {
+    "filename": "Package-Insert-VAXELIS_1.pdf",
+    "vax_type": "DTAPHEPBHIB",
+    "vax_name": "VAXELIS (DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS, INACTIVATED POLIOVIRUS, HAEMOPHILUS B CONJUGATE AND HEPATITIS B VACCINE)",
+    "vax_manu": "SANOFI PASTEUR LIMITED",
+    "extraction_success": true,
+    "adverse_events": [
+      "irritability",
+      "crying",
+      "injection site pain",
+      "somnolence",
+      "injection site erythema",
+      "decreased appetite",
+      "fever \u226538.0\u00b0C",
+      "injection site swelling",
+      "vomiting"
+    ],
+    "study_type": "solicited adverse events",
+    "source_section": "ADVERSE REACTIONS",
+    "controlled_trial_text": "The solicited adverse reactions following any dose were irritability (\u226555%), crying (\u226545%), injection site pain (\u226544%), somnolence (\u226540%), injection site erythema (\u226525%), decreased appetite (\u226523%), fever \u226538.0\u00b0C (\u226519%), injection site swelling (\u226518%), and vomiting (\u22659%)."
+  },
+  {
+    "filename": "Package-Insert-PEDIARIX_1.pdf",
+    "vax_type": "DTP-HEPB-IPV",
+    "vax_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACTIVATED POLIOVIRUS VACCINE (PEDIARIX)",
+    "vax_manu": "GLAXOSMITHKLINE BIOLOGICALS",
+    "extraction_success": true,
+    "adverse_events": [
+      "fever (100.4\u00b0F)",
+      "drowsiness",
+      "irritability/fussiness",
+      "loss of appetite"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "In a U.S. multicenter study, infants were randomized to 1 of 3 groups: (1) a combination vaccine group that received PEDIARIX concomitantly with Hib conjugate vaccine (Wyeth Pharmaceuticals Inc.; no longer licensed in the United States) and U.S.-licensed 7-valent pneumococcal conjugate vaccine (Wyeth Pharmaceuticals Inc.); (2) a separate vaccine group that received U.S.-licensed INFANRIX, ENGERIX-B, and IPV (Sanofi Pasteur SA) concomitantly with the same Hib and pneumococcal conjugate vaccines; and (3) a staggered vaccine group that received PEDIARIX concomitantly with the same Hib conjugate vaccine but with the same pneumococcal conjugate vaccine administered 2 weeks later. The schedule of administration was 2, 4, and 6 months of age. Infants either did not receive a dose of hepatitis B vaccine prior to enrollment or were permitted to receive 1 dose of hepatitis B vaccine administered at least 30 days prior to enrollment. For the separate vaccine group, ENGERIX-B was not administered at 4 months of age to subjects who received a dose of hepatitis B vaccine prior to enrollment. Among subjects in all 3 vaccine groups combined, 84% were White, 7% were Hispanic, 6% were Black, 0.7% were Asian, and 2.4% were of other racial/ethnic groups."
+  },
+  {
+    "filename": "Package-Insert-Pentacel-(inactivated-poliovirus-component-grown-in-MRC-5-cells).pdf",
+    "vax_type": "DTAP-IPV-HIB",
+    "vax_name": "PENTACEL (DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE)",
+    "vax_manu": "SANOFI PASTEUR",
+    "extraction_success": true,
+    "adverse_events": [
+      "fussiness/irritability",
+      "inconsolable crying",
+      "fever \u226538.0\u00b0C",
+      "tenderness",
+      "increase in arm circumference"
+    ],
+    "study_type": "controlled clinical trials",
+    "source_section": "Adverse Reactions",
+    "controlled_trial_text": "Rates of adverse reactions varied by dose number. Systemic reactions that occurred in >50% of participants following any dose included fussiness/irritability and inconsolable crying. Fever \u226538.0\u00b0C occurred in 6-16% of participants, depending on dose number. Injection site reactions that occurred in >30% of participants following any dose included tenderness and increase in arm circumference."
+  },
+  {
+    "filename": "BCG.pdf",
+    "vax_type": "BCG",
+    "vax_name": "BCG LIVE (TICE\u00ae BCG)",
+    "vax_manu": "ORGANON TEKNIKA CORPORATION LLC",
+    "extraction_success": true,
+    "adverse_events": [
+      "bladder irritability",
+      "malaise",
+      "fever",
+      "chills",
+      "dysuria",
+      "urgency",
+      "frequency of urination",
+      "hematuria",
+      "hemorrhagic cystitis",
+      "incontinence",
+      "cramps",
+      "pain (not specified)",
+      "nausea",
+      "myalgia/arthralgia",
+      "diaphoresis",
+      "rash"
+    ],
+    "study_type": "clinical trial",
+    "source_section": "Adverse Reactions",
+    "controlled_trial_text": "Symptoms of bladder irritability, related to the inflammatory response induced, are reported in approximately 60% of patients receiving TICE\u00ae BCG. The symptoms typically begin 4\u20136 hours after instillation and last 24\u201372 hours. The irritative side effects are usually seen following the third instillation, and tend to increase in severity after each administration.\n\nThe irritative bladder adverse effects can usually be managed symptomatically with products such as pyridium, propantheline bromide, oxybutynin chloride and acetaminophen. The mechanism of action of the irritative side effects has not been firmly established, but is most consistent with an immunological mechanism.3 There is no evidence that dose reduction or antituberculous drug therapy can prevent or lessen the irritative toxicity of TICE\u00ae BCG.\n\n\"Flu-like\" symptoms (malaise, fever, and chills) which may accompany the localized, irritative toxicities often reflect hypersensitivity reactions which can be treated symptomatically. Antihistamines have also been used.5\n\nAdverse reactions to TICE\u00ae BCG tend to be progressive in frequency and severity with subsequent instillation. Delay or postponement of subsequent treatment may or may not reduce the severity of a reaction during subsequent instillation."
+  },
+  {
+    "filename": "Td Package Insert -010301 April 2009.pdf",
+    "vax_type": "TD",
+    "vax_name": "TETANUS AND DIPHTHERIA TOXOIDS ADSORBED (TDVAX)",
+    "vax_manu": "MASSBIOLOGICS",
+    "extraction_success": true,
+    "adverse_events": [
+      "injection site reactions, including pain, tenderness, erythema, induration, pruritis, swelling and warmth",
+      "peripheral oedema",
+      "pyrexia",
+      "malaise",
+      "dizziness",
+      "headache",
+      "convulsions",
+      "myalgia",
+      "musculoskeletal stiffness or pain",
+      "arthralgia",
+      "rash",
+      "nausea",
+      "cellulitis"
+    ],
+    "study_type": "clinical trials",
+    "source_section": "ADVERSE REACTIONS",
+    "controlled_trial_text": "Data on adverse reactions following fluid and adsorbed preparations of MassBiologics' TDVAX with various doses of the diphtheria and tetanus components have been reported in a series of studies.5, 7, 8, 11, 12"
+  },
+  {
+    "filename": "package-insert-gardasil (1).pdf",
+    "vax_type": "HPV4",
+    "vax_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vax_manu": "MERCK & CO. INC.",
+    "extraction_success": true,
+    "adverse_events": [
+      "headache",
+      "fever",
+      "nausea",
+      "dizziness",
+      "injection-site pain",
+      "injection-site swelling",
+      "injection-site erythema",
+      "injection-site pruritus",
+      "injection-site bruising"
+    ],
+    "study_type": "randomized controlled trial, clinical trial, solicited adverse events",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "The most common adverse reaction was headache. Common adverse reactions (frequency of at least 1.0% and greater than AAHS control or saline placebo) are fever, nausea, dizziness; and injection-site pain, swelling, erythema, pruritus, and bruising."
+  },
+  {
+    "filename": "ZOSTAVAX (Zoster Vaccine Live) Frozen Package Insert.pdf",
+    "vax_type": "ZOSTER",
+    "vax_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vax_manu": "MERCK & CO. INC.",
+    "extraction_success": true,
+    "adverse_events": [
+      "serious adverse events",
+      "serious cardiovascular events"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "In the ZEST study, serious adverse events occurred at a similar rate in subjects vaccinated with ZOSTAVAX (0.6%) or placebo (0.5%) from Days 1 to 42 postvaccination. In the SPS, serious adverse events occurred at a similar rate (1.4%) in subjects vaccinated with ZOSTAVAX or placebo. Among reported serious adverse events in the SPS (Days 0 to 42 postvaccination), serious cardiovascular events occurred more frequently in subjects who received ZOSTAVAX (20 [0.6%]) than in subjects who received placebo (12 [0.4%]) in the AE Monitoring Substudy. The frequencies of serious cardiovascular events were similar in subjects who received ZOSTAVAX (81 [0.4%]) and in subjects who received placebo (72 [0.4%]) in the entire study cohort (Days 0 to 42 postvaccination)."
+  },
+  {
+    "filename": "Package Insert - TICOVACpdf.pdf",
+    "vax_type": "TBE",
+    "vax_name": "TICOVAC (TICK-BORNE ENCEPHALITIS VACCINE)",
+    "vax_manu": "PFIZER IRELAND PHARMACEUTICALS",
+    "extraction_success": true,
+    "adverse_events": [
+      "local tenderness",
+      "local pain",
+      "headache",
+      "fever",
+      "restlessness",
+      "fatigue",
+      "muscle pain"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "In clinical studies, the most common adverse reactions in subjects 1 through 15 years of age who received TICOVAC were local tenderness (18.1%), local pain (11.2%), headache (11.1%), fever (9.6%), and restlessness (9.1%). The most common adverse reactions in subjects 16 through 65 years of age who received TICOVAC were local tenderness (29.9%), local pain (13.2%), fatigue (6.6%), headache (6.3%), and muscle pain (5.1%)."
+  },
+  {
+    "filename": "Package-Insert-Quadracel-(inactivated-poliovirus-component-grown-in-MRC-5-cells).pdf",
+    "vax_type": "DTAP-IPV",
+    "vax_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (QUADRACEL)",
+    "vax_manu": "SANOFI PASTEUR",
+    "extraction_success": true,
+    "adverse_events": [
+      "pain",
+      "increase in arm circumference",
+      "erythema",
+      "swelling",
+      "myalgia",
+      "malaise",
+      "headache",
+      "fever"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "In a randomized, controlled, multicenter study conducted in the US and Puerto Rico (Study M5I02; ClinicalTrials.gov Identifier: NCT01346293), 3,372 children, 4 to 6 years of age, who had received 4 doses of DAPTACEL and/or Pentacel vaccine(s) received Quadracel, or DAPTACEL + IPOL (Poliovirus Vaccine Inactivated) vaccines administered concomitantly but at separate sites. Subjects also received Measles, Mumps, and Rubella Virus Vaccine Live (MMR) (Merck & Co., Inc.) and Varicella Virus Vaccine Live (Varicella vaccine) (Merck & Co., Inc.) administered concomitantly at separate sites. Safety was evaluated in 2,733 subjects who received Quadracel and 621 subjects who received DAPTACEL + IPOL vaccines. \nSolicited injection site reactions and systemic reactions were collected daily for 7 days following vaccination, via diary cards. Participants were monitored for unsolicited adverse events for 28 days and serious adverse events (SAEs) for 6 months after vaccination."
+  },
+  {
+    "filename": "Package-Insert-YF-Vax_0.pdf",
+    "vax_type": "YF",
+    "vax_name": "YELLOW FEVER (YF-VAX)",
+    "vax_manu": "SANOFI PASTEUR INC.",
+    "extraction_success": true,
+    "adverse_events": [
+      "erythema",
+      "pain at the injection site",
+      "headache",
+      "fever",
+      "rash",
+      "urticaria",
+      "headache",
+      "myalgia",
+      "malaise",
+      "asthenia"
+    ],
+    "study_type": "randomized controlled trial, clinical trial, solicited adverse events",
+    "source_section": "Data from Clinical Studies",
+    "controlled_trial_text": "No placebo-controlled trial has assessed the safety of YF-VAX. However, between 1953 and 1994, reactogenicity of 17D-204 vaccine was monitored in 10 uncontrolled clinical trials. The trials included a total of 3,933 adults and 264 infants greater than 4 months old residing in Europe or in yellow fever endemic areas. Self-limited and mild local reactions consisting of erythema and pain at the injection site and systemic reactions consisting of headache and/or fever occurred in a minority of subjects (typically less than 5%) 5 to 7 days after immunization. YF-VAX was used as a control in a double-blind, randomized comparative trial with another 17D-204 vaccine, conducted at nine centers in the US. YF-VAX was administered to 725 adults \u226518 years old with a mean age of 38 years. Safety data were collected by diary card for days 1 through 10 after vaccination and by interview on days 5, 11, and 31. Among subjects who received YF-VAX, there were no serious adverse events, and 71.9% experienced non-serious adverse events judged to have been related to vaccination. Most of these were injection site reactions of mild to moderate severity. Four such local reactions were considered severe. Rash occurred in 3.2%, including two subjects with urticaria. Systemic reactions (headache, myalgia, malaise, and asthenia) were usually mild and occurred in 10% to 30% of subjects during the first few days after vaccination."
+  },
+  {
+    "filename": "Package-Insert-KINRIX_1.pdf",
+    "vax_type": "DTaP-IPV",
+    "vax_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (KINRIX)",
+    "vax_manu": "GLAXOSMITHKLINE BIOLOGICALS",
+    "extraction_success": true,
+    "adverse_events": [
+      "Swelling",
+      "Dehydration",
+      "Hypernatremia",
+      "Cerebrovascular accident",
+      "Gastroenteritis",
+      "Cellulitis",
+      "Constipation",
+      "Foreign body trauma",
+      "Fever"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "In Study 048, KINRIX was non-inferior to INFANRIX with regard to swelling that involved >50% of the injected upper arm length and that was associated with a >30 mm increase in mid-upper arm circumference within 4 days following vaccination (upper limit of 2-sided 95% Confidence Interval for difference in percentage of KINRIX [0.6%, n = 20] minus INFANRIX [1.0%, n = 11] 2%).\n\nWithin the 31-day period following study vaccination in 3 studies (Studies 046, 047, and 048) in which all subjects received concomitant MMR vaccine (U.S.-licensed MMR vaccine [Merck & Co., Inc.] in Studies 047 and 048, non\u2014U.S.-licensed MMR vaccine in Study 046), 3 subjects (0.1% [3/3,537]) who received KINRIX reported serious adverse events (dehydration and hypernatremia; cerebrovascular accident; dehydration and gastroenteritis) and 4 subjects (0.3% [4/1,434]) who received INFANRIX and inactivated poliovirus vaccine (Sanofi Pasteur SA) reported serious adverse events (cellulitis, constipation, foreign body trauma, fever without identified etiology)."
+  },
+  {
+    "filename": "ZOSTAVAX (Zoster vaccine Live) Refrigerated Package Insert.pdf",
+    "vax_type": "ZOSTER",
+    "vax_name": "ZOSTER VACCINE LIVE (ZOSTAVAX)",
+    "vax_manu": "MERCK & CO. INC.",
+    "extraction_success": true,
+    "adverse_events": [
+      "headache",
+      "injection-site reactions",
+      "respiratory infection",
+      "fever",
+      "flu syndrome",
+      "diarrhea",
+      "rhinitis",
+      "skin disorder",
+      "respiratory disorder",
+      "asthenia"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "In the ZEST study, subjects received a single dose of either ZOSTAVAX (N=11,184) or placebo (N=11,212). The most frequent adverse reactions, reported in \u22651% of subjects vaccinated with ZOSTAVAX, were headache and injection-site reactions.\n\nIn the SPS, the largest clinical trial of ZOSTAVAX, subjects received a single dose of either ZOSTAVAX (n=19,270) or placebo (n=19,276). The most frequent adverse reactions reported at an incidence \u22651% and greater in subjects who received ZOSTAVAX than in subjects who received placebo, respectively, were respiratory infection, fever, flu syndrome, diarrhea, rhinitis, skin disorder, respiratory disorder, and asthenia."
+  },
+  {
+    "filename": "Package-Insert-CYFENDUS.pdf",
+    "vax_type": "UNKNOWN",
+    "vax_name": "UNKNOWN",
+    "vax_manu": "UNKNOWN",
+    "extraction_success": true,
+    "adverse_events": [
+      "tenderness",
+      "pain",
+      "arm motion limitation",
+      "warmth",
+      "induration",
+      "itching",
+      "swelling",
+      "erythema/redness",
+      "muscle ache",
+      "tiredness",
+      "headache",
+      "fever"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "The safety of CYFENDUS was evaluated in 4 clinical studies, in which a total of 3,276 participants 18 through 65 years of age received at least one dose of CYFENDUS and were included in a pooled safety population. Solicited local and systemic adverse reactions reported following administration of any dose of CYFENDUS or BioThrax are presented in Table 1. CYFENDUS was administered intramuscularly as two doses at Weeks 0 and 2, with saline placebo given at Week 4. BioThrax was administered subcutaneously as three doses at Weeks 0, 2, and 4. The number of participants receiving at least one dose of CYFENDUS was 3151, while 2898 participants received the complete two dose regimen of CYFENDUS."
+  },
+  {
+    "filename": "Package-Insert---BCG-Vaccine.pdf",
+    "vax_type": "BCG",
+    "vax_name": "BCG VACCINE (TICE\u00ae STRAIN)",
+    "vax_manu": "ORGANON TEKNIKA CORPORATION LLC",
+    "extraction_success": true,
+    "adverse_events": [
+      "axillary or cervical lymphadenopathy",
+      "induration and subsequent pustule formation at the injection site",
+      "ulceration at the vaccination site",
+      "regional suppurative lymphadenitis with draining sinuses",
+      "caseous lesions or purulent draining at the puncture site"
+    ],
+    "study_type": "controlled clinical trials",
+    "source_section": "Adverse Reactions",
+    "controlled_trial_text": "Although BCG vaccination often causes local reactions, serious or long-term complications are rare.3 Reactions that can be expected after vaccination include moderate axillary or cervical lymphadenopathy and induration and subsequent pustule formation at the injection site; these reactions can persist for as long as 3 months after vaccination. More serious local reactions include ulceration at the vaccination site, regional suppurative lymphadenitis with draining sinuses, and caseous lesions or purulent draining at the puncture site. These manifestations might occur up to 5 months after vaccination and could persist for several weeks. The intensity and duration of the local reaction depends on the depth of penetration of the multiple puncture device and individual variations in patients' tissue reactions."
+  },
+  {
+    "filename": "Package-Insert-and-Patient-Information-(Squeezable-Tube-Presentation)-ROTARIX.pdf",
+    "vax_type": "ROTARIX",
+    "vax_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vax_manu": "GLAXOSMITHKLINE BIOLOGICALS",
+    "extraction_success": true,
+    "adverse_events": [
+      "fussiness/irritability",
+      "cough/runny nose",
+      "fever",
+      "loss of appetite",
+      "vomiting",
+      "diarrhea",
+      "dehydration",
+      "gastroenteritis",
+      "intussusception"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "Common (\u22655%) solicited adverse reactions included fussiness/irritability, cough/runny nose, fever, loss of appetite, and vomiting. Serious adverse reactions occurred in 1.7% of recipients of ROTARIX (n = 36,755) as compared with 1.9% of placebo recipients (n = 34,454). Among placebo recipients, diarrhea (placebo 0.07%, ROTARIX 0.02%), dehydration (placebo 0.06%, ROTARIX 0.02%), and gastroenteritis (placebo 0.3%, ROTARIX 0.2%) occurred at a statistically higher incidence (95% CI of RR excluding 1) as compared with recipients of ROTARIX. In a controlled safety study (Study 8) conducted in Latin America and Finland, the risk of intussusception was evaluated in 63,225 infants (31,673 received ROTARIX and 31,552 received placebo). No increased risk of intussusception following administration of ROTARIX was observed within a 31-day period following any dose, and rates were comparable to the placebo group after a median of 100 days. Among vaccine recipients, there were no confirmed cases of intussusception within the 0- to 14-day period after the first dose."
+  },
+  {
+    "filename": "package-insert-vimkunya.pdf",
+    "vax_type": "UNKNOWN",
+    "vax_name": "UNKNOWN",
+    "vax_manu": "UNKNOWN",
+    "extraction_success": true,
+    "adverse_events": [
+      "injection site pain",
+      "fatigue",
+      "headache",
+      "myalgia",
+      "chills",
+      "arthralgia/joint pain",
+      "nausea",
+      "fever"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "In participants 12 through 64 years of age who received VIMKUNYA, the most common solicited local adverse reaction (>10%) was injection site pain (23.7%). The most common solicited systemic adverse reactions (>10%) were fatigue (19.9%), headache (18.0%), and myalgia (17.6%).\n\nIn participants 65 years of age and older who received VIMKUNYA, the most common solicited local adverse reaction (>5%) was injection site pain (5.4%). The most common solicited systemic adverse reactions (>5%) were myalgia (6.3%) and fatigue (6.3%)."
+  },
+  {
+    "filename": "Package-Insert-SHINGRIX.pdf",
+    "vax_type": "ZOSTER",
+    "vax_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vax_manu": "GLAXOSMITHKLINE BIOLOGICALS",
+    "extraction_success": true,
+    "adverse_events": [
+      "pain",
+      "redness",
+      "swelling",
+      "myalgia",
+      "fatigue",
+      "headache",
+      "shivering",
+      "fever",
+      "gastrointestinal symptoms"
+    ],
+    "study_type": "randomized controlled trial, clinical trial, solicited adverse events",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "Solicited local adverse reactions reported in individuals aged 50 years and older were pain (78%), redness (38%), and swelling (26%). Solicited general adverse reactions reported in individuals aged 50 years and older were myalgia (45%), fatigue (45%), headache (38%), shivering (27%), fever (21%), and gastrointestinal symptoms (17%). Solicited local adverse reactions reported in autologous hematopoietic stem cell transplant recipients (aged 18 through 49 and \u226550 years) were pain (88% and 83%), redness (30% and 35%), and swelling (21% and 18%). Solicited general adverse reactions reported in autologous hematopoietic stem cell transplant recipients (aged 18 through 49 and \u226550 years) were fatigue (64% and 54%), myalgia (58% and 52%), headache (44% and 30%), gastrointestinal symptoms (21% and 28%), shivering (31% and 25%), and fever (28% and 18%)."
+  },
+  {
+    "filename": "Package-Insert-Pentacel-(inactivated-poliovirus-component-grown-in-Vero-cells.pdf",
+    "vax_type": "DTAP-IPV-HIB",
+    "vax_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS AND HAEMOPHILUS B CONJUGATE (TETANUS TOXOID CONJUGATE) VACCINE (PENTACEL)",
+    "vax_manu": "SANOFI PASTEUR",
+    "extraction_success": true,
+    "adverse_events": [
+      "fussiness/irritability",
+      "inconsolable crying",
+      "fever \u226538.0\u00b0C",
+      "tenderness",
+      "increase in arm circumference"
+    ],
+    "study_type": "controlled clinical trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "In Table 2, injection site reactions are reported for the Pentacel and DAPTACEL injection sites. Systemic reactions that occurred in >50% of participants following any dose included fussiness/irritability and inconsolable crying. Fever \u226538.0\u00b0C occurred in 6-16% of participants, depending on dose number. Injection site reactions that occurred in >30% of participants following any dose included tenderness and increase in arm circumference."
+  },
+  {
+    "filename": "package-insert-vaxchora.pdf",
+    "vax_type": "UNKNOWN",
+    "vax_name": "UNKNOWN",
+    "vax_manu": "UNKNOWN",
+    "extraction_success": true,
+    "adverse_events": [
+      "tiredness",
+      "headache",
+      "abdominal pain",
+      "nausea/vomiting",
+      "lack of appetite",
+      "diarrhea",
+      "vomiting",
+      "fever"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "The safety of VAXCHORA was evaluated in four randomized, placebo-controlled, multicenter clinical trials. A total of 3235 adults 18 through 64 years of age received one dose of VAXCHORA and 562 received placebo [physiologic saline (N=551) or lactose (N=11)]. The most common adverse reactions for adults (incidence > 3%) were tiredness (31%), headache (29%), abdominal pain (19%), nausea/vomiting (18%), lack of appetite (17%) and diarrhea (4%).\n\nThe safety of VAXCHORA in children was evaluated in one randomized, placebo-controlled, multicenter clinical trial. A total of 468 children 2 through 17 years of age received one dose of VAXCHORA and 75 received placebo (physiologic saline). The most common adverse reactions for children and adolescents (incidence \u226510%) were:\n- Age 12 to <18 years: headache (45%), tiredness (41%), abdominal pain (38%), lack of appetite (29%) and nausea (22%).\n- Age 6 to <12 years: tiredness (35%), abdominal pain (27%), headache (26%), lack of appetite (15%) and nausea (14%).\n- Age 2 to <6 years: tiredness (31%), loss of appetite (19%), and abdominal pain (17%)."
+  },
+  {
+    "filename": "package-insert-mnexspike_0.pdf",
+    "vax_type": "COVID19",
+    "vax_name": "COVID19 (COVID19 (MNEXSPIKE))",
+    "vax_manu": "MODERNA US, INC.",
+    "extraction_success": true,
+    "adverse_events": [
+      "pain at the injection site",
+      "headache",
+      "fatigue",
+      "myalgia",
+      "axillary swelling or tenderness",
+      "chills",
+      "arthralgia",
+      "nausea/vomiting"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "Most commonly (\u226510%) reported adverse reactions following administration of MNEXSPIKE:\n\u2022 Participants 12 years through 17 years of age: pain at the injection site (68.8%), headache (54.5%), fatigue (47.3%), myalgia (39.2%), axillary swelling or tenderness (34.6%), chills (31.6%), arthralgia (23.9%), and nausea/vomiting (16.1%).\n\u2022 Participants 18 years through 64 years of age: pain at the injection site (74.8%), fatigue (54.3%), headache (47.8%), myalgia (41.6%), arthralgia (32.4%), chills (24.3%), axillary swelling or tenderness (21.7%), and nausea/vomiting (13.8%).\n\u2022 Participants 65 years of age and older: pain at the injection site (54.6%), fatigue (43.0%), headache (33.1%), myalgia (30.5%), arthralgia (25.6%), chills (16.5%), and axillary swelling or tenderness (10.7%)."
+  },
+  {
+    "filename": "Package-Insert-and-Patient-Information-IXIARO_0.pdf",
+    "vax_type": "JEV",
+    "vax_name": "JAPANESE ENCEPHALITIS VACCINE, INACTIVATED, ADSORBED (IXIARO)",
+    "vax_manu": "VALNEVA AUSTRIA GMBH",
+    "extraction_success": true,
+    "adverse_events": [
+      "tenderness",
+      "hardening",
+      "swelling",
+      "redness",
+      "irritability",
+      "vomiting",
+      "diarrhea",
+      "excessive fatigue",
+      "rash",
+      "loss of appetite",
+      "fever"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "The safety of the IXIARO Days 0 and 28 primary series was evaluated in a randomized, controlled, open-label clinical trial in healthy male and female subjects 2 months to <18 years of age, conducted in the Philippines, a country where Japanese Encephalitis is endemic (Study 1)1. IXIARO was compared to two control vaccines: HAVRIX (Hepatitis A vaccine, pediatric 720 EL.U./0.5 mL formulation, GlaxoSmithKline Biologicals) and Prevnar (Pneumococcal 7-valent Conjugate Vaccine [Diphtheria CRM197 protein], Pfizer). A total of 1,769 subjects were randomized in an age-stratified scheme in a 3:1 ratio (2:1 ratio for ages <1 year) to receive intramuscular injections of either IXIARO (two 0.25 mL doses on Days 0 and 28 for infants and children 2 months to <3 years of age or two 0.5 mL doses on Days 0 and 28 for children 3 to <18 years of age) or HAVRIX (children 1 year of age and older, 2 doses on Day 0 and at Month 7) or Prevnar (infants 2 to <6 months of age, 3 doses on Days 0, 28, 56 and an optional 4th dose at Month 7 or later; infants 6 to <12 months of age, 3 doses on Days 0 and 56 and at Month 7)."
+  },
+  {
+    "filename": "Package-Insert-Quadracel-(inactivated-poliovirus-component-grown-in-Vero-cells)_0.pdf",
+    "vax_type": "DTaP-IPV",
+    "vax_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE (QUADRACEL)",
+    "vax_manu": "SANOFI PASTEUR",
+    "extraction_success": true,
+    "adverse_events": [
+      "pain",
+      "increase in arm circumference",
+      "erythema",
+      "swelling",
+      "myalgia",
+      "malaise",
+      "headache",
+      "fever"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "In a randomized, controlled, multicenter study conducted in the US and Puerto Rico (Study M5I02; ClinicalTrials.gov Identifier: NCT01346293), 3,372 children, 4 to 6 years of age, who had received 4 doses of DAPTACEL and/or Pentacel vaccine(s) received Quadracel, or DAPTACEL + IPOL (Poliovirus Vaccine Inactivated) vaccines administered concomitantly but at separate sites. Subjects also received Measles, Mumps, and Rubella Virus Vaccine Live (MMR) (Merck & Co., Inc.) and Varicella Virus Vaccine Live (Varicella vaccine) (Merck & Co., Inc.) administered concomitantly at separate sites. Safety was evaluated in 2,733 subjects who received Quadracel and 621 subjects who received DAPTACEL + IPOL vaccines.\nSolicited injection site reactions and systemic reactions were collected daily for 7 days following vaccination, via diary cards. Participants were monitored for unsolicited adverse events for 28 days and serious adverse events (SAEs) for 6 months after vaccination."
+  },
+  {
+    "filename": "Package-Insert-INFANRIX_4.pdf",
+    "vax_type": "DTAP",
+    "vax_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS (INFANRIX)",
+    "vax_manu": "GLAXOSMITHKLINE BIOLOGICALS",
+    "extraction_success": true,
+    "adverse_events": [
+      "pain",
+      "redness",
+      "swelling",
+      "fever",
+      "drowsiness",
+      "irritability/fussiness",
+      "loss of appetite"
+    ],
+    "study_type": "controlled clinical trials",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "Rates of injection site reactions (pain, redness, swelling) ranged from 10% to 53%, depending on reaction and dose number, and were highest following Doses 4 and 5. Fever was common (20% to 30%) following Doses 1-3. Other common solicited adverse reactions were drowsiness, irritability/fussiness, and loss of appetite, reported in approximately 15% to 60% of subjects, depending on reaction and dose number."
+  },
+  {
+    "filename": "Package-Insert-and-FDA-Approved-Patient-Labeling-COMIRNATY.pdf",
+    "vax_type": "UNKNOWN",
+    "vax_name": "UNKNOWN",
+    "vax_manu": "UNKNOWN",
+    "extraction_success": true,
+    "adverse_events": [
+      "pain at the injection site",
+      "fatigue",
+      "headache",
+      "chills",
+      "muscle pain",
+      "joint pain",
+      "fever",
+      "injection site swelling",
+      "injection site redness"
+    ],
+    "study_type": "controlled clinical trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "The most commonly reported adverse reactions (\u226510%) after a dose of COMIRNATY were pain at the injection site (up to 90.5%), fatigue (up to 77.5%), headache (up to 75.5%), chills (up to 49.2%), muscle pain (up to 45.5%), joint pain (up to 27.5%), fever (up to 24.3%), injection site swelling (up to 11.8%), and injection site redness (up to 10.4%)."
+  },
+  {
+    "filename": "package-insert-gardasil.pdf",
+    "vax_type": "HPV4",
+    "vax_name": "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT (GARDASIL)",
+    "vax_manu": "MERCK & CO. INC.",
+    "extraction_success": true,
+    "adverse_events": [
+      "headache",
+      "fever",
+      "nausea",
+      "dizziness",
+      "injection-site pain",
+      "injection-site swelling",
+      "injection-site erythema",
+      "injection-site pruritus",
+      "injection-site bruising"
+    ],
+    "study_type": "randomized controlled trial, clinical trial, solicited adverse events",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "In 7 clinical trials (5 Amorphous Aluminum Hydroxyphosphate Sulfate [AAHS]-controlled, 1 saline placebo-controlled, and 1 uncontrolled), 18,083 individuals were administered GARDASIL or AAHS control or saline placebo on the day of enrollment, and approximately 2 and 6 months thereafter, and safety was evaluated using vaccination report cards (VRC)-aided surveillance for 14 days after each injection of GARDASIL or AAHS control or saline placebo in these individuals. The individuals who were monitored using VRC-aided surveillance included 10,088 individuals 9 through 45 years of age at enrollment who received GARDASIL and 7,995 individuals who received AAHS control or saline placebo. Few individuals (0.2%) discontinued due to adverse reactions."
+  },
+  {
+    "filename": "Package-Insert-HAVRIX.pdf",
+    "vax_type": "HEPA",
+    "vax_name": "HEPATITIS A (HAVRIX)",
+    "vax_manu": "GLAXOSMITHKLINE BIOLOGICALS",
+    "extraction_success": true,
+    "adverse_events": [
+      "injection-site soreness",
+      "headache",
+      "pain",
+      "redness",
+      "irritability",
+      "drowsiness",
+      "loss of appetite"
+    ],
+    "study_type": "clinical trial, solicited adverse events",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "In studies of adults and children 2 years of age and older, the most common solicited adverse reactions were injection-site soreness (56% of adults and 21% of children) and headache (14% of adults and less than 9% of children). In studies of children 11 to 25 months of age, the most frequently reported solicited local reactions were pain (32%) and redness (29%). Common solicited general adverse reactions were irritability (42%), drowsiness (28%), and loss of appetite (28%)."
+  },
+  {
+    "filename": "Package-Insert-SHINGRIX (1).pdf",
+    "vax_type": "ZOSTER",
+    "vax_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vax_manu": "GLAXOSMITHKLINE BIOLOGICALS",
+    "extraction_success": true,
+    "adverse_events": [
+      "pain",
+      "redness",
+      "swelling",
+      "myalgia",
+      "fatigue",
+      "headache",
+      "shivering",
+      "fever",
+      "gastrointestinal symptoms"
+    ],
+    "study_type": "randomized controlled trial, clinical trial, solicited adverse events",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "Solicited local adverse reactions reported in individuals aged 50 years and older were pain (78%), redness (38%), and swelling (26%). Solicited general adverse reactions reported in individuals aged 50 years and older were myalgia (45%), fatigue (45%), headache (38%), shivering (27%), fever (21%), and gastrointestinal symptoms (17%). Solicited local adverse reactions reported in autologous hematopoietic stem cell transplant recipients (aged 18 through 49 and \u226550 years) were pain (88% and 83%), redness (30% and 35%), and swelling (21% and 18%). Solicited general adverse reactions reported in autologous hematopoietic stem cell transplant recipients (aged 18 through 49 and \u226550 years) were fatigue (64% and 54%), myalgia (58% and 52%), headache (44% and 30%), gastrointestinal symptoms (21% and 28%), shivering (31% and 25%), and fever (28% and 18%)."
+  },
+  {
+    "filename": "Package-Insert-and-Patient-Information-(Vial-with-Oral Dosing-Applicator-Presentation-and-Oral-Dosing-Applicator-Only-Presentation)-ROTARIX.pdf",
+    "vax_type": "RV",
+    "vax_name": "ROTARIX (ROTAVIRUS VACCINE, LIVE, ORAL)",
+    "vax_manu": "GLAXOSMITHKLINE BIOLOGICALS",
+    "extraction_success": true,
+    "adverse_events": [
+      "fussiness/irritability",
+      "cough/runny nose",
+      "fever",
+      "loss of appetite",
+      "vomiting"
+    ],
+    "study_type": "randomized controlled trial, clinical trial, solicited adverse events",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "Common (\u22655%) solicited adverse reactions included fussiness/irritability, cough/runny nose, fever, loss of appetite, and vomiting."
+  },
+  {
+    "filename": "Package-Insert-Adacel.pdf",
+    "vax_type": "TDAP",
+    "vax_name": "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE ADSORBED (ADACEL)",
+    "vax_manu": "SANOFI PASTEUR INC.",
+    "extraction_success": true,
+    "adverse_events": [
+      "injection site pain",
+      "headache",
+      "body ache or muscle weakness",
+      "tiredness",
+      "injection site swelling",
+      "injection site erythema",
+      "fever",
+      "myalgia",
+      "malaise"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "The safety of a first vaccination with Adacel was evaluated in 5 clinical studies. Three of the studies were conducted in the U.S. and 2 were conducted in Canada. Of the study participants, 86% were Caucasian, 8% Black, 3% Hispanic, 1% Asian and 2% of other ethnic origin. A total of 7,143 individuals 10 through 64 years of age inclusive (4,695 adolescents 10 through 17 years of age and 2,448 adults 18 through 64 years of age) received a single dose of Adacel. Solicited local and systemic reactions and unsolicited adverse events were monitored daily for 14 days post vaccination using a diary card. From days 14 to 28 post vaccination, information on adverse events necessitating a medical contact, such as a telephone call, visit to an emergency room, physician's office or hospitalization, was obtained via telephone interview or at an interim clinic visit. From days 28 to 6 months post vaccination, participants were monitored for unexpected visits to a physician's office or to an emergency room, onset of serious illness, and hospitalizations. In study NCT01439165 when a second vaccination of Adacel was administered 8-12 years following the initial vaccination of Adacel, solicited adverse reactions were monitored for 7 days post-vaccination using a diary card. Unsolicited and serious adverse events were collected for approximately 30 days post-vaccination."
+  },
+  {
+    "filename": "Package-Insert-Typhim-Vi.pdf",
+    "vax_type": "TYPHOID",
+    "vax_name": "TYPHOID VI POLYSACCHARIDE VACCINE (TYPHIM VI)",
+    "vax_manu": "SANOFI PASTEUR SA",
+    "extraction_success": true,
+    "adverse_events": [
+      "injection site pain",
+      "erythema",
+      "induration",
+      "elevated oral temperature"
+    ],
+    "study_type": "controlled clinical trials",
+    "source_section": "Adverse Reactions",
+    "controlled_trial_text": "Safety of Typhim Vi vaccine, the US licensed liquid formulation, has been assessed in clinical trials in more than 4,000 subjects both in countries of high and low endemicity. In addition, the safety of the lyophilized formulation has been assessed in more than 6,000 individuals. The adverse reactions were predominately minor and transient local reactions. Local reactions such as injection site pain, erythema, and induration almost always resolved within 48 hours of vaccination. Elevated oral temperature, above 38\u00b0C (100.4\u00b0F), was observed in approximately 1% of vaccinees in all studies. No serious or life-threatening systemic events were reported in these clinical trials."
+  },
+  {
+    "filename": "Package-Insert-DAPTACEL.pdf",
+    "vax_type": "DTAP",
+    "vax_name": "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED (DAPTACEL)",
+    "vax_manu": "SANOFI PASTEUR INC.",
+    "extraction_success": true,
+    "adverse_events": [
+      "tenderness",
+      "redness",
+      "swelling",
+      "fever",
+      "fretfulness",
+      "anorexia",
+      "drowsiness",
+      "crying",
+      "vomiting"
+    ],
+    "study_type": "randomized controlled trial",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "In a randomized, double-blinded pertussis vaccine efficacy trial, the Sweden I Efficacy Trial, conducted in Sweden during 1992-1995, the safety of DAPTACEL was compared with DT and a whole-cell pertussis DTP vaccine. There were fewer of the solicited common local and systemic reactions following DAPTACEL than following the whole-cell pertussis DTP vaccine. As shown in Table 1, the 2,587 infants who received DAPTACEL at 2, 4 and 6 months of age had similar rates of reactions within 24 hours as recipients of DT and significantly lower rates than infants receiving whole-cell pertussis DTP."
+  }
+]
