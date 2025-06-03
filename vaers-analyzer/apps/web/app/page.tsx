@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { PageLayout, PageContainer, Card, CardTitle, CardDescription, CardFooter, IconContainer } from '@repo/ui';
+import { PageLayout, PageContainer, Card, CardTitle, CardDescription, CardFooter, IconContainer } from '../components/ui';
 
 export default function Home() {
   return (

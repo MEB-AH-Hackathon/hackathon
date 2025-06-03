@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
-    ignoreDuringBuilds: true,
+    //ignoreDuringBuilds: true,
   },
   // Add custom webpack config to log build details
   webpack: (config, { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }) => {

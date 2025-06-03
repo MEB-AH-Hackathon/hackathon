@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getReportById } from '../../../actions/reports';
-import { PageLayout, PageContainer, PageHeader } from '@repo/ui';
+import { PageLayout, PageContainer, PageHeader } from '../../../../components/ui';
 import { AnalysisStream } from './components/AnalysisStream';
 
 export default async function AnalyzePage({

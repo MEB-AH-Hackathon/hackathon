@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ReportForm } from './components/ReportForm';
-import { PageLayout, PageContainer, PageHeader } from '@repo/ui';
+import { PageLayout, PageContainer, PageHeader } from '../../../components/ui';
 
 export default function NewReportPage() {
   return (

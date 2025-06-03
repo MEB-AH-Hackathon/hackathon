@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Card, CardContent, IconContainer } from '@repo/ui';
+import { useState, useEffect, useCallback } from 'react';
+import { Card, CardContent, IconContainer } from '../../../../../components/ui';
 import type { AnalysisStep, StructuredReport } from '@vaers/analyzer';
 
 interface AnalysisStreamProps {
@@ -14,11 +14,7 @@ export function AnalysisStream({ reportId }: AnalysisStreamProps) {
   const [error, setError] = useState<string | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
-  useEffect(() => {
-    startAnalysis();
-  }, [reportId]);
-
-  const startAnalysis = async () => {
+  const startAnalysis = useCallback(async () => {
     setIsAnalyzing(true);
     setSteps([]);
     setReport(null);
@@ -84,7 +80,11 @@ export function AnalysisStream({ reportId }: AnalysisStreamProps) {
       setError(err instanceof Error ? err.message : 'Analysis failed');
       setIsAnalyzing(false);
     }
-  };
+  }, [reportId]);
+
+  useEffect(() => {
+    startAnalysis();
+  }, [startAnalysis]);
 
   return (
     <div className="space-y-8">

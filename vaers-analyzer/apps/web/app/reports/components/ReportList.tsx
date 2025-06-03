@@ -1,6 +1,6 @@
 import type { VaersReport } from '@vaers/types';
 import { ReportListItem } from './ReportListItem';
-import { Card, CardContent } from '@repo/ui';
+import { Card, CardContent } from '../../../components/ui';
 
 interface ReportListProps {
   reports: VaersReport[];

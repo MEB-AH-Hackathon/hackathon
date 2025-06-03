@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { PageHeader, Card, CardContent, IconContainer, Input, Select, Label } from '@repo/ui';
+import { PageHeader, Card, CardContent, IconContainer, Input, Select, Label } from '../../../components/ui';
 import type { ReportFilters } from '../../actions/reports';
 
 interface ReportsHeaderProps {

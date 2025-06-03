@@ -1,5 +1,5 @@
 import type { VaersReport } from '@vaers/types';
-import { Badge } from '@repo/ui';
+import { Badge } from '../../../components/ui';
 
 interface ReportOutcomeBadgesProps {
   report: VaersReport;

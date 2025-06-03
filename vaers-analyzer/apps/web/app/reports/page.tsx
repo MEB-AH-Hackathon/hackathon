@@ -2,7 +2,7 @@ import { getReports, type ReportFilters } from '../actions/reports';
 import { ReportsHeader } from './components/ReportsHeader';
 import { ReportList } from './components/ReportList';
 import { Pagination } from './components/Pagination';
-import { PageLayout, PageContainer } from '@repo/ui';
+import { PageLayout, PageContainer } from '../../components/ui';
 
 export default async function ReportsPage({
   searchParams,

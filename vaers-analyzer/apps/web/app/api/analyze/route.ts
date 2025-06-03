@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
         
         // Create stream controller that sends SSE format
         const streamController: StreamController = {
-          emit: async (event: string, data: any) => {
+          emit: async (event: string, data: unknown) => {
             const message = `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
             controller.enqueue(encoder.encode(message));
           }

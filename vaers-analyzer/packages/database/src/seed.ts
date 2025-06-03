@@ -1,3 +1,9 @@
+import * as dotenv from 'dotenv';
+import * as path from 'path';
+
+// Load environment variables from .env file
+dotenv.config({ path: path.join(__dirname, '..', '.env') });
+
 import { db } from './db-connection';
 import { VaersReportRepository } from './repositories/vaers-reports';
 import { VaersVaccineRepository } from './repositories/vaers-vaccines';

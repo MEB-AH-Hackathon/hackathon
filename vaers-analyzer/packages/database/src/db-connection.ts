@@ -1,6 +1,9 @@
 import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 import * as schema from './schema';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // Next.js will automatically load environment variables from .env files
 // No need for manual dotenv.config() in a Next.js environment
@@ -11,6 +14,13 @@ const isDev = process.env.NODE_ENV !== 'production';
 const connectionString = isDev 
   ? (process.env.DATABASE_URL_DEV || process.env.DATABASE_URL)
   : process.env.DATABASE_URL_PROD; // Production requires explicit prod URL
+
+  console.log('connectionString', connectionString);
+  console.log('isDev', isDev);
+  console.log('process.env.DATABASE_URL_DEV', process.env.DATABASE_URL_DEV);
+  console.log('process.env.DATABASE_URL_PROD', process.env.DATABASE_URL_PROD);
+  console.log('process.env.DATABASE_URL', process.env.DATABASE_URL);
+  console.log('process.env.NODE_ENV', process.env.NODE_ENV);
 
 if (!connectionString) {
   const availableVars = [

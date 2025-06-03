@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { getReportById } from '../../actions/reports';
 import { ReportDetails } from './components/ReportDetails';
 import { AnalyzeButton } from './components/AnalyzeButton';
-import { PageLayout, PageContainer, PageHeader } from '@repo/ui';
+import { PageLayout, PageContainer, PageHeader } from '../../../components/ui';
 
 export default async function ReportPage({
   params,
