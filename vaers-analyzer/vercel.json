@@ -1,0 +1,7 @@
+{
+  "buildCommand": "echo 'Building...'",
+  "installCommand": "echo 'Skipping default install'",
+  "framework": "nextjs",
+  "rewrites": [
+  ]
+}
