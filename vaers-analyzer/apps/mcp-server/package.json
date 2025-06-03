@@ -1,0 +1,22 @@
+{
+  "name": "@vaers/mcp-server",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./src/server.ts",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "@vaers/mcp-tools": "workspace:^"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.4",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.15.3",
+    "typescript": "5.8.2"
+  }
+}

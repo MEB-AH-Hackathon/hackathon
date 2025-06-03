@@ -23,51 +23,99 @@ export interface PaginatedReports {
   };
 }
 
+export interface ReportFilters {
+  search?: string;
+  vaccineType?: string;
+  outcome?: 'recovered' | 'hospitalized' | 'serious';
+  dateRange?: '7days' | '30days' | '90days';
+}
+
 export async function getReports(
   limit: number = 20,
   offset: number = 0,
-  includeDetails: boolean = true
+  includeDetails: boolean = true,
+  filters: ReportFilters = {}
 ): Promise<PaginatedReports> {
   try {
-    // Get all reports first
-    const allReports = await reportRepo.getAll();
-    
-    // Apply pagination
-    const paginatedReports = allReports.slice(offset, offset + limit);
-    
-    // Optionally include details
-    const reports = await Promise.all(
-      paginatedReports.map(async (report) => {
-        if (includeDetails) {
-          const details = await reportRepo.getReportWithDetails(report.id);
-          if (!details) return null;
-          
-          // Convert database types to interface types
-          return {
-            ...details,
-            ageYrs: details.ageYrs ? parseFloat(details.ageYrs as string) : undefined,
-          } as VaersReport;
-        }
-        // Convert basic report to VaersReport type
+    // Load all reports with details for filtering
+    const baseReports = await reportRepo.getAll();
+    const allReports = await Promise.all(
+      baseReports.map(async (r) => {
+        const details = await reportRepo.getReportWithDetails(r.id);
+        if (!details) return null;
         return {
-          ...report,
-          ageYrs: report.ageYrs ? parseFloat(report.ageYrs as string) : undefined,
-          vaccines: [],
-          symptoms: []
+          ...details,
+          ageYrs: details.ageYrs ? parseFloat(details.ageYrs as string) : undefined,
         } as VaersReport;
       })
     );
-    
-    // Filter out null values
-    const validReports = reports.filter((report): report is VaersReport => report !== null);
-    
+    const validReports = allReports.filter((r): r is VaersReport => r !== null);
+
+    // Apply filters in memory
+    let filtered = validReports;
+
+    if (filters.vaccineType) {
+      const type = filters.vaccineType.toLowerCase();
+      filtered = filtered.filter((r) =>
+        r.vaccines.some((v) => v.vaxType?.toLowerCase() === type)
+      );
+    }
+
+    if (filters.outcome) {
+      if (filters.outcome === 'recovered') {
+        filtered = filtered.filter((r) => r.recovd === 'Y');
+      } else if (filters.outcome === 'hospitalized') {
+        filtered = filtered.filter((r) => r.hospital === true);
+      } else if (filters.outcome === 'serious') {
+        filtered = filtered.filter((r) => r.died || r.lThreat);
+      }
+    }
+
+    if (filters.search) {
+      const q = filters.search.toLowerCase();
+      filtered = filtered.filter((r) => {
+        const inVaccines = r.vaccines.some(
+          (v) =>
+            v.vaxName?.toLowerCase().includes(q) ||
+            v.vaxType?.toLowerCase().includes(q)
+        );
+        const inSymptoms = r.symptoms.some((s) =>
+          s.symptomName.toLowerCase().includes(q)
+        );
+        return (
+          r.vaersId.toLowerCase().includes(q) ||
+          (r.symptomText && r.symptomText.toLowerCase().includes(q)) ||
+          inVaccines ||
+          inSymptoms
+        );
+      });
+    }
+
+    if (filters.dateRange) {
+      const days =
+        filters.dateRange === '7days'
+          ? 7
+          : filters.dateRange === '30days'
+          ? 30
+          : 90;
+      const now = Date.now();
+      filtered = filtered.filter((r) => {
+        if (!r.recvDate) return false;
+        const diff = (now - new Date(r.recvDate).getTime()) / (1000 * 60 * 60 * 24);
+        return diff <= days;
+      });
+    }
+
+    const totalFiltered = filtered.length;
+    const paginatedReports = filtered.slice(offset, offset + limit);
+
     return {
-      reports: validReports,
+      reports: paginatedReports,
       pagination: {
-        total: allReports.length,
+        total: totalFiltered,
         limit,
         offset,
-        hasMore: offset + limit < allReports.length
+        hasMore: offset + limit < totalFiltered
       }
     };
   } catch (error) {

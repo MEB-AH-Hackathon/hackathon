@@ -1,13 +1,40 @@
+"use client";
+
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import { PageHeader, Card, CardContent, IconContainer, Input, Select, Label } from '@repo/ui';
+import type { ReportFilters } from '../../actions/reports';
 
 interface ReportsHeaderProps {
   totalReports: number;
   reportsWithOutcomes: number;
   recentReports: number;
+  filters: ReportFilters;
+  limit: number;
 }
 
-export function ReportsHeader({ totalReports, reportsWithOutcomes, recentReports }: ReportsHeaderProps) {
+export function ReportsHeader({ totalReports, reportsWithOutcomes, recentReports, filters, limit }: ReportsHeaderProps) {
+  const router = useRouter();
+  const [search, setSearch] = useState(filters.search ?? "");
+  const [vaccineType, setVaccineType] = useState(filters.vaccineType ?? "");
+  const [outcome, setOutcome] = useState(filters.outcome ?? "");
+  const [dateRange, setDateRange] = useState(filters.dateRange ?? "");
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      const params = new URLSearchParams();
+      if (search) params.set('search', search);
+      if (vaccineType) params.set('vaccineType', vaccineType);
+      if (outcome) params.set('outcome', outcome);
+      if (dateRange) params.set('dateRange', dateRange);
+      params.set('page', '1');
+      params.set('limit', String(limit));
+      router.push(`/reports?${params.toString()}`);
+    }, 300);
+
+    return () => clearTimeout(timeout);
+  }, [search, vaccineType, outcome, dateRange, limit, router]);
   return (
     <div className="mb-12">
       <PageHeader
@@ -108,11 +135,13 @@ export function ReportsHeader({ totalReports, reportsWithOutcomes, recentReports
               <Input
                 type="text"
                 placeholder="VAERS ID, symptoms..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
               />
             </div>
             <div>
               <Label className="mb-2">Vaccine Type</Label>
-              <Select>
+              <Select value={vaccineType} onChange={(e) => setVaccineType(e.target.value)}>
                 <option value="">All Types</option>
                 <option value="covid19">COVID-19</option>
                 <option value="flu">Influenza</option>
@@ -122,7 +151,7 @@ export function ReportsHeader({ totalReports, reportsWithOutcomes, recentReports
             </div>
             <div>
               <Label className="mb-2">Outcome</Label>
-              <Select>
+              <Select value={outcome} onChange={(e) => setOutcome(e.target.value)}>
                 <option value="">All Outcomes</option>
                 <option value="recovered">Recovered</option>
                 <option value="hospitalized">Hospitalized</option>
@@ -131,7 +160,7 @@ export function ReportsHeader({ totalReports, reportsWithOutcomes, recentReports
             </div>
             <div>
               <Label className="mb-2">Date Range</Label>
-              <Select>
+              <Select value={dateRange} onChange={(e) => setDateRange(e.target.value)}>
                 <option value="">All Time</option>
                 <option value="7days">Last 7 days</option>
                 <option value="30days">Last 30 days</option>
