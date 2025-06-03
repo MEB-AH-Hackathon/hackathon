@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vaccine Comparisons Schema",
+  "description": "Complete vaccine comparison data with symptom counts",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "vaccine_id": {"type": "integer", "description": "Unique vaccine identifier"},
+      "vaers_name": {"type": "string", "description": "VAERS vaccine name"},
+      "pdf_name": {"type": "string", "description": "PDF vaccine name"},
+      "total_vaers_reports": {"type": "integer", "description": "Total VAERS reports"},
+      "unique_symptoms": {"type": "integer", "description": "Number of unique symptoms reported"},
+      "pdf_adverse_events": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "Adverse events from FDA package insert"
+      }
+    },
+    "required": ["vaccine_id", "vaers_name", "pdf_name", "total_vaers_reports", "unique_symptoms", "pdf_adverse_events"]
+  }
+}

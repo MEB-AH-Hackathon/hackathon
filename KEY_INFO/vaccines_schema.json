@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vaccines Schema",
+  "description": "Master list of 14 crosswalked vaccines with PDF adverse events",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "vaccine_id": {"type": "integer", "description": "Unique vaccine identifier"},
+      "vaers_name": {"type": "string", "description": "Vaccine name as it appears in VAERS data"},
+      "pdf_name": {"type": "string", "description": "Vaccine name as it appears in FDA package insert"},
+      "total_vaers_reports": {"type": "integer", "description": "Total number of VAERS reports for this vaccine"},
+      "pdf_adverse_events": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "List of adverse events documented in FDA package insert"
+      }
+    },
+    "required": ["vaccine_id", "vaers_name", "pdf_name", "total_vaers_reports", "pdf_adverse_events"]
+  }
+}

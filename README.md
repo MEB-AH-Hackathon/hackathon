@@ -59,9 +59,14 @@ The system processes VAERS adverse event reports and cross-references them with 
 
 ### Schemas (`KEY_INFO/`)
 - `system_overview.json` - High-level system architecture and capabilities
-- `json_data_schema.json` - Schema for all JSON output files  
-- `unified_database_schema.json` - Schema for main DuckDB database
-- `vaers_merged_schema.json` - Schema for VAERS data structure
+- `vaccines_schema.json` - Schema for vaccines.json
+- `strict_symptom_classifications_schema.json` - Schema for strict_symptom_classifications.json
+- `vaccine_symptom_counts_schema.json` - Schema for vaccine_symptom_counts.json
+- `vaccine_comparisons_schema.json` - Schema for vaccine_comparisons.json
+- `symptom_mappings_initial_schema.json` - Schema for symptom_mappings_initial.json
+- `pdf_extraction_results_schema.json` - Schema for pdf_extraction_results.json
+- `pdf_vaccine_names_only_schema.json` - Schema for pdf_vaccine_names_only.json
+- `manifest_schema.json` - Schema for manifest.json
 
 ## 14 Crosswalked Vaccines
 
