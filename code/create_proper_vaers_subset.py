@@ -1,170 +1,185 @@
 #!/usr/bin/env python3
 """
-Create proper VAERS subset from raw CSV files
-Each row = ONE VAERS report with basic fields + symptom list
+Create proper VAERS subset matching the format of vaers_2024_sample100.json
+Only includes reports for vaccines found in FDA reports
 """
 
 import json
 import pandas as pd
-import glob
 from pathlib import Path
+import os
+
+def load_fda_vaccine_names():
+    """Load the VAERS vaccine names from FDA reports"""
+    with open('json_data/fda_reports.json', 'r') as f:
+        fda_reports = json.load(f)
+    
+    # Collect all VAERS vaccine names from FDA reports
+    vaers_names = set()
+    for report in fda_reports:
+        if report.get('vaers_vaccine_names'):
+            vaers_names.update(report['vaers_vaccine_names'])
+    
+    return list(vaers_names)
 
 def create_proper_vaers_subset():
-    """Create VAERS subset from raw CSV files"""
-    print("Creating VAERS subset from raw CSV files...")
+    """Create VAERS subset with proper format matching sample structure"""
+    print("Creating proper VAERS subset (100K records) for vaccines in FDA reports...")
     
-    try:
-        # Load recent VAERS data (2023-2024)
-        data_files = glob.glob("../vaers_data/vaers_data/202[34]VAERSDATA.csv")
-        symptom_files = glob.glob("../vaers_data/vaers_data/202[34]VAERSSYMPTOMS.csv")
-        vax_files = glob.glob("../vaers_data/vaers_data/202[34]VAERSVAX.csv")
+    # Load FDA vaccine names
+    fda_vaccine_names = load_fda_vaccine_names()
+    print(f"Found {len(fda_vaccine_names)} vaccine names from FDA reports:")
+    for name in sorted(fda_vaccine_names):
+        print(f"  - {name}")
+    
+    # Define years to process
+    years = ['2023', '2024']
+    
+    all_records = []
+    
+    for year in years:
+        print(f"\nProcessing {year} VAERS data...")
         
-        print(f"Found {len(data_files)} data files, {len(symptom_files)} symptom files, {len(vax_files)} vaccine files")
+        # File paths
+        data_file = f'vaers_data/vaers_data/{year}VAERSDATA.csv'
+        symptoms_file = f'vaers_data/vaers_data/{year}VAERSSYMPTOMS.csv'
+        vax_file = f'vaers_data/vaers_data/{year}VAERSVAX.csv'
         
-        # Load and combine data files
-        all_data = []
-        for file in data_files:
-            print(f"Loading {file}...")
-            try:
-                df = pd.read_csv(file, encoding='latin-1', low_memory=False, on_bad_lines='skip')
-                all_data.append(df)
-                print(f"  Loaded {len(df)} records")
-            except Exception as e:
-                print(f"  Error loading {file}: {e}")
-                continue
+        # Check if files exist
+        if not all(os.path.exists(f) for f in [data_file, symptoms_file, vax_file]):
+            print(f"  Skipping {year} - files not found")
+            continue
         
-        if not all_data:
-            raise Exception("No VAERS data files found")
-            
-        main_data = pd.concat(all_data, ignore_index=True)
-        print(f"Loaded {len(main_data)} total reports")
+        # Load data files with error handling
+        print(f"  Loading {year}VAERSDATA.csv...")
+        data_df = pd.read_csv(data_file, encoding='latin-1', low_memory=False, on_bad_lines='skip')
         
-        # Load and combine symptom files
-        all_symptoms = []
-        for file in symptom_files:
-            print(f"Loading {file}...")
-            try:
-                df = pd.read_csv(file, encoding='latin-1', low_memory=False, on_bad_lines='skip')
-                all_symptoms.append(df)
-                print(f"  Loaded {len(df)} symptom records")
-            except Exception as e:
-                print(f"  Error loading {file}: {e}")
-                continue
+        print(f"  Loading {year}VAERSSYMPTOMS.csv...")
+        symptoms_df = pd.read_csv(symptoms_file, encoding='latin-1', low_memory=False, on_bad_lines='skip')
         
-        symptoms_data = pd.concat(all_symptoms, ignore_index=True) if all_symptoms else pd.DataFrame()
-        print(f"Total symptom records: {len(symptoms_data)}")
+        print(f"  Loading {year}VAERSVAX.csv...")
+        vax_df = pd.read_csv(vax_file, encoding='latin-1', low_memory=False, on_bad_lines='skip')
         
-        # Load and combine vaccine files
-        all_vax = []
-        for file in vax_files:
-            print(f"Loading {file}...")
-            try:
-                df = pd.read_csv(file, encoding='latin-1', low_memory=False, on_bad_lines='skip')
-                all_vax.append(df)
-                print(f"  Loaded {len(df)} vaccine records")
-            except Exception as e:
-                print(f"  Error loading {file}: {e}")
-                continue
+        # Filter vaccines for our FDA list
+        vax_filtered = vax_df[vax_df['VAX_NAME'].isin(fda_vaccine_names)]
+        print(f"  Found {len(vax_filtered)} vaccine records matching FDA vaccines")
         
-        vax_data = pd.concat(all_vax, ignore_index=True) if all_vax else pd.DataFrame()
-        print(f"Total vaccine records: {len(vax_data)}")
+        # Get unique VAERS_IDs for reports that ONLY contain FDA vaccines
+        # First, find reports with non-FDA vaccines
+        non_fda_vax = vax_df[~vax_df['VAX_NAME'].isin(fda_vaccine_names)]
+        reports_with_non_fda = set(non_fda_vax['VAERS_ID'].unique())
         
-        # Sample 100K reports
-        target_size = min(100000, len(main_data))
-        sampled_data = main_data.sample(n=target_size, random_state=42)
-        print(f"Sampled {len(sampled_data)} reports")
+        # Get reports that only have FDA vaccines
+        all_reports_with_fda = set(vax_filtered['VAERS_ID'].unique())
+        vaers_ids = list(all_reports_with_fda - reports_with_non_fda)
+        print(f"  Found {len(vaers_ids)} unique VAERS reports with ONLY FDA vaccines")
         
-        # Get symptoms for sampled reports
-        sampled_ids = set(sampled_data['VAERS_ID'])
-        relevant_symptoms = symptoms_data[symptoms_data['VAERS_ID'].isin(sampled_ids)]
+        # Filter other dataframes
+        data_filtered = data_df[data_df['VAERS_ID'].isin(vaers_ids)]
+        symptoms_filtered = symptoms_df[symptoms_df['VAERS_ID'].isin(vaers_ids)]
+        vax_filtered = vax_df[vax_df['VAERS_ID'].isin(vaers_ids)]  # Get all vaccines for these reports
         
         # Group symptoms by VAERS_ID
-        symptom_groups = relevant_symptoms.groupby('VAERS_ID')['SYMPTOM1'].apply(list).to_dict()
+        symptoms_grouped = symptoms_filtered.groupby('VAERS_ID').agg({
+            'SYMPTOM1': lambda x: list(x.dropna()),
+            'SYMPTOM2': lambda x: list(x.dropna()),
+            'SYMPTOM3': lambda x: list(x.dropna()),
+            'SYMPTOM4': lambda x: list(x.dropna()),
+            'SYMPTOM5': lambda x: list(x.dropna())
+        }).reset_index()
         
-        # Get vaccines for sampled reports  
-        relevant_vax = vax_data[vax_data['VAERS_ID'].isin(sampled_ids)]
+        # Combine symptom columns into a single list
+        symptoms_grouped['symptom_list'] = symptoms_grouped.apply(
+            lambda row: list(set(row['SYMPTOM1'] + row['SYMPTOM2'] + row['SYMPTOM3'] + 
+                                row['SYMPTOM4'] + row['SYMPTOM5'])), axis=1
+        )
         
-        # Group vaccine info by VAERS_ID
-        vax_groups = relevant_vax.groupby('VAERS_ID').agg({
-            'VAX_TYPE': list,
-            'VAX_MANU': list, 
-            'VAX_NAME': list,
-            'VAX_DOSE_SERIES': list,
-            'VAX_ROUTE': list,
-            'VAX_SITE': list
-        }).to_dict('index')
+        # Group vaccines by VAERS_ID
+        vax_grouped = vax_filtered.groupby('VAERS_ID').agg({
+            'VAX_TYPE': lambda x: list(x.dropna()),
+            'VAX_MANU': lambda x: list(x.dropna()),
+            'VAX_NAME': lambda x: list(x.dropna()),
+            'VAX_DOSE_SERIES': lambda x: [str(v) for v in x.dropna()],
+            'VAX_ROUTE': lambda x: list(x.dropna()),
+            'VAX_SITE': lambda x: list(x.dropna())
+        }).reset_index()
         
-        # Create final dataset
-        result_data = []
-        for _, row in sampled_data.iterrows():
-            vaers_id = row['VAERS_ID']
-            
-            # Get symptoms (remove empty/null values)
-            symptoms = symptom_groups.get(vaers_id, [])
-            symptoms = [s for s in symptoms if pd.notna(s) and s.strip()]
-            
-            # Get vaccine info
-            vax_info = vax_groups.get(vaers_id, {})
+        # Merge all data
+        merged = data_filtered.merge(symptoms_grouped[['VAERS_ID', 'symptom_list']], 
+                                    on='VAERS_ID', how='left')
+        merged = merged.merge(vax_grouped, on='VAERS_ID', how='left')
+        
+        # Define value mappers
+        sex_map = {'M': 'male', 'F': 'female', 'U': 'unknown'}
+        yes_no_map = {'Y': 'yes', 'N': 'no'}
+        recovd_map = {'Y': 'yes', 'N': 'no', 'U': 'unknown'}
+        
+        # Convert to proper format
+        for _, row in merged.iterrows():
+            # Helper function to convert Y/N values
+            def map_yes_no(value, allow_no=False, allow_unknown=False):
+                if pd.isna(value):
+                    return None
+                if value == 'Y':
+                    return 'yes'
+                elif allow_no and value == 'N':
+                    return 'no'
+                elif allow_unknown and value == 'U':
+                    return 'unknown'
+                else:
+                    return None
             
             record = {
-                "VAERS_ID": int(vaers_id),
-                "RECVDATE": row.get('RECVDATE'),
-                "STATE": row.get('STATE'),
-                "AGE_YRS": float(row['AGE_YRS']) if pd.notna(row.get('AGE_YRS')) else None,
-                "SEX": row.get('SEX'),
-                "SYMPTOM_TEXT": row.get('SYMPTOM_TEXT'),
-                "DIED": row.get('DIED'),
-                "L_THREAT": row.get('L_THREAT'),
-                "ER_VISIT": row.get('ER_VISIT'),
-                "HOSPITAL": row.get('HOSPITAL'),
-                "DISABLE": row.get('DISABLE'),
-                "RECOVD": row.get('RECOVD'),
-                "VAX_DATE": row.get('VAX_DATE'),
-                "ONSET_DATE": row.get('ONSET_DATE'),
-                "NUMDAYS": float(row['NUMDAYS']) if pd.notna(row.get('NUMDAYS')) else None,
-                "VAX_TYPE_list": vax_info.get('VAX_TYPE', []),
-                "VAX_MANU_list": vax_info.get('VAX_MANU', []),
-                "VAX_NAME_list": vax_info.get('VAX_NAME', []),
-                "VAX_DOSE_SERIES_list": vax_info.get('VAX_DOSE_SERIES', []),
-                "VAX_ROUTE_list": vax_info.get('VAX_ROUTE', []),
-                "VAX_SITE_list": vax_info.get('VAX_SITE', []),
-                "symptom_list": symptoms
+                "VAERS_ID": int(row['VAERS_ID']) if pd.notna(row['VAERS_ID']) else None,
+                "RECVDATE": row['RECVDATE'] if pd.notna(row['RECVDATE']) else None,
+                "STATE": row['STATE'] if pd.notna(row['STATE']) else None,
+                "AGE_YRS": float(row['AGE_YRS']) if pd.notna(row['AGE_YRS']) else None,
+                "SEX": sex_map.get(row['SEX'], None) if pd.notna(row['SEX']) else None,
+                "SYMPTOM_TEXT": row['SYMPTOM_TEXT'] if pd.notna(row['SYMPTOM_TEXT']) else None,
+                "DIED": map_yes_no(row['DIED']),
+                "L_THREAT": map_yes_no(row['L_THREAT']),
+                "ER_VISIT": map_yes_no(row['ER_VISIT']),
+                "HOSPITAL": map_yes_no(row['HOSPITAL']),
+                "DISABLE": map_yes_no(row['DISABLE']),
+                "RECOVD": map_yes_no(row['RECOVD'], allow_no=True, allow_unknown=True),
+                "VAX_DATE": row['VAX_DATE'] if pd.notna(row['VAX_DATE']) else None,
+                "ONSET_DATE": row['ONSET_DATE'] if pd.notna(row['ONSET_DATE']) else None,
+                "NUMDAYS": float(row['NUMDAYS']) if pd.notna(row['NUMDAYS']) else None,
+                "VAX_TYPE_list": row['VAX_TYPE'] if isinstance(row['VAX_TYPE'], list) else [],
+                "VAX_MANU_list": row['VAX_MANU'] if isinstance(row['VAX_MANU'], list) else [],
+                "VAX_NAME_list": row['VAX_NAME'] if isinstance(row['VAX_NAME'], list) else [],
+                "VAX_DOSE_SERIES_list": row['VAX_DOSE_SERIES'] if isinstance(row['VAX_DOSE_SERIES'], list) else [],
+                "VAX_ROUTE_list": row['VAX_ROUTE'] if isinstance(row['VAX_ROUTE'], list) else [],
+                "VAX_SITE_list": row['VAX_SITE'] if isinstance(row['VAX_SITE'], list) else [],
+                "symptom_list": row['symptom_list'] if isinstance(row['symptom_list'], list) else []
             }
-            result_data.append(record)
-        
-        print(f"Created {len(result_data)} complete records")
-        
-        # Save to JSON 
-        output_file = "../json_data/vaers_subset.json"
-        with open(output_file, 'w') as f:
-            json.dump(result_data, f, indent=2)
-        
-        print(f"Created vaers_subset.json with {len(result_data):,} records")
-        
-        # Sample stats
-        ages = [r['AGE_YRS'] for r in result_data if r['AGE_YRS'] is not None]
-        dates = [r['RECVDATE'] for r in result_data if r['RECVDATE']]
-        sexes = [r['SEX'] for r in result_data if r['SEX']]
-        
-        print(f"\nSample statistics:")
-        if dates:
-            print(f"  Date range: {min(dates)} to {max(dates)}")
-        if ages:
-            print(f"  Age range: {min(ages):.1f} to {max(ages):.1f} years")
-        if sexes:
-            from collections import Counter
-            sex_counts = Counter(sexes)
-            print(f"  Sex distribution: {dict(sex_counts)}")
-        
-        print(f"\nVAERS subset saved to: {output_file}")
-        
-        return True
-        
-    except Exception as e:
-        print(f"Error creating VAERS subset: {e}")
-        import traceback
-        traceback.print_exc()
-        return False
+            all_records.append(record)
+    
+    print(f"\nTotal records collected: {len(all_records)}")
+    
+    # Sample to 100K records if we have more
+    if len(all_records) > 100000:
+        import random
+        random.seed(42)  # For reproducibility
+        all_records = random.sample(all_records, 100000)
+        print(f"Sampled down to 100,000 records")
+    
+    # Save the results
+    Path('json_data').mkdir(parents=True, exist_ok=True)
+    with open('json_data/vaers_subset.json', 'w') as f:
+        json.dump(all_records, f, indent=2)
+    
+    print(f"\n✓ Created vaers_subset.json with {len(all_records)} reports")
+    
+    # Show summary of vaccines in the subset
+    vaccine_counts = {}
+    for record in all_records:
+        for vax in record.get('VAX_NAME_list', []):
+            vaccine_counts[vax] = vaccine_counts.get(vax, 0) + 1
+    
+    print("\nVaccine distribution in subset:")
+    for vax, count in sorted(vaccine_counts.items(), key=lambda x: x[1], reverse=True)[:10]:
+        print(f"  {vax}: {count:,} reports")
 
 if __name__ == "__main__":
     create_proper_vaers_subset()
