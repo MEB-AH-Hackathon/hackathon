@@ -1,0 +1,1 @@
+- remember when creating new package.json commands to make sure they integrate well into the overall monorepo structure
