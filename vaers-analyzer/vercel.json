@@ -1,7 +1,7 @@
 {
   "buildCommand": "bash scripts/build-debug.sh",
   "installCommand": "pnpm install",
-  "outputDirectory": "apps/web/.next",
+  "outputDirectory": "apps/web",
   "framework": "nextjs",
   "rewrites": [
     {
