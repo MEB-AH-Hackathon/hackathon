@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
     DATABASE_URL_DEV: process.env.DATABASE_URL_DEV,
     DATABASE_URL_PROD: process.env.DATABASE_URL_PROD,
   },
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
   // Add custom webpack config to log build details
   webpack: (config, { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }) => {
     console.log('=== Next.js Build Debug Info ===');

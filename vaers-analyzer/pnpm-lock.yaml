@@ -60,6 +60,9 @@ importers:
       '@repo/ui':
         specifier: workspace:^
         version: link:../../packages/ui
+      '@vaers/analyzer':
+        specifier: workspace:^
+        version: link:../../packages/analyzer
       '@vaers/database':
         specifier: workspace:^
         version: link:../../packages/database
@@ -106,12 +109,21 @@ importers:
 
   packages/analyzer:
     dependencies:
+      '@anthropic-ai/sdk':
+        specifier: ^0.52.0
+        version: 0.52.0
+      '@vaers/database':
+        specifier: workspace:^
+        version: link:../database
       '@vaers/mcp-tools':
         specifier: workspace:^
         version: link:../mcp-tools
       '@vaers/types':
         specifier: workspace:^
         version: link:../types
+      dotenv:
+        specifier: ^16.5.0
+        version: 16.5.0
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:^
@@ -265,6 +277,10 @@ packages:
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
+
+  '@anthropic-ai/sdk@0.52.0':
+    resolution: {integrity: sha512-d4c+fg+xy9e46c8+YnrrgIQR45CZlAi7PwdzIfDXDM6ACxEZli1/fxhURsq30ZpMZy6LvSkr41jGq5aF5TD7rQ==}
+    hasBin: true
 
   '@babel/runtime-corejs3@7.27.0':
     resolution: {integrity: sha512-UWjX6t+v+0ckwZ50Y5ShZLnlk95pP5MyW/pon9tiYzl3+18pkTHTFNTKr7rQbfRXPkowt2QAn30o1b6oswszew==}
@@ -3413,6 +3429,8 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
+
+  '@anthropic-ai/sdk@0.52.0': {}
 
   '@babel/runtime-corejs3@7.27.0':
     dependencies:

@@ -1,6 +1,7 @@
 import { db } from '../db-connection';
-import { eq, and, sql } from 'drizzle-orm';
+import { eq, and, sql, like } from 'drizzle-orm';
 import { vaersSymptoms, type VaersSymptomRecord, type NewVaersSymptomRecord } from '../schema/vaers-symptoms';
+import { vaersReports } from '../schema/vaers-reports';
 import { symptomAnalogies } from '../schema/symptom-analogies';
 
 export class VaersSymptomRepository {
@@ -64,5 +65,31 @@ export class VaersSymptomRepository {
 
   async executePreparedSymptomsByReport(reportId: number): Promise<VaersSymptomRecord[]> {
     return await this.preparedSymptomsByReport.execute({ reportId });
+  }
+
+  async findReportsBySymptom(searchTerm: string): Promise<{ vaersId: string; reportId: number }[]> {
+    // Get symptom records that match the search term
+    const matchingSymptoms = await db
+      .select({ reportId: vaersSymptoms.reportId })
+      .from(vaersSymptoms)
+      .where(like(vaersSymptoms.symptomName, `%${searchTerm}%`));
+
+    if (matchingSymptoms.length === 0) {
+      return [];
+    }
+
+    // Get the unique report IDs
+    const reportIds = [...new Set(matchingSymptoms.map(s => s.reportId))];
+
+    // Get the VAERS IDs for these reports
+    const reports = await db
+      .select({ 
+        vaersId: vaersReports.vaersId, 
+        reportId: vaersReports.id 
+      })
+      .from(vaersReports)
+      .where(sql`${vaersReports.id} = ANY(${reportIds})`);
+
+    return reports;
   }
 }
