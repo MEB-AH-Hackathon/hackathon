@@ -24,3 +24,5 @@ myenv/
 TODO.md
 scratch/
 duckdb/vaers_analysis.db
+.vercel
+.DS_Store
