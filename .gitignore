@@ -1,3 +1,28 @@
+# Environment and config
 .env
+.DS_Store
+
+# Raw data directories (too large for git)
+vaers_data/
+data/
+duckdb/
+# Generated output directories
+duckdb_data/
+intermediate_results/
+
+# Temporary files
+code/.tmp/
+code/__pycache__/
+*.pyc
+
+# Old/experimental code and data
+old_code/
+sample_data/
+myenv/
+
+# Development files
 TODO.md
+scratch/
+duckdb/vaers_analysis.db
 .vercel
+.DS_Store

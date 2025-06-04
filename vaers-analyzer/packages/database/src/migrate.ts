@@ -1,8 +1,11 @@
+import { config } from 'dotenv';
+import * as path from 'path';
+
+// Load environment variables before importing db-connection
+config({ path: path.join(__dirname, '..', '.env') });
+
 import { migrate } from 'drizzle-orm/neon-http/migrator';
 import { db } from './db-connection';
-import { config } from 'dotenv';
-
-config();
 
 async function runMigration() {
   console.log('Running migrations...');

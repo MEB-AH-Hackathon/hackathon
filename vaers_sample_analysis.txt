@@ -1,0 +1,104 @@
+=== VAERS Data Sample Analysis ===
+
+1. FULLY MATCHED (symptoms documented in FDA package insert):
+------------------------------------------------------------
+VAERS ID: 2681302
+Vaccine: COVID19 (COVID19 (MODERNA))
+Symptoms: Sepsis
+FDA Matches: nausea/vomiting, chills
+
+VAERS ID: 2759500
+Vaccine: COVID19 (COVID19 (MODERNA))
+Symptoms: Sepsis
+FDA Matches: chills, nausea/vomiting
+
+VAERS ID: 2719248
+Vaccine: HPV (GARDASIL)
+Symptoms: Stomatitis
+FDA Matches: nausea
+
+VAERS ID: 2606388
+Vaccine: COVID19 (COVID19 (MODERNA))
+Symptoms: Dysstasia
+FDA Matches: myalgia
+
+VAERS ID: 2677178
+Vaccine: COVID19 (COVID19 (MODERNA))
+Symptoms: Sepsis
+FDA Matches: nausea/vomiting, chills
+
+
+2. MAPPED BUT NOT MATCHED (processed but not in FDA list):
+------------------------------------------------------------
+VAERS ID: 2729511
+Vaccine: COVID19 (COVID19 (MODERNA))
+Symptoms: Acute sinusitis, Agitation
+Mapped to FDA terms: restlessness, nasal congestion, irritability, fretfulness, respiratory disorder, rhinitis, upper respiratory tract infections
+Status: These FDA terms are NOT in the package insert for this vaccine
+
+VAERS ID: 2745063
+Vaccine: COVID19 (COVID19 (MODERNA))
+Symptoms: Diarrhoea
+Mapped to FDA terms: gastroenteritis, diarrhea
+Status: These FDA terms are NOT in the package insert for this vaccine
+
+VAERS ID: 2759477
+Vaccine: ZOSTER (SHINGRIX)
+Symptoms: Paraesthesia
+Mapped to FDA terms: numbness, dizziness, paresthesia
+Status: These FDA terms are NOT in the package insert for this vaccine
+
+VAERS ID: 2678402
+Vaccine: COVID19 (COVID19 (MODERNA))
+Symptoms: Arteriosclerosis coronary artery
+Mapped to FDA terms: cerebrovascular accident, serious cardiovascular events
+Status: These FDA terms are NOT in the package insert for this vaccine
+
+VAERS ID: 2556159
+Vaccine: COVID19 (COVID19 (MODERNA BIVALENT))
+Symptoms: Atrial fibrillation, Renal stone removal
+Mapped to FDA terms: hematuria, serious cardiovascular events, cerebrovascular accident, frequency of urination, dysuria, abdominal pain, convulsions, urgency
+Status: These FDA terms are NOT in the package insert for this vaccine
+
+
+3. NOT MAPPED (symptoms not processed yet):
+------------------------------------------------------------
+VAERS ID: 2603629
+Vaccine: ZOSTER (SHINGRIX)
+Symptoms: Fatigue, Pain
+Status: No mapping exists for these symptoms yet
+
+VAERS ID: 2772226
+Vaccine: DTAP + IPV + HIB (PENTACEL)
+Symptoms: Product preparation issue, No adverse event
+Status: No mapping exists for these symptoms yet
+
+VAERS ID: 2571499
+Vaccine: COVID19 (COVID19 (MODERNA))
+Symptoms: Expired product administered, No adverse event
+Status: No mapping exists for these symptoms yet
+
+VAERS ID: 2631724
+Vaccine: COVID19 (COVID19 (MODERNA BIVALENT))
+Symptoms: No adverse event, Expired product administered
+Status: No mapping exists for these symptoms yet
+
+VAERS ID: 2598800
+Vaccine: ZOSTER (SHINGRIX)
+Symptoms: Arthralgia, Headache, Pain in extremity
+Status: No mapping exists for these symptoms yet
+
+
+=== SUMMARY STATISTICS ===
+Total unique reports: 57,454
+Total symptom instances: 213,212
+
+Fully Matched:
+  Reports: 838 (1.5%)
+  Symptoms: 1,069 (0.5%)
+Not Mapped:
+  Reports: 50,470 (87.8%)
+  Symptoms: 203,046 (95.2%)
+Mapped Not Matched:
+  Reports: 6,146 (10.7%)
+  Symptoms: 9,097 (4.3%)

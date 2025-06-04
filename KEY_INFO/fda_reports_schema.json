@@ -1,0 +1,95 @@
+{
+  "description": "FDA reports containing adverse events extracted from vaccine package inserts with VAERS-compatible naming",
+  "file_path": "json_data/fda_reports.json",
+  "record_count": "33 vaccines (some vaccines have multiple entries)",
+  "data_source": "Package insert PDFs from FDA",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string",
+          "description": "Source PDF filename"
+        },
+        "vax_type": {
+          "type": "string",
+          "description": "Vaccine type code (e.g., 'COVID19', 'ZOSTER', 'HPV4')"
+        },
+        "vax_name": {
+          "type": "string",
+          "description": "Original FDA vaccine name from package insert"
+        },
+        "vax_manu": {
+          "type": "string",
+          "description": "Vaccine manufacturer"
+        },
+        "extraction_success": {
+          "type": "boolean",
+          "description": "Whether adverse events were successfully extracted"
+        },
+        "adverse_events": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of adverse events from FDA package insert"
+        },
+        "study_type": {
+          "type": "string",
+          "description": "Type of clinical study (e.g., 'randomized controlled trial')"
+        },
+        "source_section": {
+          "type": "string",
+          "description": "Section of package insert where adverse events were found"
+        },
+        "controlled_trial_text": {
+          "type": "string",
+          "description": "Full text excerpt from clinical trials section"
+        },
+        "vaers_vaccine_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "VAERS-compatible vaccine names that map to this FDA vaccine"
+        },
+        "vaccine_name": {
+          "type": "string",
+          "description": "Primary VAERS-compatible vaccine name for matching"
+        }
+      },
+      "required": ["filename", "vax_type", "vax_name", "vax_manu", "adverse_events", "vaccine_name"]
+    }
+  },
+  "key_fields": {
+    "vaccine_name": "Use this field to match with VAERS data VAX_NAME_list",
+    "adverse_events": "FDA-documented adverse events from package insert",
+    "vaers_vaccine_names": "All VAERS names that map to this vaccine"
+  },
+  "sample_record": {
+    "filename": "Package-Insert-SHINGRIX.pdf",
+    "vax_type": "ZOSTER",
+    "vax_name": "SHINGRIX (ZOSTER VACCINE RECOMBINANT, ADJUVANTED)",
+    "vax_manu": "GLAXOSMITHKLINE BIOLOGICALS",
+    "extraction_success": true,
+    "adverse_events": [
+      "pain",
+      "redness",
+      "swelling",
+      "myalgia",
+      "fatigue",
+      "headache",
+      "shivering",
+      "fever",
+      "gastrointestinal symptoms"
+    ],
+    "study_type": "randomized controlled trial, clinical trial, solicited adverse events",
+    "source_section": "Clinical Trials Experience",
+    "controlled_trial_text": "Solicited local adverse reactions reported in individuals aged 50 years and older were pain (78%), redness (38%), and swelling (26%)...",
+    "vaers_vaccine_names": [
+      "ZOSTER (SHINGRIX)"
+    ],
+    "vaccine_name": "ZOSTER (SHINGRIX)"
+  }
+}

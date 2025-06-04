@@ -1,0 +1,43 @@
+[
+  {
+    "filename": "Package-Insert-DENGVAXIA.pdf",
+    "success": true,
+    "data": {
+      "controlled_trial_text": "The safety of DENGVAXIA in subjects 6 through 16 years of age was evaluated in 12 randomized, placebo-controlled, multicenter clinical trials with at least 28 days of follow-up conducted primarily in dengue endemic regions including Asia-Pacific and Latin American countries. In these studies, a total of 22,924 subjects 6 through 16 years of age received at least one dose of DENGVAXIA and 10,668 received placebo (0.9% sodium chloride). Solicited adverse reactions were recorded daily for 14 days following each vaccination. The most frequently reported adverse reactions regardless of the dengue serostatus prior to vaccination in ages 9 through 16 years were headache (40%), injection site pain (32%), malaise (25%), asthenia (25%), and myalgia (29%). The most frequently reported adverse reactions regardless of the dengue serostatus prior to vaccination in ages 6 through 8 years were headache (27%), injection site pain (28%), malaise (19%), asthenia (13%), and myalgia (15%).",
+      "symptoms_list": [
+        "headache",
+        "injection site pain",
+        "malaise",
+        "asthenia",
+        "myalgia"
+      ],
+      "study_type": "randomized controlled trial",
+      "source_section": "Clinical Trials Experience",
+      "full_pdf_text": "Individuals using assistive technology may not be able to fully access the information contained in this file..."
+    },
+    "raw_response": "{\"controlled_trial_text\": \"The safety of DENGVAXIA in subjects 6 through 16 years of age was evaluated in 12 randomized, placebo-controlled, multicenter clinical trials...\", \"symptoms_list\": [\"headache\", \"injection site pain\", \"malaise\", \"asthenia\", \"myalgia\"], \"study_type\": \"randomized controlled trial\", \"source_section\": \"Clinical Trials Experience\"}"
+  },
+  {
+    "filename": "Package Insert - Adenovirus Type 4 and Type 7 Vaccine, Live, Oral_0.pdf",
+    "success": true,
+    "data": {
+      "controlled_trial_text": "The safety of Adenovirus Type 4 and Type 7 Vaccine, Live, Oral was evaluated in a multicenter, double-blind, randomized, placebo-controlled study that enrolled 3031 subjects who received vaccine and 1009 subjects who received placebo (lactose tablets). The study was conducted in healthy male (63%) and female (37%) active duty US Army and Navy military recruits during their basic training. Subjects in both groups were administered other vaccines concomitantly with Adenovirus Type 4 and Type 7 Vaccine, Live, Oral. The specific vaccines that each subject received varied and were dependent on their immunization history. The vaccines that were co-administered included Hepatitis A Vaccine, Inactivated (Merck & Co., Inc.), Hepatitis A Inactivated and Hepatitis B (Recombinant) Vaccine (GlaxoSmithKline Biologicals), Hepatitis B Vaccine (Recombinant) (Merck & Co., Inc.), Human Papillomavirus Quadrivalent (Types 6, 11, 16, 18) Vaccine, Recombinant (Merck & Co., Inc.), Influenza Vaccine, Live, Intranasal (MedImmune, LLC), Influenza Virus Vaccine (Sanofi Pasteur, Inc.), Measles, Mumps, and Rubella Virus Vaccine Live (Merck & Co., Inc.), Meningococcal (Groups A, C, Y and W-135) Polysaccharide, Diphtheria Toxoid Conjugate Vaccine (Sanofi Pasteur, Inc.), Meningococcal Polysaccharide Vaccine (Groups A, C, Y and W-135 Combined) (Sanofi Pasteur, Inc.), Poliovirus Vaccine Inactivated (Sanofi Pasteur, SA), Tetanus Toxoid, Reduced Diphtheria Toxoid and Acellular Pertussis Vaccine, Adsorbed (Sanofi Pasteur, Ltd.), Tetanus Toxoid, Reduced Diphtheria Toxoid and Acellular Pertussis Vaccine, Adsorbed (GlaxoSmithKline Biologicals), Typhoid Vi Polysaccharide Vaccine (Sanofi Pasteur, SA), Varicella Virus Vaccine Live (Merck & Co., Inc.), Yellow Fever Vaccine (Sanofi Pasteur, Inc.).",
+      "symptoms_list": [
+        "upper respiratory tract infections",
+        "headache",
+        "nasal congestion",
+        "pharyngolaryngeal pain",
+        "cough",
+        "arthralgia",
+        "nausea",
+        "abdominal pain",
+        "diarrhea",
+        "vomiting"
+      ],
+      "study_type": "randomized controlled trial",
+      "source_section": "Clinical Trials Experience",
+      "full_pdf_text": "Individuals using assistive technology may not be able to fully access the information contained in this file..."
+    },
+    "raw_response": "{\"controlled_trial_text\": \"The safety of Adenovirus Type 4 and Type 7 Vaccine, Live, Oral was evaluated in a multicenter, double-blind, randomized, placebo-controlled study...\", \"symptoms_list\": [\"upper respiratory tract infections\", \"headache\", \"nasal congestion\", \"pharyngolaryngeal pain\", \"cough\", \"arthralgia\", \"nausea\", \"abdominal pain\", \"diarrhea\", \"vomiting\"], \"study_type\": \"randomized controlled trial\", \"source_section\": \"Clinical Trials Experience\"}"
+  }
+]

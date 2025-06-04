@@ -3,6 +3,15 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   distDir: '.next',
+  env: {
+    DATABASE_URL_DEV: process.env.DATABASE_URL_DEV,
+    DATABASE_URL_PROD: process.env.DATABASE_URL_PROD,
+  },
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    //ignoreDuringBuilds: true,
+  },
   // Add custom webpack config to log build details
   webpack: (config, { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }) => {
     console.log('=== Next.js Build Debug Info ===');
@@ -15,6 +24,7 @@ const nextConfig: NextConfig = {
     console.log('NODE_ENV:', process.env.NODE_ENV);
     console.log('VERCEL:', process.env.VERCEL);
     console.log('VERCEL_ENV:', process.env.VERCEL_ENV);
+    console.log('DATABASE_URL_DEV:', process.env.DATABASE_URL_DEV ? '[SET]' : '[NOT SET]');
     console.log('================================');
     
     return config;

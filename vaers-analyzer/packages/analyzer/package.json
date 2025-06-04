@@ -1,0 +1,23 @@
+{
+  "name": "@vaers/analyzer",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0",
+    "@vaers/database": "workspace:^",
+    "@vaers/mcp-tools": "workspace:^",
+    "@vaers/types": "workspace:^",
+    "dotenv": "^16.5.0"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:^",
+    "@types/node": "^22.15.3",
+    "typescript": "5.8.2"
+  },
+  "scripts": {
+    "build": "tsc --build"
+  }
+}

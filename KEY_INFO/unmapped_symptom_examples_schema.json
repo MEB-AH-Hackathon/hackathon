@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Unmapped Symptom Examples Schema",
+  "description": "Schema for VAERS unmapped symptoms that need manual mapping review",
+  "type": "object",
+  "required": ["metadata", "examples"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["description", "purpose", "criteria", "generated_date"],
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Description of the file's purpose"
+        },
+        "purpose": {
+          "type": "string",
+          "description": "Explanation of why these examples were selected"
+        },
+        "criteria": {
+          "type": "string",
+          "description": "Selection criteria for the symptoms"
+        },
+        "generated_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date when the examples were generated"
+        }
+      }
+    },
+    "examples": {
+      "type": "array",
+      "description": "List of unmapped symptom examples for manual review",
+      "items": {
+        "type": "object",
+        "required": ["VAERS_ID", "vaccine", "unmapped_symptom", "symptom_frequency", "fda_adverse_events_for_vaccine", "potential_matches", "should_find", "notes", "symptom_text"],
+        "properties": {
+          "VAERS_ID": {
+            "type": "string",
+            "description": "Example VAERS report identifier for this symptom"
+          },
+          "vaccine": {
+            "type": "string",
+            "description": "Vaccine name in VAERS format"
+          },
+          "unmapped_symptom": {
+            "type": "string",
+            "description": "VAERS symptom that hasn't been mapped to FDA terminology yet"
+          },
+          "symptom_frequency": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Number of times this symptom appears in VAERS data"
+          },
+          "fda_adverse_events_for_vaccine": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of FDA adverse events documented for this vaccine"
+          },
+          "potential_matches": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Potential FDA adverse events that could match this symptom (to be filled manually)"
+          },
+          "should_find": {
+            "type": "boolean",
+            "description": "Whether this symptom should reasonably match one of the FDA adverse events"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Additional notes about the symptom and potential mapping"
+          },
+          "symptom_text": {
+            "type": "string",
+            "description": "Full SYMPTOM_TEXT from the VAERS report providing context for the unmapped symptom"
+          }
+        }
+      }
+    }
+  }
+}
