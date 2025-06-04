@@ -1,0 +1,380 @@
+VACCINE MATCHING SCORES (Cutoff = 40)
+--------------------------------------------------------------------------------
+
+✓ [42] COVID19 | PFIZER\BIONTECH | COVID19 (COVID19 (PFIZER-BIONTECH))
+  └─ MATCHED: Package-Insert-IXCHIQ.pdf
+
+✗ [33] COVID19 | MODERNA | COVID19 (COVID19 (MODERNA))
+  └─ BEST MATCH (below cutoff): Package-Insert-TRUMENBA.pdf
+
+✓ [40] COVID19 | JANSSEN | COVID19 (COVID19 (JANSSEN))
+  └─ MATCHED: package_insert_-_nuvaxovid.pdf
+
+✓ [50] PNC20 | PFIZER\WYETH | PNEUMO (PREVNAR20)
+  └─ MATCHED: Package-Insert-PREVNAR-20.pdf
+
+✓ [45] HEPA | MERCK & CO. INC. | HEP A (VAQTA)
+  └─ MATCHED: Package Insert - VAQTA.pdf
+
+✓ [68] MMR | MERCK & CO. INC. | MEASLES + MUMPS + RUBELLA (MMR II)
+  └─ MATCHED: Package-Insert-Measles-Mumps-and-Rubella-Virus-Vaccine-Live_2.pdf
+
+✓ [50] PNC13 | PFIZER\WYETH | PNEUMO (PREVNAR13)
+  └─ MATCHED: Package-Insert-PREVNAR-20.pdf
+
+✓ [61] PPV | MERCK & CO. INC. | PNEUMO (PNEUMOVAX)
+  └─ MATCHED: Package-Insert-PNEUMOVAX-23_0.pdf
+
+✓ [52] RSV | PFIZER\WYETH | RSV (ABRYSVO)
+  └─ MATCHED: Package Insert - ABRYSVO.pdf
+
+✓ [55] FLUC4 | SEQIRUS, INC. | INFLUENZA (SEASONAL) (FLUCELVAX QUADRIVALENT)
+  └─ MATCHED: Package-Insert-FLUCELVAX-QUADRIVALENT_0.pdf
+
+✓ [51] IPV | SANOFI PASTEUR | POLIO VIRUS, INACT. (IPOL)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [44] RSV | GLAXOSMITHKLINE BIOLOGICALS | RSV (AREXVY)
+  └─ MATCHED: Package-Insert-AREXVY.pdf
+
+✓ [44] DTPPVHBHPB | MSP VACCINE COMPANY | DTAP+IPV+HIB+HEPB (VAXELIS)
+  └─ MATCHED: ZOSTAVAX (Zoster Vaccine Live) Frozen Package Insert.pdf
+
+✓ [63] PNC15 | MERCK & CO. INC. | PNEUMO (VAXNEUVANCE)
+  └─ MATCHED: Package-Insert-VAXNEUVANCE.pdf
+
+✓ [53] RV5 | MERCK & CO. INC. | ROTAVIRUS (ROTATEQ)
+  └─ MATCHED: Package-Insert-RotaTeq.pdf
+
+✓ [46] VARZOS | GLAXOSMITHKLINE BIOLOGICALS | ZOSTER (SHINGRIX)
+  └─ MATCHED: Package-Insert-SHINGRIX.pdf
+
+✓ [41] RVX | UNKNOWN MANUFACTURER | ROTAVIRUS (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-and-Patient-Information-(Squeezable-Tube-Presentation)-ROTARIX.pdf
+
+✓ [55] FLUA4 | SEQIRUS, INC. | INFLUENZA (SEASONAL) (FLUAD QUADRIVALENT)
+  └─ MATCHED: Package-Insert-FLUARIX-QUADRIVALENT.pdf
+
+✓ [43] TDAP | GLAXOSMITHKLINE BIOLOGICALS | TDAP (BOOSTRIX)
+  └─ MATCHED: Package Insert - BOOSTRIX_1.pdf
+
+✓ [44] CHIK | VALNEVA USA, INC. | CHIKUNGUNYA LIVE (IXCHIQ)
+  └─ MATCHED: Package-Insert---Influenza-Virus-Vaccine--H5N1.pdf
+
+✓ [54] HPV9 | MERCK & CO. INC. | HPV (GARDASIL 9)
+  └─ MATCHED: Package-Insert-GARDASIL 9_0.pdf
+
+✓ [69] FLU3 | SANOFI PASTEUR | INFLUENZA (SEASONAL) (FLUZONE)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [60] PNC21 | MERCK & CO. INC. | PNEUMO (CAPVAXIVE)
+  └─ MATCHED: package-insert-capvaxive.pdf
+
+✓ [46] FLUX | UNKNOWN MANUFACTURER | INFLUENZA (SEASONAL) (NO BRAND NAME)
+  └─ MATCHED: Package-Insert---Influenza-Virus-Vaccine--H5N1.pdf
+
+✗ [36] COVID19 | UNKNOWN MANUFACTURER | COVID19 (COVID19 (UNKNOWN))
+  └─ BEST MATCH (below cutoff): Package-Insert---Menactra.pdf
+
+✓ [43] FLU3 | GLAXOSMITHKLINE BIOLOGICALS | INFLUENZA (SEASONAL) (FLUARIX)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-(CSL-Limited).pdf
+
+✓ [58] YF | SANOFI PASTEUR | YELLOW FEVER (YF-VAX)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [43] HEPAB | GLAXOSMITHKLINE BIOLOGICALS | HEP A + HEP B (TWINRIX)
+  └─ MATCHED: Package Insert - TWINRIX.pdf
+
+✓ [64] FLU4 | SANOFI PASTEUR | INFLUENZA (SEASONAL) (FLUZONE HIGH-DOSE QUADRIVALENT)
+  └─ MATCHED: Package-Insert-Fluzone-High-Dose.pdf
+
+✓ [49] UNK | UNKNOWN MANUFACTURER | VACCINE NOT SPECIFIED (NO BRAND NAME)
+  └─ MATCHED: Package-Insert---Influenza-Virus-Vaccine--H5N1.pdf
+
+✓ [62] MMRV | MERCK & CO. INC. | MEASLES + MUMPS + RUBELLA + VARICELLA (PROQUAD)
+  └─ MATCHED: Package-Insert-Measles-Mumps-and-Rubella-Virus-Vaccine-Live_2.pdf
+
+✓ [64] FLU3 | SANOFI PASTEUR | INFLUENZA (SEASONAL) (FLUZONE HIGH-DOSE)
+  └─ MATCHED: Package-Insert-Fluzone-High-Dose.pdf
+
+✓ [69] FLU3 | SANOFI PASTEUR | INFLUENZA (SEASONAL) (FLUBLOK)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [48] DTAPIPVHIB | SANOFI PASTEUR | DTAP + IPV + HIB (PENTACEL)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [43] HEPA | GLAXOSMITHKLINE BIOLOGICALS | HEP A (HAVRIX)
+  └─ MATCHED: Package-Insert-HAVRIX.pdf
+
+✓ [42] DTAPHEPBIP | GLAXOSMITHKLINE BIOLOGICALS | DTAP + HEPB + IPV (PEDIARIX)
+  └─ MATCHED: Package-Insert-PEDIARIX_1.pdf
+
+✓ [65] MNQ | NOVARTIS VACCINES AND DIAGNOSTICS | MENINGOCOCCAL CONJUGATE (MENVEO)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-(Novartis-Vaccines-and-Diagnostics-Limited).pdf
+
+✓ [43] HIBV | GLAXOSMITHKLINE BIOLOGICALS | HIB (HIBERIX)
+  └─ MATCHED: Package Insert - Hiberix.pdf
+
+✓ [52] HEP | GLAXOSMITHKLINE BIOLOGICALS | HEP B (ENGERIX-B)
+  └─ MATCHED: Package-Insert-Engerix-B.pdf
+
+✓ [45] VARZOS | UNKNOWN MANUFACTURER | ZOSTER (NO BRAND NAME)
+  └─ MATCHED: ZOSTAVAX (Zoster Vaccine Live) Frozen Package Insert.pdf
+
+✓ [69] MENB | NOVARTIS VACCINES AND DIAGNOSTICS | MENINGOCOCCAL B (BEXSERO)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-(Novartis-Vaccines-and-Diagnostics-Limited).pdf
+
+✓ [42] DTAPIPV | GLAXOSMITHKLINE BIOLOGICALS | DTAP + IPV (KINRIX)
+  └─ MATCHED: Package Insert - TWINRIX.pdf
+
+✓ [46] FLU3 | GLAXOSMITHKLINE BIOLOGICALS | INFLUENZA (SEASONAL) (FLULAVAL)
+  └─ MATCHED: Package-Insert-FLULAVAL.pdf
+
+✓ [67] DTAP | SANOFI PASTEUR | DTAP (DAPTACEL)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [79] FLU3 | NOVARTIS VACCINES AND DIAGNOSTICS | INFLUENZA (SEASONAL) (FLUVIRIN)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-(Novartis-Vaccines-and-Diagnostics-Limited).pdf
+
+✓ [41] RV1 | GLAXOSMITHKLINE BIOLOGICALS | ROTAVIRUS (ROTARIX)
+  └─ MATCHED: Package-Insert-and-Patient-Information-(Squeezable-Tube-Presentation)-ROTARIX.pdf
+
+✗ [35] COVID19 | NOVAVAX | COVID19 (COVID19 (NOVAVAX))
+  └─ BEST MATCH (below cutoff): Package Insert - Varivax (Frozen)_0.pdf
+
+✓ [50] FLU3 | SEQIRUS, INC. | INFLUENZA (SEASONAL) (FLUCELVAX)
+  └─ MATCHED: Package-Insert---Influenza-Virus-Vaccine--H5N1.pdf
+
+✓ [70] TDAP | SANOFI PASTEUR | TDAP (ADACEL)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [56] VARCEL | MERCK & CO. INC. | VARICELLA (VARIVAX)
+  └─ MATCHED: Package Insert - Varivax (Refrigerator)_0.pdf
+
+✓ [46] UNK | UNKNOWN MANUFACTURER | VACCINE NOT SPECIFIED (OTHER)
+  └─ MATCHED: Package-Insert---Influenza-Virus-Vaccine--H5N1.pdf
+
+✓ [51] DTAPIPV | SANOFI PASTEUR | DTAP + IPV (QUADRACEL)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [64] HIBV | SANOFI PASTEUR | HIB (ACTHIB)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [41] MNP | PFIZER\WYETH | MENINGOCOCCAL CONJUGATE (PENBRAYA)
+  └─ MATCHED: Package-Insert-PENBRAYA_0.pdf
+
+✓ [51] FLU3 | SEQIRUS, INC. | INFLUENZA (SEASONAL) (AFLURIA)
+  └─ MATCHED: Package-Insert---Influenza-Virus-Vaccine--H5N1.pdf
+
+✓ [54] HIBV | MERCK & CO. INC. | HIB (PEDVAXHIB)
+  └─ MATCHED: Package-Insert---PedvaxHIB.pdf
+
+✓ [62] HEP | MERCK & CO. INC. | HEP B (RECOMBIVAX HB)
+  └─ MATCHED: package-insert-recombivax-hb.pdf
+
+✓ [51] MNQ | SANOFI PASTEUR | MENINGOCOCCAL CONJUGATE (MENQUADFI)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [43] RAB | UNKNOWN MANUFACTURER | RABIES (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-and-Information-for-Patients-MenQuadfi.pdf
+
+✗ [39] DTAP | GLAXOSMITHKLINE BIOLOGICALS | DTAP (INFANRIX)
+  └─ BEST MATCH (below cutoff): Package Insert - TWINRIX.pdf
+
+✓ [56] MMR | GLAXOSMITHKLINE BIOLOGICALS | MEASLES + MUMPS + RUBELLA (PRIORIX)
+  └─ MATCHED: Package-Insert-Measles-Mumps-and-Rubella-Virus-Vaccine-Live_2.pdf
+
+✓ [41] PPV | UNKNOWN MANUFACTURER | PNEUMO (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-PNEUMOVAX-23_0.pdf
+
+✓ [52] FLU3 | SEQIRUS, INC. | INFLUENZA (SEASONAL) (FLUAD)
+  └─ MATCHED: Package-Insert---Influenza-Virus-Vaccine--H5N1.pdf
+
+✓ [56] TYP | SANOFI PASTEUR | TYPHOID VI POLYSACCHARIDE (TYPHIM VI)
+  └─ MATCHED: Package-Insert-Typhim-Vi.pdf
+
+✓ [51] HEP | DYNAVAX TECHNOLOGIES CORPORATION | HEP B (HEPLISAV-B)
+  └─ MATCHED: Package-Insert-HEPLISAV-B.pdf
+
+✓ [52] TD | SANOFI PASTEUR | TD ADSORBED (NO BRAND NAME)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [46] MENB | PFIZER\WYETH | MENINGOCOCCAL B (TRUMENBA)
+  └─ MATCHED: Package-Insert-TRUMENBA.pdf
+
+✓ [45] SMALLMNK | BAVARIAN NORDIC | SMALLPOX + MONKEYPOX (JYNNEOS)
+  └─ MATCHED: Package-Insert-JYNNEOS-(Frozen).pdf
+
+✓ [46] DTOX | UNKNOWN MANUFACTURER | DIPHTHERIA TOXOIDS (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-and-Information-for-Patients---Biothrax.pdf
+
+✓ [40] TTOX | UNKNOWN MANUFACTURER | TETANUS TOXOID (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-and-Patient-Information-Sheet-Fluzone-Southern-Hemisphere.pdf
+
+✓ [58] FLU4 | SANOFI PASTEUR | INFLUENZA (SEASONAL) (FLUZONE QUADRIVALENT)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [49] TYP | BERNA BIOTECH, LTD. | TYPHOID LIVE ORAL TY21A (VIVOTIF)
+  └─ MATCHED: Package Insert - Adenovirus Type 4 and Type 7 Vaccine, Live, Oral_0.pdf
+
+✓ [40] MEN | UNKNOWN MANUFACTURER | MENINGOCOCCAL (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-and-Information-for-Patients-MenQuadfi.pdf
+
+✓ [44] COVID19-2 | MODERNA | COVID19 (COVID19 (MODERNA BIVALENT))
+  └─ MATCHED: Package-Insert-PREVNAR-20.pdf
+
+✓ [53] FLUN3 | MEDIMMUNE VACCINES, INC. | INFLUENZA (SEASONAL) (FLUMIST)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [53] HPV4 | MERCK & CO. INC. | HPV (GARDASIL)
+  └─ MATCHED: package-insert-gardasil.pdf
+
+✓ [77] RAB | NOVARTIS VACCINES AND DIAGNOSTICS | RABIES (RABAVERT)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-(Novartis-Vaccines-and-Diagnostics-Limited).pdf
+
+✓ [40] HEP | UNKNOWN MANUFACTURER | HEP B (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-AFLURIA-SOUTHERN-HEMISPHERE.pdf
+
+✓ [59] MMR | UNKNOWN MANUFACTURER | MEASLES + MUMPS + RUBELLA (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-Measles-Mumps-and-Rubella-Virus-Vaccine-Live_2.pdf
+
+✓ [48] MNQ | SANOFI PASTEUR | MENINGOCOCCAL CONJUGATE (MENACTRA)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [58] TD | SANOFI PASTEUR | TD ADSORBED (TENIVAC)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [43] TD | UNKNOWN MANUFACTURER | TD ADSORBED (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-and-Information-for-Patients-MenQuadfi.pdf
+
+✓ [44] HEPA | UNKNOWN MANUFACTURER | HEP A (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-AFLURIA-SOUTHERN-HEMISPHERE.pdf
+
+✓ [52] FLU4 | GLAXOSMITHKLINE BIOLOGICALS | INFLUENZA (SEASONAL) (FLULAVAL QUADRIVALENT)
+  └─ MATCHED: Package-Insert-FluLaval-Quadrivalent_0.pdf
+
+✗ [39] RSV | UNKNOWN MANUFACTURER | RSV (NO BRAND NAME)
+  └─ BEST MATCH (below cutoff): Package-Insert-and-Information-for-Patients-FluMist.pdf
+
+✓ [44] COVID19-2 | PFIZER\BIONTECH | COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))
+  └─ MATCHED: Package Insert - Fluzone_0-2.pdf
+
+✗ [39] TDAP | UNKNOWN MANUFACTURER | TDAP (NO BRAND NAME)
+  └─ BEST MATCH (below cutoff): Package-Insert---Menactra.pdf
+
+✓ [48] EBZR | MERCK & CO. INC. | EBOLA ZAIRE (ERVEBO)
+  └─ MATCHED: Package-Insert-ERVEBO_1.pdf
+
+✓ [54] RSV | MODERNA | RSV (MRESVIA)
+  └─ MATCHED: Package Insert - MRESVIA.pdf
+
+✓ [61] RAB | SANOFI PASTEUR | RABIES (IMOVAX)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [52] FLUR4 | PROTEIN SCIENCES CORPORATION | INFLUENZA (SEASONAL) (FLUBLOK QUADRIVALENT)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-(ID-Biomedical-Corporation-of-Quebec).pdf
+
+✓ [48] UNK | UNKNOWN MANUFACTURER | VACCINE NOT SPECIFIED (FOREIGN)
+  └─ MATCHED: Package-Insert---Influenza-Virus-Vaccine--H5N1.pdf
+
+✓ [52] DT | SANOFI PASTEUR | DT ADSORBED (NO BRAND NAME)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [55] ANTH | EMERGENT BIOSOLUTIONS | ANTHRAX (BIOTHRAX)
+  └─ MATCHED: Package-Insert-and-Information-for-Patients---Biothrax.pdf
+
+✓ [42] DTIPV | UNKNOWN MANUFACTURER | DT + IPV (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-and-Information-for-Patients-MenQuadfi.pdf
+
+✓ [40] DTAP | UNKNOWN MANUFACTURER | DTAP (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-and-FDA-Approved-Patient-Labeling-COMIRNATY.pdf
+
+✓ [40] HIBV | UNKNOWN MANUFACTURER | HIB (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-and-Information-for-Patients-MenQuadfi.pdf
+
+✓ [48] IPV | UNKNOWN MANUFACTURER | POLIO VIRUS, INACT. (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-Measles-Mumps-and-Rubella-Virus-Vaccine-Live_2.pdf
+
+✗ [39] MENHIB | GLAXOSMITHKLINE BIOLOGICALS | MENINGOCOCCAL CONJUGATE + HIB (MENITORIX)
+  └─ BEST MATCH (below cutoff): Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-(ID-Biomedical-Corporation-of-Quebec).pdf
+
+✓ [40] 6VAX-F | GLAXOSMITHKLINE BIOLOGICALS | DTAP+IPV+HEPB+HIB (INFANRIX HEXA)
+  └─ MATCHED: Package-Insert-and-Patient-Information-Fluzone-High-Dose-Southern-Hemisphere.pdf
+
+✓ [53] PNC | PFIZER\WYETH | PNEUMO (PREVNAR)
+  └─ MATCHED: Package-Insert-PREVNAR-20.pdf
+
+✓ [53] YF | SANOFI PASTEUR | YELLOW FEVER (STAMARIL)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [41] TD | MASS. PUB HLTH BIOL LAB | TD ADSORBED (TDVAX)
+  └─ MATCHED: Package-Insert---PedvaxHIB.pdf
+
+✓ [51] SMALL | EMERGENT BIOSOLUTIONS | SMALLPOX (ACAM2000)
+  └─ MATCHED: Package-Insert-ACAM2000_0.pdf
+
+✓ [49] JEV1 | INTERCELL AG | JAPANESE ENCEPHALITIS (IXIARO)
+  └─ MATCHED: Package-Insert-and-Patient-Information-IXIARO_0.pdf
+
+✓ [40] PNC10 | GLAXOSMITHKLINE BIOLOGICALS | PNEUMO (SYNFLORIX)
+  └─ MATCHED: Package-Insert-AFLURIA-SOUTHERN-HEMISPHERE.pdf
+
+✓ [44] FLU4 | GLAXOSMITHKLINE BIOLOGICALS | INFLUENZA (SEASONAL) (QIV DRESDEN)
+  └─ MATCHED: Package-Insert---Influenza-Virus-Vaccine--H5N1.pdf
+
+✓ [57] FLU4 | SEQIRUS, INC. | INFLUENZA (SEASONAL) (AFLURIA QUADRIVALENT)
+  └─ MATCHED: Package-Insert-AFLURIA-QUADRIVALENT-SOUTHERN-HEMISPHERE.pdf
+
+✓ [68] FLUN4 | MEDIMMUNE VACCINES, INC. | INFLUENZA (SEASONAL) (FLUMIST QUADRIVALENT)
+  └─ MATCHED: Package-Insert-FluMist-Quadrivalent.pdf
+
+✓ [68] FLU4 | GLAXOSMITHKLINE BIOLOGICALS | INFLUENZA (SEASONAL) (FLUARIX QUADRIVALENT)
+  └─ MATCHED: Package-Insert-FLUARIX-QUADRIVALENT.pdf
+
+✓ [45] TYP | UNKNOWN MANUFACTURER | TYPHOID LIVE ORAL TY21A (NO BRAND NAME)
+  └─ MATCHED: Package Insert - Adenovirus Type 4 and Type 7 Vaccine, Live, Oral_0.pdf
+
+✓ [43] TYP | UNKNOWN MANUFACTURER | TYPHOID VI POLYSACCHARIDE (NO BRAND NAME)
+  └─ MATCHED: Package Insert - Adenovirus Type 4 and Type 7 Vaccine, Live, Oral_0.pdf
+
+✓ [45] MEA | UNKNOWN MANUFACTURER | MEASLES (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-Measles-Mumps-and-Rubella-Virus-Vaccine-Live_2.pdf
+
+✓ [45] TD | UNKNOWN MANUFACTURER | TETANUS DIPHTHERIA (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-and-Information-for-Patients---Biothrax.pdf
+
+✓ [70] BCG | SANOFI PASTEUR | BCG (MYCOBAX)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [46] MNP | GLAXOSMITHKLINE BIOLOGICALS | MENINGOCOCCAL CONJUGATE (PENMENVY)
+  └─ MATCHED: package-insert-penmenvy.pdf
+
+✓ [50] DF | SANOFI PASTEUR | DENGUE TETRAVALENT (DENGVAXIA)
+  └─ MATCHED: Package-Insert---Influenza-A-(H1N1)-2009-Monovalent-Vaccine-(Sanofi-Pasteur--Inc.).pdf
+
+✓ [43] VARCEL | UNKNOWN MANUFACTURER | VARICELLA (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-and-Information-for-Patients-MenQuadfi.pdf
+
+✓ [62] ADEN_4_7 | TEVA PHARMACEUTICALS | ADENOVIRUS TYPES 4 & 7, LIVE, ORAL (NO BRAND NAME)
+  └─ MATCHED: Package Insert - Adenovirus Type 4 and Type 7 Vaccine, Live, Oral_0.pdf
+
+✓ [40] HPVX | UNKNOWN MANUFACTURER | HPV (NO BRAND NAME)
+  └─ MATCHED: Package-Insert-and-FDA-Approved-Patient-Labeling-COMIRNATY.pdf
+
+
+--------------------------------------------------------------------------------
+SUMMARY:
+Total vaccine combinations: 120
+Matched with score >= 40: 113 (94.2%)
+Unmatched (below cutoff): 7 (5.8%)
+
+Score distribution:
+  0-19: 0 items
+  20-39: 7 items
+  40-49: 55 items
+  50-59: 36 items
+  60-69: 18 items
+  70-79: 4 items
+  80-89: 0 items
+  90-99: 0 items
+  100-100: 0 items
