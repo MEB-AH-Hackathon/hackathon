@@ -1,3 +1,31 @@
+---
+marp: true
+theme: default
+paginate: true
+size: A4
+style: |
+  section {
+    font-size: 20px;
+    padding: 50px;
+    overflow: hidden;
+  }
+  table {
+    font-size: 16px;
+  }
+  code {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  blockquote {
+    font-size: 18px;
+  }
+---
+
 # VAERS Analyzer
 ## Bridging Patient Language and Medical Documentation
 
@@ -6,7 +34,6 @@ AI-powered analysis system for the Vaccine Adverse Event Reporting System (VAERS
 **Key Features:**
 - `Real-time Claude AI agents`
 - `VAERS & FDA integration`
-- `MCP Protocol`
 
 ---
 
@@ -123,7 +150,7 @@ AI-powered analysis system for the Vaccine Adverse Event Reporting System (VAERS
 - **Validate** mappings with real VAERS reports
 
 ### ⚡ Real-Time Processing: Handle Anything New
-- **MCP Claude agents** analyze new symptoms on the spot
+- **Agentic search** analyze new symptoms on the spot
 - **No pre-mapping needed** - works with any input
 - **Context-aware** - uses symptom text for better matching
 - **Instant results** - no waiting for batch processing
@@ -275,7 +302,7 @@ Explore actual reports with AI-powered analysis:
 ### Our Innovation
 - **Real-time Claude AI agents**
 - **VAERS & FDA integration**
-- **MCP Protocol**
+- **Agentic Search**
 - **Symptom mapping system**
 
 ---
