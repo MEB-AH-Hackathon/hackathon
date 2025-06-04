@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Understanding Vaccine Adverse Events</title>
+    <title>VAERS Analyzer - Understanding Vaccine Adverse Events</title>
     <style>
         /* PDF-friendly styling */
         @page {
@@ -191,6 +191,58 @@
             margin: 30px 0;
         }
 
+        /* Website-specific styling */
+        .website-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            margin: -20px -20px 20px -20px;
+            text-align: center;
+        }
+
+        .website-subtitle {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .feature-badges {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .case-preview {
+            background: #f8f9fa;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        .case-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .case-id {
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .case-demographics {
+            color: #6b7280;
+        }
+
         /* Print-specific styles */
         @media print {
             body {
@@ -216,8 +268,21 @@
 <body>
 
 <div class="slide">
-    <h1>Understanding Vaccine Adverse Events</h1>
-    <h2 class="center">Making Sense of Real-World Reports</h2>
+    <div class="website-header">
+        <h1 style="border: none; color: white;">VAERS Analyzer</h1>
+        <div class="website-subtitle">Bridging Patient Language and Medical Documentation</div>
+        <p style="max-width: 800px; margin: 0 auto;">
+            AI-powered analysis system for the Vaccine Adverse Event Reporting System (VAERS), 
+            the national early warning system established in 1990 to detect vaccine safety concerns. 
+            Our system maps patient language to medical terminology, revealing hidden patterns in 
+            adverse event reports submitted to CDC and FDA.
+        </p>
+        <div class="feature-badges">
+            <span class="badge">Real-time Claude AI agents</span>
+            <span class="badge">VAERS & FDA integration</span>
+            <span class="badge">MCP Protocol</span>
+        </div>
+    </div>
 </div>
 
 <div class="slide">
@@ -421,30 +486,54 @@ Maps to: "injection site burning", "pain", "inflammation"
 </div>
 
 <div class="slide">
-    <h2>How You Use It</h2>
+    <h2>How You Use It - On Our Website</h2>
     
-    <h3>Option 1: Check a Real VAERS Report</h3>
+    <h3>Option 1: Browse & Analyze Real Reports</h3>
+    <p>View actual VAERS reports from the CDC/FDA database with AI analysis:</p>
+    
+    <div class="case-preview">
+        <div class="case-header">
+            <span class="case-id">VAERS 2548069</span>
+            <span class="case-demographics">77 years • female • SC</span>
+        </div>
+        <p><strong>Vaccines:</strong> VARZOS</p>
+        <p><strong>Symptoms:</strong> Injection site pain, Injection site erythema, Injection site nodule</p>
+        <p><strong>Onset:</strong> 4 days after vaccination</p>
+    </div>
+    
+    <p>Click "View Details" to see:</p>
+    <ul>
+        <li>Which symptoms match FDA adverse events</li>
+        <li>AI-powered symptom mapping</li>
+        <li>Similar reports and patterns</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h2>Option 2: Check Any VAERS Report</h2>
+    
+    <h3>Enter a VAERS ID</h3>
     <ol>
-        <li><strong>Enter a VAERS ID</strong> (e.g., 2548069)</li>
-        <li><strong>System analyzes</strong> all symptoms in the report</li>
-        <li><strong>Shows which symptoms</strong> match known FDA adverse events</li>
-        <li><strong>Identifies</strong> unmapped or new symptoms</li>
+        <li><strong>Input any VAERS ID</strong> (e.g., 2548069)</li>
+        <li><strong>System fetches</strong> the official report</li>
+        <li><strong>AI analyzes</strong> all symptoms</li>
+        <li><strong>Shows matches</strong> to FDA adverse events</li>
     </ol>
 
     <h4>Example Output</h4>
     <div class="demo-output">
 VAERS Report 2548069:<br/>
-<span style="color: #1e40af;">✅ "redness" → Matches FDA: "redness"</span><br/>
-<span style="color: #1e40af;">✅ "soreness" → Matches FDA: "pain"</span><br/>
-<span style="color: #f59e0b;">❓ "knot on her arm" → New symptom (Agent analyzing...)</span>
+<span style="color: #1e40af;">✅ "Injection site pain" → Matches FDA: "injection site pain"</span><br/>
+<span style="color: #1e40af;">✅ "Injection site erythema" → Matches FDA: "injection site erythema"</span><br/>
+<span style="color: #1e40af;">✅ "Injection site nodule" → Matches FDA: "injection site nodule"</span>
     </div>
 </div>
 
 <div class="slide">
-    <h2>Option 2: Enter Your Own Symptoms</h2>
+    <h2>Option 3: Describe Your Own Symptoms</h2>
     
-    <h3>Describe What You're Experiencing</h3>
-    <p>Type naturally:</p>
+    <h3>Natural Language Input</h3>
+    <p>Type symptoms in your own words:</p>
     <blockquote>"I have a headache and my arm is really sore where I got the shot. Also feeling super tired."</blockquote>
 
     <h3>System Response</h3>
@@ -516,6 +605,56 @@ Similar reports found: 2,847 people reported this combination
 </div>
 
 <div class="slide">
+    <h2>Featured on Our Website</h2>
+    
+    <h3>Browse Real VAERS Reports</h3>
+    <p>Explore actual reports with AI-powered analysis:</p>
+    
+    <div class="case-preview">
+        <div class="case-header">
+            <span class="case-id">VAERS 2547741</span>
+            <span class="case-demographics">58 years • male • CA</span>
+        </div>
+        <p><strong>Vaccines:</strong> COVID19</p>
+        <p><strong>Symptoms:</strong> Pain, Magnetic resonance imaging abnormal, Arthritis reactive... +3 more</p>
+    </div>
+    
+    <div class="case-preview">
+        <div class="case-header">
+            <span class="case-id">VAERS 2547788</span>
+            <span class="case-demographics">59 years • female • GA</span>
+        </div>
+        <p><strong>Vaccines:</strong> COVID19-2</p>
+        <p><strong>Symptoms:</strong> Influenza virus test negative, Malaise, Streptococcus test negative... +3 more</p>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>System Information</h2>
+    
+    <div class="two-column">
+        <div>
+            <h3>About VAERS</h3>
+            <ul>
+                <li><strong>1990</strong>: VAERS Established</li>
+                <li><strong>CDC + FDA</strong>: Co-Managed By</li>
+                <li><strong>Public Access</strong>: Open Reporting</li>
+                <li>National early warning system</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Our Innovation</h3>
+            <ul>
+                <li><strong>Real-time Claude AI agents</strong></li>
+                <li><strong>VAERS & FDA integration</strong></li>
+                <li><strong>MCP Protocol</strong></li>
+                <li><strong>Symptom mapping system</strong></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
     <h2>Future Vision</h2>
     
     <h3>Systematic Mapping Framework</h3>
@@ -540,6 +679,9 @@ Similar reports found: 2,847 people reported this combination
     
     <div class="center" style="margin-top: 100px;">
         <h1>Thank you!</h1>
+        <p style="font-size: 1.2em; margin-top: 20px;">
+            Try it yourself at: <strong>https://vaers-analyzer.vercel.app/</strong>
+        </p>
     </div>
 </div>
 
